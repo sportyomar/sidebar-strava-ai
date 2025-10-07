@@ -1,0 +1,442 @@
+/* MarkdownEditor.module.css */
+
+.editorContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.splitPane {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 200px); /* Adjust based on your layout */
+  border: 1px solid #e5e7eb;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.editorPane {
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  min-width: 200px;
+  overflow-y: auto;
+}
+
+/* Resize Handle */
+.resizeHandle {
+  width: 4px;
+  background: #e5e7eb;
+  cursor: col-resize;
+  flex-shrink: 0;
+  position: relative;
+  transition: background-color 0.15s ease;
+}
+
+.resizeHandle:hover {
+  background: #9ca3af;
+}
+
+.resizeHandle:active {
+  background: #6b7280;
+}
+
+/* Add a visual indicator on the resize handle */
+.resizeHandle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 24px;
+  background: #9ca3af;
+  opacity: 0.6;
+}
+
+.resizeHandle:hover::before {
+  opacity: 1;
+  background: #6b7280;
+}
+
+.previewPane {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  min-width: 200px;
+  overflow-y: auto;
+}
+
+.editorHeader {
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.previewHeader {
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.editorHeader h3,
+.previewHeader h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.editorStats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Formatting Ribbon Styles */
+.formattingRibbon {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 4px;
+  position: sticky;
+  top: 57px; /* Height of editor header */
+  z-index: 9;
+}
+
+.ribbonGroup {
+  display: flex;
+  gap: 2px;
+}
+
+.ribbonButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #ffffff;
+  color: #6b7280;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.ribbonButton:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.ribbonButton:active {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.ribbonButton:disabled {
+  background: #f9fafb;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.ribbonButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.ribbonSeparator {
+  width: 1px;
+  height: 24px;
+  background: #e5e7eb;
+  margin: 0 8px;
+}
+
+.markdownTextarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 16px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #1f2937;
+  resize: none;
+  tab-size: 2;
+}
+
+.markdownTextarea::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.markdownTextarea:focus {
+  background: #ffffff;
+}
+
+.previewContent {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+/* Preview styles that match your main document styles */
+.previewH1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.previewH2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  color: #1f2937;
+}
+
+.previewH3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  color: #374151;
+}
+
+.previewP {
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.previewUl,
+.previewOl {
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.previewLi {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.previewStrong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.previewEm {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.previewCode {
+  background: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  color: #dc2626;
+}
+
+.previewPre {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.previewPre code {
+  background: none;
+  padding: 0;
+  color: #1f2937;
+  font-size: 0.875rem;
+}
+
+.previewBlockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.previewHr {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 2rem 0;
+}
+
+.previewTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  border: 1px solid #e5e7eb;
+}
+
+.previewThead {
+  background: #f9fafb;
+}
+
+.previewTh,
+.previewTd {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.previewTh {
+  font-weight: 600;
+  color: #374151;
+}
+
+.previewTd {
+  color: #4b5563;
+}
+
+.previewLink {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.previewLink:hover {
+  color: #1d4ed8;
+}
+
+/* Loading and error states */
+.loading,
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #6b7280;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f4f6;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: #dc2626;
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.retryButton:hover {
+  background: #2563eb;
+}
+
+/* Quick actions */
+.quickActions {
+  padding: 12px 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quickSaveButton {
+  padding: 0.5rem 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.quickSaveButton:hover:not(:disabled) {
+  background: #059669;
+}
+
+.quickSaveButton:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .splitPane {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .editorPane {
+    width: 100% !important;
+    min-height: 300px;
+  }
+
+  .previewPane {
+    width: 100% !important;
+    min-height: 300px;
+  }
+
+  .resizeHandle {
+    display: none;
+  }
+
+  /* Disable sticky on mobile to save screen space */
+  .editorHeader,
+  .previewHeader {
+    position: relative;
+    top: auto;
+  }
+
+  .formattingRibbon {
+    position: relative;
+    top: auto;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+
+  .ribbonSeparator {
+    display: none;
+  }
+}

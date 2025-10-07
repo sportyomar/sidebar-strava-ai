@@ -1,0 +1,22 @@
+{
+  "fixtures": {
+    "User": [
+      {
+        "id": 1,
+        "firstName": "Alice",
+        "lastName": "Doe",
+        "email": "alice@example.com",
+        "createdAt": "2025-07-09T03:16:00"
+      }
+    ],
+    "Post": [
+      {
+        "id": 101,
+        "userId": 1,
+        "title": "Hello World",
+        "content": "First post!",
+        "createdAt": "2025-07-09T03:17:00"
+      }
+    ]
+  }
+}

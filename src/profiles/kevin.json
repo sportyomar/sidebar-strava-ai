@@ -1,0 +1,13 @@
+{
+  "username": "camnewton",
+  "displayName": "Cam Newton",
+  "avatar": "/headshots/camnewton.jpg",
+  "defaultModule": "dealIntake",
+  "defaultRole": "vpPrincipal",
+  "allowedModules": ["dealIntake", "utilities", "adminConsole"],
+  "allowedRolesByModule": {
+    "dealIntake": ["associate", "vpPrincipal", "partnerExec"],
+    "utilities": ["admin"],
+    "adminConsole": ["partnerExec"]
+  }
+}

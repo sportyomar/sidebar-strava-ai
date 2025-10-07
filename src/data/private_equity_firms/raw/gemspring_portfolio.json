@@ -1,0 +1,481 @@
+{
+  "company_overview": {
+    "name": "Gemspring Capital",
+    "description": "Flexible capital solutions for middle market companies",
+    "mission": "We provide flexible capital solutions and partner with talented management teams to help companies achieve their full potential. We take a hands-on approach to help drive growth, market leadership, operational excellence, and strategic value for our partner companies.",
+    "key_metrics": {
+      "capital_under_management": "$3.8 billion",
+      "completed_acquisitions": 122,
+      "team_members": 70,
+      "us_offices": 4
+    },
+    "geographic_focus": ["United States", "Canada"],
+    "target_market": "Middle market companies"
+  },
+  "investment_criteria": {
+    "overview": "Strong competitive position, significant growth potential, complexity welcomed",
+    "description": "Gemspring provides flexible capital solutions to middle market companies headquartered primarily in the United States and Canada. We partner with industry leaders with growth potential that will benefit from our support and expertise. We do not shy away from complicated situations and have the ability to provide tailored capital solutions and support to drive growth and profit improvement.",
+    "transaction_types": [
+      "Corporate Carve-outs / Divestitures",
+      "Growth Equity",
+      "Leveraged Buyouts",
+      "Preferred Equity",
+      "Recapitalizations",
+      "Restructurings",
+      "Strategic Debt",
+      "Structured Equity"
+    ],
+    "value_creation_approach": "Prior to making an investment, we work alongside management to identify actionable opportunities for growth and operational improvement. In addition, we focus on removing structural complexities and other barriers that limit a company's potential. Strategy and execution are unique to each company, but initiatives most often involve investing in talent and infrastructure, expanding into new markets, optimizing operations, and pursuing both strategic add-on acquisitions and larger transformational acquisitions.",
+    "sector_focus": [
+      "Business Services",
+      "Consumer Services",
+      "Financial & Insurance Services",
+      "Healthcare",
+      "Industrials",
+      "Software",
+      "Tech-Enabled Services"
+    ]
+  },
+  "offices": [
+    {
+      "type": "Main Office",
+      "location": "Westport",
+      "address": "54 Wilton Road, Westport, CT 06880",
+      "phone": "(203) 842-8886"
+    },
+    {
+      "type": "Business Development Office",
+      "location": "Charlotte",
+      "address": "101 S. Tryon Street, 27th Floor, Charlotte, NC 28280",
+      "phone": "(704) 705-8491"
+    },
+    {
+      "type": "Office",
+      "location": "Los Angeles",
+      "address": "11911 San Vicente Blvd, 225, Los Angeles, CA 90049",
+      "phone": "(424) 502-0460"
+    },
+    {
+      "type": "Business Development Office",
+      "location": "Columbus",
+      "address": "875 N. High Street, 3rd Floor, Columbus, OH 43215",
+      "phone": "(614) 237-2002"
+    }
+  ],
+  "contact_information": {
+    "email": "info@gemspring.com",
+    "linkedin": "LinkedIn",
+    "general_inquiries": "Whether you would like to join the Gemspring team, are seeking a role as an executive at one of our portfolio companies, or have an investment opportunity to refer, please reach out."
+  },
+  "portfolio_companies": [
+    {
+      "name": "A10 Capital",
+      "status": "Active",
+      "sector": "Financial Services",
+      "investment_date": "May 2018",
+      "headquarters": "Boise, ID",
+      "website": "https://a10capital.com/",
+      "description": "A10 is a leading provider of commercial real estate mortgage solutions in the United States. A10's broad offering of transitional and permanent loan products covers the entire commercial property life cycle and borrowers benefit from A10's full-service platform, which includes in-house underwriting, legal, and servicing.",
+      "contact": "Alex Shakibnia for add-on acquisition opportunities"
+    },
+    {
+      "name": "Airswift Global Limited",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "July 2024",
+      "headquarters": "Houston, TX",
+      "website": "https://www.airswift.com",
+      "description": "Airswift is a global workforce solutions provider specializing in temporary and permanent staffing for technology and engineering roles within the global energy sector. Airswift has established an extensive global footprint serving a diverse client base spanning 6 continents. The Company offers a compelling value proposition by connecting scarce STEM talent with technical engineering projects in challenging environments.",
+      "contact": "Alex Shakibnia for add-on acquisition opportunities"
+    },
+    {
+      "name": "AMPAM",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "August 2023",
+      "headquarters": "Carson, CA",
+      "website": "http://www.ampam.com",
+      "description": "Founded in 1997, AMPAM is a full-service provider of design-build plumbing and HVAC solutions serving the multifamily end market. The company's offerings include design-build, pre-fabrication, installation, and post-installation services. AMPAM has delivered operational excellence to its customers for over 20 years and is considered the premier plumbing provider amongst leading multifamily general contractors and developers.",
+      "contact": "Alex Shakibnia for add-on acquisition opportunities"
+    },
+    {
+      "name": "Amplix",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "November 2022",
+      "headquarters": "Norwood, MA",
+      "website": "http://www.amplix.com",
+      "description": "Amplix is a leading provider of technology advisory services, leveraging technical expertise and deep relationships throughout the technology vendor landscape to deliver optimized outcomes for customers across their entire technology infrastructure. Amplix's services include data connectivity, cloud telephony, customer experience, security and managed services, business continuity, cloud optimization, and data center solutions.",
+      "contact": "Zubin Malkani for add-on acquisition opportunities"
+    },
+    {
+      "name": "Appriss Retail",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "March 2025",
+      "headquarters": "Irvine, CA",
+      "website": "https://apprissretail.com/",
+      "description": "Appriss Retail is a leading provider of fraud prevention software and data solutions for retailers. The company's advanced platform helps businesses combat both internal theft and consumer return fraud, serving over 200 top-tier enterprise retailers across a wide range of categories.",
+      "contact": "Aron Grossman for add-on acquisition opportunities"
+    },
+    {
+      "name": "Bobit Business Media",
+      "status": "Realized",
+      "sector": "Business Services",
+      "investment_date": "November 2018",
+      "headquarters": "Torrance, CA",
+      "website": "https://www.bobitbusinessmedia.com/",
+      "description": "Bobit Business Media is a leading provider of digital media and marketing solutions, events and print media. The company has a leading market position in each of the niche verticals it operates – fleet, transportation, beauty and law enforcement – serving a large customer base of over 1,700 B2B marketers. By leveraging its deep and entrenched audience, proprietary database and strong editorial capabilities, Bobit delivers highly targeted marketing solutions to each of its customers.",
+      "contact": null
+    },
+    {
+      "name": "Bradford",
+      "status": "Active",
+      "sector": "Specialty Manufacturing",
+      "investment_date": "June 2023",
+      "headquarters": "West Warwick, RI",
+      "website": "https://www.bradfordsoap.com/",
+      "description": "Founded in 1876, Bradford is a developer, formulator, and manufacturer of beauty & personal care products. Bradford is a marketplace leader in supplying specialty soap, shampoo bars, conditioner bars, shower poufs, facial cleansing sticks, and a variety of other beauty & personal care items to both large-scale CPGs as well as emerging brands across the specialty market.",
+      "contact": "Kristin Steen for add-on acquisition opportunities"
+    },
+    {
+      "name": "Bridgeway Connects",
+      "status": "Active",
+      "sector": "Industrial Services",
+      "investment_date": "May 2021",
+      "headquarters": "Pittsburgh, PA",
+      "website": "https://bridgewayconnects.com/",
+      "description": "Bridgeway Connects (f/k/a Transport Investments) is an asset-light transportation and logistics company. As one of the largest carrier groups in the United States and Canada, Bridgeway offers heavy haul, flatbed, specialty and van transportation, brokerage and logistics services. The Company currently handles an annual volume of over 250,000 loads and is positioned to capture substantial growth through its network of nationwide terminals, owner-operators and carriers.",
+      "contact": "Howy Fang for add-on acquisition opportunities"
+    },
+    {
+      "name": "Carr & Duff",
+      "status": "Active",
+      "sector": "Industrial Services",
+      "investment_date": "March 2022",
+      "headquarters": "Huntingdon Valley, PA",
+      "website": "http://www.carrduff.com",
+      "description": "Carr & Duff is a leading specialty electrical services provider of value added electrical construction and maintenance services to commercial, institutional, utility and industrial clients. Through 60+ years of business history, the Company has built a trusted reputation for tackling complex electrical contracting projects in the Greater Philadelphia area and throughout the East Coast.",
+      "contact": "Jay Reynolds for add-on acquisition opportunities"
+    },
+    {
+      "name": "Cforia",
+      "status": "Realized. Acquired by HighRadius Corporation.",
+      "sector": "Software",
+      "investment_date": "July 2020",
+      "headquarters": "Westlake Village, CA",
+      "website": "https://cforia.com/",
+      "description": "Cforia is a leading provider of order-to-cash automation software focused on improving collections and cash management for B2B customers globally. The Cforia platform was designed to help companies accelerate the conversion of accounts receivable to cash in order to better manage credit exposure and reduce cost of capital and expense. Cforia's success has been driven by superior technology that leverages proprietary, real-time data integration tools that work across complex and disparate ERP systems.",
+      "contact": null
+    },
+    {
+      "name": "ClearCompany",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "September 2023",
+      "headquarters": "Boston, MA",
+      "website": "http://www.clearcompany.com",
+      "description": "ClearCompany is a horizontal provider of Human Capital Management (HCM) software. The company provides an end-to-end suite of solutions to facilitate employee recruiting, onboarding, and performance management for mid-market businesses.",
+      "contact": "D.J. Andrzejewski for add-on acquisition opportunities"
+    },
+    {
+      "name": "Crafty Apes",
+      "status": "Realized",
+      "sector": "Tech-Enabled Services",
+      "investment_date": "October 2019",
+      "headquarters": "Los Angeles, CA",
+      "website": "http://www.craftyapes.com/",
+      "description": "Crafty Apes is a full-service visual effects company with studios in Los Angeles, Atlanta and New York. Crafty Apes provides set supervision, VFX consultation, 2D and 3D compositing, digital cosmetics and computer-generated imagery to film, episodic and commercial video production customers.",
+      "contact": null
+    },
+    {
+      "name": "Creative Labs",
+      "status": "Active",
+      "sector": "Specialty Manufacturing",
+      "investment_date": "January 2025",
+      "headquarters": "Eagan, MN",
+      "websites": [
+        "https://www.creativelabsinc.com/",
+        "http://www.unitedhaircare.com"
+      ],
+      "description": "Creative Labs is a vertically integrated manufacturer and developer of branded and contract-manufactured haircare and skincare products. Creative Labs owns a diverse portfolio of growing brands that sell across channels including retail, e-commerce, and hair salons. In addition to its branded offerings, the company provides contract manufacturing services for a variety of third-party brands.",
+      "contact": "Kristin Steen for add-on acquisition opportunities"
+    },
+    {
+      "name": "Fenceworks",
+      "status": "Active",
+      "sector": "Industrial Services",
+      "investment_date": "November 2023",
+      "headquarters": "Riverside, CA",
+      "website": "https://fenceworks.us/",
+      "description": "Founded in 1984, Fenceworks is a leading fencing installer and distributor serving the nation's largest homebuilders as well as general contractors and local fencing providers. For nearly 40 years, Fenceworks has developed a deep expertise in wood, vinyl, iron, glass and other high-quality fencing materials. The company provides services across the entire project lifecycle, including engineering and design, procurement, prefabrication and installation.",
+      "contact": "Geoff Broglio for add-on acquisition opportunities"
+    },
+    {
+      "name": "GoldenSource",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "May 2022",
+      "headquarters": "New York, NY",
+      "website": "http://www.thegoldensource.com",
+      "description": "GoldenSource is a provider of Enterprise Data Management (EDM) and Master Data Management (MDM) solutions for financial services customers. GoldenSource's offerings help some of the world's largest and most prominent investments banks, asset managers, and capital markets services firms manage and derive insights from their data, including equity and debt securities, customers, entities, and other data types.",
+      "contact": "Reid Litowitz for add-on acquisition opportunities"
+    },
+    {
+      "name": "Insurvia, LLC",
+      "status": "Realized. Acquired by an affiliate of BharCap Partners.",
+      "sector": "Insurance Services",
+      "investment_date": "October 2018",
+      "headquarters": "Las Vegas, NV",
+      "website": "https://www.insurvia.com/",
+      "description": "Insurvia is an insurance services holding company with subsidiaries including Fiesta Insurance, a leading retail franchisor of insurance products and services and La Familia Insurance, an independent insurance agency distributing insurance and related services through retail storefronts in Texas.",
+      "contact": null
+    },
+    {
+      "name": "JTI",
+      "status": "Active",
+      "sector": "Facility Services",
+      "investment_date": "December 2021",
+      "headquarters": "Bakersfield, CA",
+      "website": "http://www.jtielectric.com",
+      "description": "JTI is a full-service, design-build mechanical and electrical solutions provider that focuses on complex agricultural processing systems, high and medium voltage electric systems, and bespoke, fully-integrated panels and process controls. Primary customers are in the agribusiness, food and beverage, energy, building products, and heavy manufacturing industries. Services include design, engineering, installation, maintenance, and specialty fabrication of electrical and mechanical systems for industrial processing applications.",
+      "contact": "Mathew Wallace for add-on acquisition opportunities"
+    },
+    {
+      "name": "Mantis",
+      "status": "Realized",
+      "sector": "Facility Services",
+      "investment_date": "December 2021",
+      "headquarters": "Houston, TX",
+      "website": "http://www.mantisinnovation.com",
+      "description": "Mantis is a tech-enabled service provider that works with customers to deliver better building performance and improved energy efficiency. The company offers a full suite of services, including: energy procurement and demand management; solar, roofing, building envelope, and pavement, design, assessment and maintenance; and LED lighting, HVAC/mechanical and building automation systems implementation.",
+      "contact": null
+    },
+    {
+      "name": "Midland",
+      "status": "Active",
+      "sector": "Industrial Services",
+      "investment_date": "September 2023",
+      "headquarters": "Kansas City, MO",
+      "website": "http://www.midlandindustries.com",
+      "description": "Founded in 1919, Midland is a value-added distributor and manufacturer of fittings, valves, clamps, hoses, and related products for a wide variety of manufacturing, plumbing, utilities, HVAC, fluid power, and other general industrial end markets. Providing mission-critical parts for a diverse set of applications, Midland is a crucial supply chain partner to customers across the industrial ecosystem.",
+      "contact": "Geoff Broglio for add-on acquisition opportunities"
+    },
+    {
+      "name": "OCI",
+      "status": "Active",
+      "sector": "Specialty Manufacturing",
+      "investment_date": "May 2023",
+      "headquarters": "Brookville, PA",
+      "website": "http://www.ocidivision.com",
+      "description": "Founded in 1998, OCI is a manufacturer of custom-built drilling components for the infrastructure and construction end markets. OCI is a marketplace leader in supplying micropile casing, drill string, hammers and bits, augurs, core barrels, swivels, and other customized products to geotechnical service companies and drilling contractors.",
+      "contact": "Jay Reynolds for add-on acquisition opportunities"
+    },
+    {
+      "name": "OPEXUS",
+      "status": "Realized. Acquired by an affiliate of Thoma Bravo. Gemspring maintains a minority investment in the business.",
+      "sector": "Software",
+      "investment_date": "November 2021",
+      "headquarters": "Washington, D.C.",
+      "website": "https://www.opexustech.com/",
+      "description": "OPEXUS (f/k/a AINS) is a leading provider of case management software solutions and IT services for government agencies and other public sector organizations. The OPEXUS software enables organizations to streamline and automate workflows across a wide variety of use cases, spanning FOIA (Freedom of Information Act), audits, investigations, human resources, and contract management.",
+      "contact": null
+    },
+    {
+      "name": "Outform",
+      "status": "Realized",
+      "sector": "Business Services",
+      "investment_date": "July 2019",
+      "headquarters": "Chicago, IL",
+      "website": "http://www.outform.com",
+      "description": "Outform (f/k/a Rapid Displays) is a leading provider of technology infused, end-to-end custom merchandising solutions for point-of-purchase displays, including creative design, engineering, prototyping, production, and logistics. Outform serves a diverse range of retailers and consumer brands, and the Company's international footprint throughout the U.S. as well as in Europe, Israel, and China enables a one-stop global execution for customers.",
+      "contact": null
+    },
+    {
+      "name": "Radancy",
+      "status": "Acquired by an affiliate of New Mountain Capital. Gemspring maintains a minority investment in the business.",
+      "sector": "Software and Tech Enabled Services",
+      "investment_date": "April 2018",
+      "headquarters": "New York, NY",
+      "website": "https://www.radancy.com/",
+      "description": "Radancy (f/k/a TMP Worldwide) is a global talent technology leader focused on intelligently solving the most critical challenges for employers and delivering results that strengthen their organizations. Through its unified Platform, augmented by rich data and deep industry expertise, Radancy is revolutionizing how employers attract and hire the talent they need.",
+      "contact": "Chirag Hirawat for add-on acquisition opportunities"
+    },
+    {
+      "name": "Residence",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "June 2025",
+      "headquarters": "Los Angeles, CA",
+      "website": "http://www.residence.co/",
+      "description": "Residence is a global network of creative companies united by a shared commitment to craft, community, and innovation. Its brands include BUCK, VTProDesign, Part and Sum, Giant Ant, Wild, and a group of community platforms that support and amplify creative talent, including It's Nice That, Creative Lives in Progress, and If You Could. Together, these companies offer deep expertise across branding, design, technology, strategy, and content for a broad range of Fortune 100 companies across sectors.",
+      "contact": "Zubin Malkani for add-on acquisition opportunities"
+    },
+    {
+      "name": "ROR Partners",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "November 2022",
+      "headquarters": "Las Vegas, NV",
+      "website": "http://www.rorpartners.com",
+      "description": "ROR is a leading, tech-enabled provider of omni-channel marketing services to location-based businesses in the US. ROR leverages proprietary algorithms and unique data sets to optimize marketing placement and audiences to drive exceptional return on advertising spend for its clients.",
+      "contact": "Zubin Malkani for add-on acquisition opportunities"
+    },
+    {
+      "name": "Security 101",
+      "status": "Active",
+      "sector": "Facility Services",
+      "investment_date": "December 2021",
+      "headquarters": "West Palm Beach, FL",
+      "website": "http://www.security101.com",
+      "description": "Security 101 is a leading provider of integrated security solutions to a diverse set of customers. The Company delivers a full-service offering of security services and products including the design, installation, and maintenance of access control, video surveillance, intrusion detection, and visitor management solutions. Security 101 has a national presence and focuses on key end markets including healthcare, education, critical infrastructure, government and commercial facilities.",
+      "contact": "Alex Shakibnia for add-on acquisition opportunities"
+    },
+    {
+      "name": "Shrieve Chemical Company",
+      "status": "Active",
+      "sector": "Industrial Services",
+      "investment_date": "December 2019",
+      "headquarters": "The Woodlands, TX",
+      "website": "https://www.shrieve.com/",
+      "description": "Shrieve is a value-added marketer of industrial chemicals, performance fluids and specialty lubricants. The company markets and sells over 700 products into more than 40 countries with support from manufacturing and research and development facilities in North America and Asia. Since its founding in 1978, Shrieve has been known for its market knowledge, consistency of supply, exceptional customer support and service, broad product slate and logistics capabilities.",
+      "contact": "Geoff Broglio for add-on acquisition opportunities"
+    },
+    {
+      "name": "Sigga Technologies",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "December 2020",
+      "headquarters": "Sugar Land, TX",
+      "website": "https://www.sigga.com/",
+      "description": "Sigga is a leading provider of Enterprise Asset Management (\"EAM\") software, offering a comprehensive suite of solutions that fully integrate with SAP and enable asset-intensive businesses to more efficiently manage their maintenance and repair operations. Sigga's success has been driven by its superior, purpose-built technology that is designed to directly address the needs of maintenance personnel and has been refined through Sigga's two decades of experience in the EAM space.",
+      "contact": "Stephen Reynolds for add-on acquisition opportunities"
+    },
+    {
+      "name": "Sitemetric",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "January 2025",
+      "headquarters": "Houston, Texas",
+      "website": "https://www.sitemetric.com/",
+      "description": "Sitemetric is a leading provider of jobsite security, safety, and workforce management solutions for the construction industry. Its comprehensive platform, which combines proprietary software with integrated hardware and service components, empowers general contractors and site owners with real-time insights into onsite personnel access, supports adherence to critical safety and security standards, and drives workforce productivity.",
+      "contact": "D.J. Andrzejewski for add-on acquisition opportunities"
+    },
+    {
+      "name": "Skyline Displays",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "January 2020",
+      "headquarters": "Eagan, MN",
+      "website": "https://www.skyline.com/",
+      "description": "Skyline Displays is a leading provider of displays, exhibits and services for trade shows and large corporate events. It is a vertically integrated business with exhibit and display design and manufacturing capabilities as well as asset management, installation and dismantling, and equipment rental services. Skyline's customers are seamlessly served across the United States and internationally through its network of more than 75 locations, including 27 Skyline-owned retail centers, four regional service centers, and 45 independent dealers.",
+      "contact": "Kristin Steen for add-on acquisition opportunities"
+    },
+    {
+      "name": "Sparkstone Electrical Group",
+      "status": "Realized",
+      "sector": "Specialty Manufacturing",
+      "investment_date": "January 2023",
+      "headquarters": "Elmhurst, IL",
+      "website": "https://www.sparkstone.com/",
+      "description": "Founded in 1936, Sparkstone Electrical Group (f/k/a Chicago Switchboard) is a specialty manufacturer of custom-built electrical power distribution equipment. Sparkstone is a marketplace leader in providing switchgears, switchboards, panel boards and other electrical distribution equipment to commercial, institutional, infrastructure and manufacturing clients.",
+      "contact": null
+    },
+    {
+      "name": "Telna Inc.",
+      "status": "Active",
+      "sector": "Software",
+      "investment_date": "May 2024",
+      "headquarters": "Toronto, Canada",
+      "website": "https://www.telna.com/",
+      "description": "Telna is a leading provider of eSIM connectivity solutions for roaming and IoT, enabling mobile devices to switch carrier networks without the need for physical SIM cards. Its software management platform, combined with a data connectivity network that integrates with over 800 telecom carriers worldwide, ensures that Telna's customers can provide reliable connectivity to their mobile users.",
+      "contact": "Michael Fan for add-on acquisition opportunities"
+    },
+    {
+      "name": "Therma Holdings",
+      "status": "Realized. Acquired by an affiliate of The Blackstone Group.",
+      "sector": "Facility Services",
+      "investment_date": "June 2017",
+      "headquarters": "San Jose, CA",
+      "website": "https://www.therma.com/",
+      "description": "Therma Holdings is a full-service, design-build mechanical and electrical solutions provider that focuses on complex HVAC systems, high purity process piping and process controls. Primary customers are in the bio-pharmaceutical, semiconductor, data center, electronics, education and internet/software industries. Services include design, installation and maintenance of HVAC and energy efficiency systems, piping for water, gas, lab waste, compressed air and other processes, air balancing, modular skids, building information modeling and custom fabrication.",
+      "contact": null
+    },
+    {
+      "name": "Valant Medical Solutions",
+      "status": "Realized. Acquired by an affiliate of Resurgens Technology Partners.",
+      "sector": "Software",
+      "investment_date": "April 2019",
+      "headquarters": "Seattle, WA",
+      "website": "https://valant.com/",
+      "description": "Valant is a leading provider of electronic health record and practice management software for the behavioral health market. Built with the specific needs of mental health professionals in mind, the company's cloud-based software enables practitioners to efficiently schedule, document, and bill patients from a single, seamlessly integrated offering. Valant serves over 2,000 private practices and 12,000 behavioral health professionals across the United States.",
+      "contact": null
+    },
+    {
+      "name": "Wireless Vision",
+      "status": "Active",
+      "sector": "Business Services",
+      "investment_date": "December 2020",
+      "headquarters": "Bloomfield Hills, MI",
+      "website": "https://www.wirelessvision.com/",
+      "description": "Wireless Vision is the largest T-Mobile Exclusive Retailer in the country, operating more than 600 T-Mobile-branded retail stores in 27 states. Established in 2004 and based in Bloomfield Hills, Michigan, the company is dedicated to providing the finest-quality products and highest level of service to its customers.",
+      "contact": "Geoff Broglio for add-on acquisition opportunities"
+    },
+    {
+      "name": "Zavation",
+      "status": "Active",
+      "sector": "Healthcare",
+      "investment_date": "June 2021",
+      "headquarters": "Flowood, MS",
+      "website": "http://www.zavation.com",
+      "description": "Headquartered in Flowood, Mississippi, Zavation designs and manufactures a comprehensive portfolio of spinal hardware and biologics that provide medical solutions to improve and enhance quality of life for patients around the world. The company serves nearly 400 hospitals and ambulatory surgical centers through a network of over 300 distributors and approximately 100 employees.",
+      "contact": "Chirag Hirawat for add-on acquisition opportunities"
+    }
+  ],
+  "metadata": {
+    "team": {
+      "total_members": 68,
+      "by_title": {
+        "founder_ceo": 1,
+        "managing_directors": 22,
+        "principals": 7,
+        "directors": 8,
+        "vice_presidents": 12,
+        "senior_associates": 8,
+        "associates": 8,
+        "analysts": 1,
+        "executive_assistants": 3
+      },
+      "specializations": [
+        "Portfolio Operations",
+        "Business Development",
+        "Research",
+        "Capital Markets",
+        "Investor Relations",
+        "Operations",
+        "Fund Finance",
+        "People & Performance",
+        "Strategy & Research",
+        "Finance"
+      ]
+    },
+    "portfolio": {
+      "total_companies": 35,
+      "active_companies": 25,
+      "realized_companies": 10,
+      "sectors": [
+        "Business Services",
+        "Software",
+        "Industrial Services",
+        "Specialty Manufacturing",
+        "Facility Services",
+        "Financial Services",
+        "Healthcare",
+        "Insurance Services",
+        "Tech-Enabled Services",
+        "Software and Tech Enabled Services"
+      ]
+    },
+    "extraction_date": "2025-06-28"
+  }
+}

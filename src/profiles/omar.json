@@ -1,0 +1,13 @@
+{
+  "username": "ashton",
+  "displayName": "Ashton Hall",
+  "avatar": "/headshots/ashton.webp",
+  "defaultModule": "memoEditor",
+  "defaultRole": "partner",
+  "allowedModules": ["memoEditor", "dealIntake", "adminConsole"],
+  "allowedRolesByModule": {
+    "memoEditor": ["partner", "executive"],
+    "dealIntake": ["vpPrincipal", "partnerExec"],
+    "adminConsole": ["partnerExec"]
+  }
+}

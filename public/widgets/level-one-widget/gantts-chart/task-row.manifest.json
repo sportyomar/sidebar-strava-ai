@@ -1,0 +1,40 @@
+{
+  "manifestType": "component",
+  "componentName": "TaskRow",
+  "version": "1.0.0",
+  "description": "Individual task row with label and timeline slot",
+
+  "props": {
+    "taskName": { "type": "string", "required": true },
+    "taskId": { "type": "string", "required": true },
+    "category": { "type": "string", "required": false }
+  },
+
+  "styling": {
+    "container": {
+      "display": "grid",
+      "gridTemplateColumns": "200px 1fr",
+      "minHeight": "2.5rem",
+      "alignItems": "center",
+      "borderBottom": "1px solid #f3f4f6"
+    },
+    "taskLabel": {
+      "padding": "0.5rem",
+      "fontSize": "0.875rem",
+      "color": "#374151",
+      "borderRight": "1px solid #e5e7eb",
+      "backgroundColor": "#ffffff"
+    },
+    "timelineSlot": {
+      "position": "relative",
+      "padding": "0.5rem",
+      "backgroundColor": "#ffffff"
+    }
+  },
+
+  "slots": {
+    "timeline": {
+      "description": "Where the gantt bar will be rendered"
+    }
+  }
+}

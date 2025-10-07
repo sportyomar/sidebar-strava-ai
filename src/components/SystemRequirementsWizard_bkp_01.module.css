@@ -1,0 +1,530 @@
+/* SystemRequirementsWizard.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
+  padding: 2rem;
+}
+
+.card {
+  max-width: 48rem;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* Step Navigation */
+.stepNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.stepButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stepButtonCurrent {
+  background: #3b82f6;
+  color: white;
+}
+
+.stepButtonCompleted {
+  background: #10b981;
+  color: white;
+}
+
+.stepButtonCompleted:hover {
+  background: #059669;
+}
+
+.stepButtonPartial {
+  background: #fbbf24;
+  color: #1f2937;
+}
+
+.stepButtonPartial:hover {
+  background: #f59e0b;
+}
+
+.stepButtonPending {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.stepButtonPending:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.stepButtonPending:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.stepArrow {
+  color: #94a3b8;
+  padding: 0 0.5rem;
+}
+
+/* Navigation */
+.navigationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topNavigation {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bottomNavigation {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backButton {
+  color: #475569;
+  background: transparent;
+}
+
+.backButton:hover:not(.navButtonDisabled) {
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+.nextButton {
+  background: #3b82f6;
+  color: white;
+}
+
+.nextButton:hover {
+  background: #2563eb;
+}
+
+.completeButton {
+  background: #10b981;
+  color: white;
+}
+
+.navButtonDisabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+  background: #e2e8f0;
+}
+
+/* Step Content */
+.stepContent {
+  margin-bottom: 2rem;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+/* Template Suggestion */
+.templateSuggestion {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  border-radius: 0.5rem;
+}
+
+.templateSuggestionContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.templateSuggestionTitle {
+  font-weight: 600;
+  color: #065f46;
+}
+
+.templateSuggestionDescription {
+  font-size: 0.875rem;
+  color: #047857;
+}
+
+.templateSuggestionActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.useTemplateButton {
+  padding: 0.5rem 1rem;
+  background: #059669;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.useTemplateButton:hover {
+  background: #047857;
+}
+
+.continueManuallyButton {
+  padding: 0.5rem 1rem;
+  color: #059669;
+  border: 1px solid #059669;
+  background: transparent;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.continueManuallyButton:hover {
+  background: #ecfdf5;
+}
+
+/* Template Selection */
+.templateSelection {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 0.5rem;
+}
+
+.templateSelectionTitle {
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.templateSelectionOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.templateOption {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.templateOption:hover {
+  background: #eff6ff;
+}
+
+.templateOptionName {
+  font-weight: 500;
+  color: #1e40af;
+}
+
+.templateOptionDescription {
+  font-size: 0.875rem;
+  color: #2563eb;
+}
+
+.skipAllButton {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skipAllButton:hover {
+  background: #e2e8f0;
+}
+
+/* Field Components */
+.fieldContainer {
+  margin-bottom: 2rem;
+}
+
+.fieldHeader {
+  margin-bottom: 1rem;
+}
+
+.fieldHeaderSkipped {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.fieldTitleSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.fieldLabel {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.fieldLabelSkipped {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.selectedIndicator {
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.skippedIndicator {
+  color: #ea580c;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.skipButton {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.skipButton:hover {
+  color: #374151;
+}
+
+.configureButton {
+  font-size: 0.875rem;
+  color: #2563eb;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.configureButton:hover {
+  color: #1d4ed8;
+}
+
+.fieldDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Options */
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.optionButton {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.optionButton:hover {
+  border-color: #d1d5db;
+}
+
+.optionButtonSelected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.optionLabel {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.showMoreButton {
+  width: 100%;
+  padding: 0.75rem;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.showMoreButton:hover {
+  background: #f9fafb;
+}
+
+.edgeOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.showFewerButton {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.showFewerButton:hover {
+  color: #374151;
+}
+
+/* Status Summary */
+.statusSummary {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.statusTitle {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.statusSection {
+  margin-bottom: 0.75rem;
+}
+
+.statusSection:last-child {
+  margin-bottom: 0;
+}
+
+.selectedHeader {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+.skippedHeader {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #c2410c;
+  margin-bottom: 0.5rem;
+}
+
+.statusList {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.statusItem {
+  margin-bottom: 0.25rem;
+}
+
+.statusFieldName {
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .stepNavigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .stepButton {
+    width: 100%;
+  }
+
+  .stepArrow {
+    transform: rotate(90deg);
+  }
+
+  .templateSuggestionContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .templateSuggestionActions {
+    width: 100%;
+  }
+
+  .useTemplateButton,
+  .continueManuallyButton {
+    flex: 1;
+  }
+}

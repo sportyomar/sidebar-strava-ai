@@ -1,0 +1,70 @@
+import React, { useEffect, useState } from 'react';
+import styles from './GoogleDriveConnector.module.css';
+
+export default function GoogleDriveConnector() {
+  const [files, setFiles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [mappings, setMappings] = useState({});
+  const categories = ['Board Reports', 'Financial Data', 'Legal Documents'];
+
+  useEffect(() => {
+    fetch('http://localhost:5002/api/drive/list', { credentials: 'include' })
+      .then(res => res.json())
+      .then(data => {
+        setFiles(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to load drive files:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  const handleMappingChange = (fileId, category) => {
+    setMappings(prev => ({ ...prev, [fileId]: category }));
+  };
+
+  if (loading) return <div className={styles.loading}>Loading Google Drive files...</div>;
+
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Google Drive Connector</h1>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Modified</th>
+            <th>Type</th>
+            <th>Map to Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {files.map(file => (
+            <tr key={file.id}>
+              <td>{file.name}</td>
+              <td>{new Date(file.modifiedTime).toLocaleString()}</td>
+              <td>{file.mimeType}</td>
+              <td>
+                <select
+                  value={mappings[file.id] || ''}
+                  onChange={e => handleMappingChange(file.id, e.target.value)}
+                  className={styles.select}
+                >
+                  <option value="">Select Category</option>
+                  {categories.map(cat => (
+                    <option key={cat} value={cat}>{cat}</option>
+                  ))}
+                </select>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div className={styles.mappingsBox}>
+        <h2>Current Mappings</h2>
+        <pre>{JSON.stringify(mappings, null, 2)}</pre>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "columns": [
+      {
+        "key": "string",
+        "label": "string",
+        "type": "text|currency|percentage"
+      }
+    ],
+    "filter": "string"
+  },
+  "example": {
+    "columns": [
+      {"key": "name", "label": "Company", "type": "text"},
+      {"key": "actual_revenue", "label": "Revenue", "type": "currency"},
+      {"key": "plan_variance_percent", "label": "vs Plan", "type": "percentage"}
+    ],
+    "filter": "variance_flag === 'high_negative' || cash_flow_status === 'Negative'"
+  },
+  "bindings": {
+    "data": "filteredCompanies",
+    "onClick": "setSelectedCompany",
+    "companies": "portfolio_companies array"
+  }
+}

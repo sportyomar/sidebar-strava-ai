@@ -1,0 +1,17 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "FundComparisonTable",
+      "settings": {
+        "funds": "{{fundData}}"
+      }
+    },
+    {
+      "blockKind": "MetricCard",
+      "settings": {
+        "title": "Portfolio IRR",
+        "amount": "{{fundSummary.portfolioIRR}}"
+      }
+    }
+  ]
+}

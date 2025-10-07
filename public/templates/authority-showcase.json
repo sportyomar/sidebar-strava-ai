@@ -1,0 +1,136 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "HeroIntroCard",
+      "settings": {
+        "title": "{{company.heroTitle}}",
+        "subtitle": "{{company.heroSubtitle}}",
+        "companyName": "{{company.name}}",
+        "tagline": "{{company.tagline}}",
+        "backgroundGradient": "financial-premium",
+        "animation": "fadeInUp"
+      }
+    },
+    {
+      "blockKind": "MarketProblemShowcase",
+      "settings": {
+        "title": "{{marketProblems.title}}",
+        "subtitle": "{{marketProblems.subtitle}}",
+        "problems": "{{marketProblems.criticalIssues}}",
+        "visualStyle": "crisis-red",
+        "animation": "countUp"
+      }
+    },
+    {
+      "blockKind": "CompanyCredentialsPanel",
+      "settings": {
+        "title": "{{credentials.title}}",
+        "subtitle": "{{credentials.subtitle}}",
+        "credentials": [
+          {
+            "metric": "{{company.clientCount}}",
+            "label": "PE Firms",
+            "description": "Managing {{company.assetsUnderManagement}} in assets on our platform"
+          },
+          {
+            "metric": "{{company.yearsInBusiness}} Years",
+            "label": "Market Leadership",
+            "description": "{{credentials.marketLeadershipNote}}"
+          },
+          {
+            "metric": "{{platform.automationRate}}%",
+            "label": "Process Automation",
+            "description": "{{credentials.automationDescription}}"
+          },
+          {
+            "metric": "{{platform.uptimeSLA}}%",
+            "label": "Uptime SLA",
+            "description": "{{credentials.reliabilityNote}}"
+          }
+        ],
+        "teamHighlight": "{{credentials.teamCredentials}}",
+        "visualStyle": "authority-blue"
+      }
+    },
+    {
+      "blockKind": "DomainExpertiseMatrix",
+      "settings": {
+        "title": "{{expertise.title}}",
+        "subtitle": "{{expertise.subtitle}}",
+        "expertiseAreas": "{{expertise.roleSpecificSolutions}}",
+        "visualStyle": "expertise-gradient"
+      }
+    },
+    {
+      "blockKind": "SolutionDifferentiator",
+      "settings": {
+        "title": "{{solution.title}}",
+        "subtitle": "{{solution.subtitle}}",
+        "beforeAfter": {
+          "before": {
+            "title": "{{solution.beforeState.title}}",
+            "problems": "{{solution.beforeState.problems}}",
+            "cost": "{{computed: formatCurrency(solution.beforeState.annualCost)}}"
+          },
+          "after": {
+            "title": "{{solution.afterState.title}}",
+            "benefits": "{{solution.afterState.benefits}}",
+            "value": "{{computed: formatCurrency(solution.afterState.annualValue)}}"
+          }
+        },
+        "uniqueAdvantages": "{{solution.competitiveAdvantages}}"
+      }
+    },
+    {
+      "blockKind": "TechnologyShowcase",
+      "settings": {
+        "title": "{{technology.title}}",
+        "subtitle": "{{technology.subtitle}}",
+        "technicalHighlights": "{{technology.coreCapabilities}}",
+        "architectureVisualization": "technical-depth"
+      }
+    },
+    {
+      "blockKind": "AIFutureReadiness",
+      "settings": {
+        "title": "{{ai.title}}",
+        "subtitle": "{{ai.subtitle}}",
+        "aiCapabilities": "{{ai.capabilities}}",
+        "futureProofEvidence": "{{ai.futureProofStatement}}"
+      }
+    },
+    {
+      "blockKind": "TrustIndicators",
+      "settings": {
+        "title": "{{trust.title}}",
+        "subtitle": "{{trust.subtitle}}",
+        "trustMetrics": "{{trust.metrics}}",
+        "clientTestimonials": "{{trust.testimonials}}"
+      }
+    },
+    {
+      "blockKind": "CallToActionPanel",
+      "settings": {
+        "title": "{{cta.title}}",
+        "subtitle": "{{cta.subtitle}}",
+        "primaryAction": "{{cta.primaryAction}}",
+        "secondaryAction": "{{cta.secondaryAction}}",
+        "urgencyStatement": "{{cta.urgencyMessage}}",
+        "contactInfo": "{{company.executiveContact}}"
+      }
+    }
+  ],
+  "realTimeConfig": {
+    "updateFrequency": "5000ms",
+    "endpoints": {
+      "companyMetrics": "/api/company/live-metrics",
+      "clientTestimonials": "/api/testimonials/featured"
+    }
+  },
+  "conditionalStyling": {
+    "platform.maintenanceMode === true": {
+      "opacity": "0.9",
+      "overlay": "Platform Maintenance in Progress"
+    }
+  }
+}

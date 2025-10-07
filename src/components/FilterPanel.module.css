@@ -1,0 +1,34 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './FilterPanel.module.css';
+
+export default function FilterPanel({ availableFilters, selectedFilters, onFilterChange }) {
+  return (
+    <div className={styles.filterBar}>
+      {availableFilters.map(filter => (
+        <select
+          key={filter.type}
+          value=""
+          onChange={(e) => onFilterChange(filter.type, e.target.value)}
+          className={styles.filterDropdown}
+        >
+          <option value="">Select {filter.label}</option>
+          {filter.options.map(option => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      ))}
+      <button className={styles.presetButton} onClick={() => onFilterChange('quick', 'problemsOnly')}>
+        Problems Only
+      </button>
+    </div>
+  );
+}
+
+FilterPanel.propTypes = {
+  availableFilters: PropTypes.array.isRequired,
+  selectedFilters: PropTypes.object.isRequired,
+  onFilterChange: PropTypes.func.isRequired
+};

@@ -1,0 +1,175 @@
+/* Chat Interface Container */
+.chatInterface {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Chat Content Container (sidebar + chat area) */
+.chatContent {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Chat Area */
+.chatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Chat Header */
+.chatHeader {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.modelInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modelName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.modelProvider {
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* Messages Area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.message {
+  margin-bottom: 20px;
+}
+
+.messageUser {
+  background: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.messageBot {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.messageMetadata {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.messageMetadata span {
+  background: #f8fafc;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Input Form */
+.inputForm {
+  display: flex;
+  padding: 16px 20px;
+  border-top: 1px solid #e2e8f0;
+  background: #ffffff;
+  gap: 12px;
+}
+
+.promptInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+.promptInput:focus {
+  outline: none;
+  border-color: #64748b;
+  box-shadow: 0 0 0 2px rgba(100, 116, 139, 0.1);
+}
+
+.promptInput:disabled {
+  background: #f9fafb;
+  color: #6b7280;
+}
+
+.sendButton {
+  padding: 12px 24px;
+  background: #64748b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #475569;
+}
+
+.sendButton:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chatInterface {
+    height: auto;
+  }
+
+  .chatContent {
+    flex-direction: column;
+  }
+
+  .messages {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatContent {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "username": "ishowspeed",
+  "displayName": "Darren Watkins Jr.",
+  "avatar": "/headshots/ishowspeed.jpg",
+  "defaultModule": "utilities",
+  "defaultRole": "engineer",
+  "allowedModules": [
+    "utilities",
+    "memoEditor",
+    "dealIntake",
+    "metrics",
+    "forecasts",
+    "privacyCenter",
+    "domainAdapter",
+    "dataIntegration",
+    "connectors"
+  ],
+  "allowedRolesByModule": {
+    "connectors": ["consultant"],
+    "utilities": ["admin"],
+    "memoEditor": ["consultant"],
+    "dealIntake": ["consultant", "vpPrincipal", "partnerExec"],
+    "metrics": ["consultant"],
+    "forecasts": ["consultant"],
+    "domainAdapter": ["consultant"],
+    "privacyCenter": ["consultant"],
+    "dataIntegration": ["consultant"]
+  }
+}

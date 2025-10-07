@@ -1,0 +1,460 @@
+/* DocumentationRibbon.module.css */
+
+.ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 48px;
+  gap: 16px;
+}
+
+/* Left Section */
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modeToggle {
+  display: flex;
+  background: #f3f4f6;
+  border-radius: 6px;
+  padding: 2px;
+  gap: 1px;
+}
+
+.modeButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.modeButton:hover:not(:disabled) {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.modeButton.active {
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modeIcon {
+  font-size: 14px;
+}
+
+/* Markdown Tools */
+.markdownTools {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.ribbonGroup {
+  display: flex;
+  gap: 2px;
+}
+
+.ribbonButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #ffffff;
+  color: #6b7280;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.ribbonButton:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.ribbonButton:active {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.ribbonButton:disabled {
+  background: #f9fafb;
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.ribbonButton:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.ribbonSeparator {
+  width: 1px;
+  height: 24px;
+  background: #e5e7eb;
+  margin: 0 8px;
+}
+
+.documentActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.actionButton:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.saveButton {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.saveButton:hover:not(:disabled) {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.publishButton {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.publishButton:hover:not(:disabled) {
+  background: #ecfdf5;
+  border-color: #059669;
+}
+
+.actionIcon {
+  font-size: 14px;
+}
+
+/* Center Section */
+.centerSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.documentStatus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #f9fafb;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+}
+
+.statusIcon {
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.statusIcon.unsaved {
+  color: #f59e0b;
+  animation: pulse 2s infinite;
+}
+
+.statusIcon.saving {
+  color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+.statusText {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.documentTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 250px;
+}
+
+.titleText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  truncate: true;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.documentType {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.noDocument {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.noDocText {
+  font-size: 13px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewControls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.viewButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.viewButton:hover:not(:disabled) {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.viewButton.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.viewButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.viewIcon {
+  font-size: 14px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #f9fafb;
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.authPrompt {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.authText {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .ribbon {
+    gap: 8px;
+  }
+
+  .leftSection {
+    gap: 8px;
+  }
+
+  .markdownTools {
+    gap: 2px;
+    padding: 2px 4px;
+  }
+
+  .ribbonSeparator {
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ribbon {
+    padding: 6px 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .leftSection {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .modeButton {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 60px;
+  }
+
+  .markdownTools {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 8px;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .actionButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .documentTitle .titleText {
+    max-width: 150px;
+  }
+
+  .userName {
+    max-width: 80px;
+  }
+
+  .viewButton {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ribbon {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .centerSection {
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 8px;
+    max-width: none;
+  }
+
+  .markdownTools {
+    order: 3;
+    margin-top: 8px;
+  }
+
+  .documentActions .actionButton span {
+    display: none;
+  }
+
+  .viewControls .viewButton span:not(.viewIcon) {
+    display: none;
+  }
+
+  .ribbonButton {
+    width: 28px;
+    height: 28px;
+  }
+}

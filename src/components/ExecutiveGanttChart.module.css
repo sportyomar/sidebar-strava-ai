@@ -1,0 +1,145 @@
+import React from 'react';
+import styles from './ExecutiveGanttChart.module.css';
+import { ganttData } from './ganttUtils';
+
+const ExecutiveGanttChart = ({ className = '' }) => {
+  // Calculate bar positioning
+  const getBarStyle = (start, duration, color) => ({
+    left: `${((start - 1) / 21) * 100}%`,
+    width: `${(duration / 21) * 100}%`,
+    backgroundColor: color
+  });
+
+  const dayLabels = Array.from({ length: 21 }, (_, i) => i + 1);
+
+  return (
+    <div className={`${styles.container} ${className}`}>
+      {/* Document Header */}
+      <div className={styles.header}>
+        <div className={styles.meta}>
+          {ganttData.meta}
+        </div>
+        <h1 className={styles.title}>
+          {ganttData.title}
+        </h1>
+        <p className={styles.subtitle}>
+          {ganttData.subtitle}
+        </p>
+      </div>
+
+      {/* Chart Container */}
+      <div className={styles.chartContainer}>
+        {/* Chart Header */}
+        <div className={styles.chartHeader}>
+          <div className={styles.activitiesHeader}>
+            Project Activities
+          </div>
+          <div className={styles.weekHeaders}>
+            {['Week 1 (Days 1-7)', 'Week 2 (Days 8-14)', 'Week 3 (Days 15-21)'].map(week => (
+              <div key={week} className={styles.weekHeader}>
+                {week}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Day Headers */}
+        <div className={styles.dayHeaderRow}>
+          <div className={styles.timelineLabel}>
+            Timeline
+          </div>
+          <div className={styles.dayHeaders}>
+            {dayLabels.map(day => (
+              <div
+                key={day}
+                className={`${styles.dayHeader} ${day % 7 === 0 ? styles.weekEnd : ''}`}
+              >
+                {day}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Traditional Consulting Section */}
+        <div className={styles.consultantSection}>
+          <div className={styles.sectionHeader}>
+            <div className={`${styles.sectionLabel} ${styles.consultantLabel}`}>
+              {ganttData.consultant.label}
+            </div>
+            <div></div>
+          </div>
+
+          {ganttData.consultant.tasks.map((task, index) => (
+            <div key={index} className={styles.taskRow}>
+              <div className={styles.taskName}>
+                {task.name}
+              </div>
+              <div className={styles.taskBarContainer}>
+                <div
+                  className={styles.taskBar}
+                  style={getBarStyle(task.start, task.duration, ganttData.consultant.color)}
+                >
+                  <div className={styles.taskBarLabel}>
+                    {task.duration} day{task.duration > 1 ? 's' : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Enhanced Intelligence Section */}
+        <div className={styles.efforaSection}>
+          <div className={styles.sectionHeader}>
+            <div className={`${styles.sectionLabel} ${styles.efforaLabel}`}>
+              {ganttData.effora.label}
+            </div>
+            <div></div>
+          </div>
+
+          {ganttData.effora.tasks.map((task, index) => (
+            <div key={index} className={`${styles.taskRow} ${index === ganttData.effora.tasks.length - 1 ? styles.lastTask : ''}`}>
+              <div className={styles.taskName}>
+                {task.name}
+              </div>
+              <div className={styles.taskBarContainer}>
+                <div
+                  className={styles.taskBar}
+                  style={getBarStyle(task.start, task.duration, ganttData.effora.color)}
+                >
+                  <div className={styles.taskBarLabel}>
+                    {task.duration} day{task.duration > 1 ? 's' : ''}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Executive Analysis */}
+      <div className={styles.analysis}>
+        <div className={styles.analysisHeader}>
+          Executive Analysis
+        </div>
+        <p className={styles.analysisText}>
+          The Gantt chart demonstrates a fundamental shift in resource allocation. Traditional consulting concentrates effort on manual data gathering and validation (Days 2-12), constraining strategic analysis time. Enhanced intelligence methodology front-loads comprehensive market analysis (Days 1-4), enabling sustained strategic focus throughout the remaining timeline and accelerating executive decision-making.
+        </p>
+      </div>
+
+      {/* Methodology Footer */}
+      <div className={styles.footer}>
+        <div className={styles.footerTitle}>
+          Timeline Methodology:
+        </div>
+        <p className={styles.footerText}>
+          Project timeline reflects standard executive decision-making processes across Fortune 500 organizations.
+          Traditional consulting methodology based on 500+ project assessments. Enhanced intelligence timeline
+          validated through comparative analysis of AI-augmented strategic consulting engagements.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default ExecutiveGanttChart;

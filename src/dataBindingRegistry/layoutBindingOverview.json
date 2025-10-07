@@ -1,0 +1,242 @@
+{
+  "cross_platform_binding_challenge": {
+    "problem_statement": "Same dashboard data needs to render across platforms with completely different layout paradigms",
+    "platforms": {
+      "web": "CSS flexbox/grid, responsive, interactive",
+      "powerpoint": "Fixed slide dimensions, text boxes, shapes",
+      "pdf": "Page-based, fixed positioning, print optimization",
+      "excel": "Cell-based grid, tabular data, formulas",
+      "google_sheets": "Cell references, conditional formatting",
+      "google_slides": "Slide-based, absolute positioning"
+    }
+  },
+
+  "layout_binding_schema": {
+    "metric_card_cross_platform": {
+      "data_binding": {
+        "title": "Revenue",
+        "amount": "$847M",
+        "trend": "up",
+        "lines": ["data arrays"]
+      },
+      "layout_bindings": {
+        "web": {
+          "container": "flexbox",
+          "position": "relative",
+          "size": "auto",
+          "responsive_breakpoints": ["mobile", "tablet", "desktop"]
+        },
+        "powerpoint": {
+          "slide_position": {"x": 50, "y": 100},
+          "dimensions": {"width": 200, "height": 150},
+          "text_boxes": [
+            {"content": "title", "position": {"x": 10, "y": 10}, "font_size": 16},
+            {"content": "amount", "position": {"x": 10, "y": 40}, "font_size": 24}
+          ],
+          "shapes": [
+            {"type": "rectangle", "position": {"x": 0, "y": 0}, "fill": "#f0f0f0"}
+          ]
+        },
+        "pdf": {
+          "page": 1,
+          "coordinates": {"x": 72, "y": 720},
+          "box_model": {"width": 144, "height": 108},
+          "text_elements": [
+            {"content": "title", "x": 82, "y": 810, "font": "Arial", "size": 12},
+            {"content": "amount", "x": 82, "y": 790, "font": "Arial-Bold", "size": 18}
+          ]
+        },
+        "excel": {
+          "sheet": "Dashboard",
+          "cell_range": "A1:C4",
+          "cells": {
+            "A1": {"content": "title", "format": "header"},
+            "B1": {"content": "amount", "format": "currency"},
+            "A2": {"formula": "=trend_formula", "format": "percentage"}
+          }
+        },
+        "google_slides": {
+          "slide_index": 0,
+          "elements": [
+            {
+              "type": "text_box",
+              "content": "title",
+              "transform": {"scaleX": 1, "scaleY": 1, "translateX": 100, "translateY": 50}
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  "coordinate_system_mappings": {
+    "web_to_powerpoint": {
+      "coordinate_conversion": {
+        "web_viewport": {"width": 1200, "height": 800},
+        "ppt_slide": {"width": 720, "height": 540},
+        "scale_factor": {"x": 0.6, "y": 0.675},
+        "conversion_formula": {
+          "ppt_x": "web_x * 0.6",
+          "ppt_y": "web_y * 0.675"
+        }
+      },
+      "layout_rules": {
+        "metric_cards_row": {
+          "web": "display: flex, justify-content: space-between",
+          "powerpoint": "evenly spaced text boxes across slide width"
+        },
+        "company_table": {
+          "web": "scrollable table component",
+          "powerpoint": "table shape with max 8 rows per slide"
+        }
+      }
+    },
+
+    "web_to_excel": {
+      "grid_mapping": {
+        "metric_cards": {
+          "web": "4 cards in horizontal row",
+          "excel": "A1:D1 with each card in separate column"
+        },
+        "filter_panel": {
+          "web": "sidebar component",
+          "excel": "data validation dropdowns in row 2"
+        },
+        "company_table": {
+          "web": "interactive table with sorting",
+          "excel": "data table starting at A5 with Excel table formatting"
+        }
+      }
+    },
+
+    "responsive_breakpoint_mapping": {
+      "web_mobile": {"width": 320},
+      "web_tablet": {"width": 768},
+      "web_desktop": {"width": 1200},
+      "powerpoint_equivalent": {
+        "mobile": "portrait slide orientation",
+        "tablet": "4:3 aspect ratio slides",
+        "desktop": "16:9 widescreen slides"
+      }
+    }
+  },
+
+  "platform_specific_constraints": {
+    "powerpoint": {
+      "text_box_limitations": "Max characters per text box",
+      "slide_pagination": "Split large tables across multiple slides",
+      "color_palette": "Corporate brand colors only",
+      "font_restrictions": "Arial, Calibri, Times New Roman",
+      "animation_bindings": "Entrance effects for data updates"
+    },
+    "pdf": {
+      "page_breaks": "Content must fit within page boundaries",
+      "print_optimization": "Ensure readability at 300 DPI",
+      "accessibility": "Alt text for all visual elements",
+      "hyperlink_preservation": "Maintain interactive elements where possible"
+    },
+    "excel": {
+      "formula_preservation": "Maintain calculations across platforms",
+      "data_validation": "Dropdown filters must work in Excel",
+      "conditional_formatting": "Status colors translate to Excel rules",
+      "chart_compatibility": "Ensure charts render correctly"
+    },
+    "google_sheets": {
+      "collaboration_features": "Comments and sharing settings",
+      "real_time_updates": "Data refresh mechanisms",
+      "add_on_compatibility": "Third-party integrations",
+      "mobile_optimization": "Touch-friendly interface elements"
+    }
+  },
+
+  "semantic_layout_bindings": {
+    "dashboard_structure": {
+      "header_section": {
+        "semantic_role": "navigation and context",
+        "web": "sticky header with breadcrumbs",
+        "powerpoint": "slide title and subtitle",
+        "pdf": "page header with document title",
+        "excel": "frozen top rows with navigation"
+      },
+      "metrics_overview": {
+        "semantic_role": "key performance indicators",
+        "web": "card grid layout",
+        "powerpoint": "4 shaped text boxes with icons",
+        "pdf": "table with highlighted cells",
+        "excel": "formatted cells with conditional formatting"
+      },
+      "data_tables": {
+        "semantic_role": "detailed company information",
+        "web": "sortable, filterable table",
+        "powerpoint": "formatted table shapes (paginated)",
+        "pdf": "structured table with alternating row colors",
+        "excel": "Excel table with filters and sorting"
+      }
+    }
+  },
+
+  "layout_transformation_rules": {
+    "spatial_relationships": {
+      "adjacency_preservation": "Elements next to each other in web should maintain proximity",
+      "hierarchy_mapping": "Visual hierarchy must translate across platforms",
+      "grouping_logic": "Related elements should be visually grouped consistently"
+    },
+    "content_adaptation": {
+      "text_overflow": {
+        "web": "ellipsis or wrapping",
+        "powerpoint": "auto-resize text box or split content",
+        "pdf": "page break or font size reduction",
+        "excel": "cell wrapping or column width adjustment"
+      },
+      "interactive_elements": {
+        "web": "buttons, dropdowns, modals",
+        "powerpoint": "hyperlinks, action buttons",
+        "pdf": "form fields where supported",
+        "excel": "data validation, hyperlinks"
+      }
+    }
+  },
+
+  "binding_generation_strategies": {
+    "design_tokens_approach": {
+      "spacing_units": "Define consistent spacing that scales across platforms",
+      "typography_scale": "Font sizes that work in all target formats",
+      "color_system": "Brand colors with platform-specific variations",
+      "layout_primitives": "Basic building blocks (card, table, header)"
+    },
+    "template_mapping": {
+      "component_templates": {
+        "metric_card": {
+          "powerpoint_template": "slide_templates/metric_card.potx",
+          "excel_template": "cell_styles/metric_card_format.xlsx",
+          "pdf_template": "layouts/metric_card_pdf.json"
+        }
+      }
+    },
+    "automated_conversion": {
+      "css_to_powerpoint": "Parse CSS styles and convert to PowerPoint formatting",
+      "html_to_pdf": "Use headless browser rendering with print stylesheets",
+      "table_to_excel": "Direct data mapping with preserved formatting"
+    }
+  },
+
+  "practical_implementation": {
+    "multi_platform_config": {
+      "component_definition": {
+        "type": "metric_card",
+        "data_binding": "revenue_card_data",
+        "layout_bindings": {
+          "web": "web_layout_config",
+          "powerpoint": "ppt_layout_config",
+          "pdf": "pdf_layout_config",
+          "excel": "excel_layout_config"
+        }
+      }
+    },
+    "coordinate_translation_engine": {
+      "input": "web component coordinates and dimensions",
+      "output": "platform-specific positioning data",
+      "algorithm": "proportional scaling with platform constraint validation"
+    }
+  }
+}

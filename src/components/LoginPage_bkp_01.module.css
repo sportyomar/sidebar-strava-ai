@@ -1,0 +1,679 @@
+/* LoginPage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Login Card */
+.loginCard {
+  flex: 1;
+  max-width: 480px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.errorMessage {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: #3b82f6;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.forgotLink {
+  font-size: 0.875rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgotLink:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+.footer {
+  text-align: center;
+}
+
+.signupPrompt {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.signupLink {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signupLink:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Side Panel */
+.sidePanel {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidePanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  opacity: 0.1;
+}
+
+.sidePanelContent {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.sidePanelTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.sidePanelSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.features {
+  margin-bottom: 3rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.featureContent h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.featureContent p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quote {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.author {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidePanel {
+    order: -1;
+    min-height: 300px;
+    padding: 2rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 2rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .features {
+    margin-bottom: 2rem;
+  }
+
+  .feature {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .loginCard {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .sidePanel {
+    padding: 1.5rem;
+    min-height: 250px;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.75rem;
+  }
+
+  .formOptions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+
+.containerList {
+  margin-top: 2rem;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.containerListTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.containerListItems {
+  list-style: none;
+  padding-left: 0;
+}
+
+.containerListItems li {
+  margin-bottom: 0.25rem;
+}
+/* Add these new styles to your existing LoginPage.module.css */
+
+/* Single Profile Login Styles */
+.singleProfile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 0;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.profileCard:hover {
+  border-color: #4f46e5;
+  background: #f0f4ff;
+}
+
+.profileImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 16px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.profileEmail {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.removeButton:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.quickSignInButton {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.quickSignInButton:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.quickSignInButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.useAnotherButton {
+  background: transparent;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.useAnotherButton:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Multiple Profiles Login Styles */
+.multiProfiles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.profilesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.profileItem {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.profileItem:hover {
+  border-color: #4f46e5;
+  background: #f0f4ff;
+}
+
+.profileSelector {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.profileImageSmall {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profileDetails {
+  flex: 1;
+}
+
+.profileNameSmall {
+  margin: 0 0 2px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.profileEmailSmall {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.removeButtonSmall {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.removeButtonSmall:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.multiProfileActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.createAccountButton {
+  background: transparent;
+  color: #059669;
+  border: 2px solid #059669;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.createAccountButton:hover {
+  background: #059669;
+  color: white;
+}
+
+/* Loading state improvements */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profileCard {
+    padding: 16px;
+  }
+
+  .profileImage {
+    width: 56px;
+    height: 56px;
+  }
+
+  .profileImageSmall {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profilesList {
+    max-height: 250px;
+  }
+
+  .multiProfileActions {
+    gap: 8px;
+  }
+}
+
+/* Accessibility improvements */
+.profileSelector:focus,
+.quickSignInButton:focus,
+.useAnotherButton:focus,
+.createAccountButton:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.removeButton:focus,
+.removeButtonSmall:focus {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}

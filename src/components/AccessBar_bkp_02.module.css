@@ -1,0 +1,518 @@
+/* AccessBar.module.css */
+.accessFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem; /* Reduced from 0.75rem */
+  width: 100%;
+  min-width: 0; /* Allow flex items to shrink */
+  --control-height: 2rem;
+  /* NO overflow-x - this was causing the dropdown issue */
+}
+
+.leftControls {
+  display: flex;
+  gap: 0.5rem; /* Reduced from 0.75rem */
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* Allow shrinking */
+  /*background-color: #0ea5e9;*/ /* Remove debug color */
+}
+
+.rightControls {
+  display: flex;
+  gap: 0.75rem; /* Slightly reduced from 1rem */
+  align-items: center;
+  flex-shrink: 0; /* Prevent right controls from shrinking */
+  /*background-color: #1e7e34;*/
+}
+
+.accessGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Allow shrinking */
+}
+
+.userAccessGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessGroup select,
+.accessGroup input,
+.accessGroup textarea {
+  padding: 0px 6px;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  height: var(--control-height);
+  min-width: 0; /* Allow shrinking */
+}
+
+/* 3 style */
+
+.accessGroup.project select,
+.accessGroup.module select {
+  min-width: 140px; /* Reduced from 180px */
+  max-width: 180px; /* Reduced from 220px */
+}
+
+/* Make text truncate with ellipsis */
+.accessGroup select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 1. Style */
+
+.headshot {
+  width: var(--control-height);
+  height: var(--control-height);
+  /*width: calc(var(--control-height) * 1.125);*/
+  /*height: calc(var(--control-height) * 1.125);*/
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.userSelector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selectedUser {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  transition: background-color 0.2s ease;
+}
+
+.selectedUser:hover {
+  background: #f5f5f5;
+}
+
+.userName {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.dropdownArrow {
+  font-size: 12px;
+  color: #666;
+}
+
+.userDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e8eaed;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);  /* Match docs menu shadow */
+  z-index: 9999;
+  /*max-height: 200px;*/
+  overflow-y: auto;
+  width: 200px;
+}
+
+.userOption {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-top: 1px solid #e8eaed;
+  z-index: 9999;
+}
+
+.userOption:first-child {
+  border-top: none;
+}
+
+.userOption:hover {
+  background: #f8f9fa;
+}
+
+.userOption.selected {
+  background: #e3f2fd;
+}
+
+.optionAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.optionName {
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.docsToggleContainer {
+  position: relative;
+}
+
+
+/* Documentation Toggle Button Styling */
+.docsToggle, .settingsButton {
+  border: 1px solid #e5e7db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgb(95,99,104);
+  height: var(--control-height);
+  width: var(--control-height);
+}
+
+.settingsButtonContainer {
+  position: relative;
+}
+
+.docsMenu {
+  z-index: 9999;
+  background: white;
+  border:none;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  text-align: left;
+  font-weight: 300;
+  font-size: 0.875rem;
+  position: absolute;
+  top: 100%;
+  right:0;
+  /*padding: 0.5rem 0;*/
+  min-width: 275px;
+}
+
+
+
+.docsMenu button {
+  border-top: 1px solid #e8eaed;
+  background: none;
+  color: #3c4043;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.docsMenu button:first-child {
+  border-top: none;  /* Remove border from last button */
+}
+
+/* Add these styles to AccessBar.module.css */
+
+/* Access Warning System */
+.accessWarning {
+  position: fixed;
+  top: 60px; /* Adjust based on your header height */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-width: 600px;
+  z-index: 9999;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.warningHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #92400e;
+}
+
+.warningIcon {
+  width: 16px;
+  height: 16px;
+  color: #f59e0b;
+}
+
+.warningClose {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #92400e;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.warningClose:hover {
+  background: #fbbf24;
+}
+
+.warningContent {
+  color: #92400e;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.warningItem {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fbbf24;
+}
+
+.warningItem:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.warningMessage {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.warningSuggestion {
+  font-size: 0.8rem;
+  color: #a16207;
+  font-style: italic;
+}
+
+.warningSuggestions {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #fbbf24;
+}
+
+.suggestionItem {
+  font-size: 0.8rem;
+  color: #a16207;
+  margin-bottom: 4px;
+}
+
+.suggestionItem:before {
+  content: "💡 ";
+  margin-right: 4px;
+}
+
+/* Error state styling for form elements */
+.hasError {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+}
+
+.invalidOption {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Error state for headshot */
+.headshot.hasError {
+  border: 2px solid #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+}
+
+/* Warning state for dropdowns */
+.accessGroup select.hasError {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1);
+}
+
+.accessGroup select.hasError:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Critical error state */
+.criticalError {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+  background-color: #fef2f2;
+}
+
+/* Success state for valid selections */
+.validSelection {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+/* Disabled state for truly inaccessible options */
+.accessGroup select option:disabled {
+  color: #9ca3af;
+  background-color: #f9fafb;
+}
+
+.settingsDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 240px;
+  z-index: 9999;
+  padding: 0.25rem 0;
+}
+
+.settingsOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.settingsOption:hover {
+  background-color: #f5f5f5;
+}
+
+.menuIcon {
+  stroke-width: 1.5;
+}
+
+.notificationsContainer {
+  position: relative;
+}
+
+.notificationsButton {
+  border: 1px solid #e5e7db;
+  border-radius: 50%;
+  background: none;
+  color: rgb(95,99,104);
+  height: var(--control-height);
+  width: var(--control-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.notificationsDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  min-width: 275px;
+  z-index: 1000;
+}
+
+.notificationItem {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #f1f1f1;
+  font-size: 0.875rem;
+}
+
+.notificationItem:first-child {
+  border-top: none;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Infrastructure button - make it more compact */
+.infrastructureSettingsButton {
+  border: 1px solid #e5e7db;
+  border-radius: 4px; /* Less rounded for compactness */
+  background: none;
+  color: rgb(95,99,104);
+  height: var(--control-height);
+  padding: 0 0.5rem; /* Reduced padding */
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* Reduced gap */
+  cursor: pointer;
+  font-size: 0.8rem; /* Smaller font */
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .accessFlex {
+    gap: 0.375rem;
+  }
+
+  .leftControls {
+    gap: 0.375rem;
+  }
+
+  .rightControls {
+    gap: 0.5rem;
+  }
+
+  .accessGroup.project select,
+  .accessGroup.module select {
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .accessGroup.project select,
+  .accessGroup.module select {
+    min-width: 100px;
+    max-width: 130px;
+  }
+
+  .accessFlex {
+    gap: 0.25rem;
+  }
+
+  .leftControls {
+    gap: 0.25rem;
+  }
+}
+
+/* Alternative: Icon-only version for tight spaces */
+@media (max-width: 1100px) {
+  .infrastructureSettingsButton {
+    padding: 0;
+    width: var(--control-height);
+    justify-content: center;
+  }
+
+  .infrastructureSettingsButton span {
+    display: none; /* Hide text, show only icon */
+  }
+}

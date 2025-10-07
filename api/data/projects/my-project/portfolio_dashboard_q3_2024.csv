@@ -1,0 +1,13 @@
+Company Name,Sector,Performance Tier,Cash Flow Status,Plan Variance Percent,Variance Flag,Requires Deep Dive,Planned Revenue,Actual Revenue,Revenue Variance Amount
+TechCorp,Technology,Ahead of Plan,Positive,45,high_positive,true,$24M,$34.8M,$10.8M
+RetailCo,Retail,Behind Plan,Positive,-23,high_negative,true,$78M,$60.1M,-$17.9M
+HealthInc,Healthcare,Behind Plan,Positive,-18,outside_range,true,$65M,$53.3M,-$11.7M
+ManufacturePlus,Manufacturing,Ahead of Plan,Positive,22,high_positive,true,$45M,$54.9M,$9.9M
+FinanceFirst,Financial Services,On Track,Positive,8,within_range,false,$52M,$56.2M,$4.2M
+TechSolutions,Technology,Ahead of Plan,Positive,16,outside_range,true,$38M,$44.1M,$6.1M
+Healthcare Partners,Healthcare,Ahead of Plan,Positive,12,within_range,false,$42M,$47.0M,$5.0M
+RetailMax,Retail,On Track,Positive,5,within_range,false,$58M,$60.9M,$2.9M
+Manufacturing Co,Manufacturing,Ahead of Plan,Positive,19,outside_range,true,$48M,$57.1M,$9.1M
+TechVentures,Technology,Behind Plan,Negative,-28,high_negative,true,$35M,$25.2M,-$9.8M
+ServiceCorp,Financial Services,Behind Plan,Negative,-31,high_negative,true,$41M,$28.3M,-$12.7M
+InnovateLab,Technology,Ahead of Plan,Negative,14,within_range,false,$28M,$31.9M,$3.9M

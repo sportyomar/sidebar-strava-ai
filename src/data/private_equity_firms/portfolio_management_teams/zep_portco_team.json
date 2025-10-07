@@ -1,0 +1,16 @@
+{
+  "company": "Zep",
+  "team_members": [
+    { "name": "Amy Hahn", "title": "Chief Executive Officer" },
+    { "name": "Laura Riquelme", "title": "Chief Financial Officer" },
+    { "name": "Terry Royer", "title": "Chief Value Chain Officer" },
+    { "name": "Tad Schimmelpfenning", "title": "President – Food & Beverage" },
+    { "name": "Bill Moody", "title": "President – Industrial Solutions" },
+    { "name": "Greg Heyer", "title": "President – Retail Sales & Marketing" },
+    { "name": "Ron Wickham", "title": "Auto OEM" },
+    { "name": "Shari Lotz", "title": "Human Resources" },
+    { "name": "Surya Gupta", "title": "Procurement" },
+    { "name": "Kimberly Turner", "title": "Retail Sales" },
+    { "name": "Philip Thonhauser", "title": "CTO & Head of Zep Europe" }
+  ]
+}

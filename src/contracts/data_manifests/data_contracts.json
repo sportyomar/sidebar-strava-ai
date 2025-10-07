@@ -1,0 +1,18 @@
+{
+  "entities": {
+    "user": {
+      "fields": {
+        "id": "integer",
+        "firstName": "string",
+        "email": "string"
+      }
+    },
+    "order": {
+      "fields": {
+        "orderId": "string",
+        "amount": "number",
+        "items": "array"
+      }
+    }
+  }
+}

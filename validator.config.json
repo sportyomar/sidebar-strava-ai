@@ -1,0 +1,21 @@
+{
+  "projectRoot": "/Users/sporty/PycharmProjects/memory_issue/Sidebar/sidebar",
+  "contractsDir": "contracts",
+  "publicDir": "public",
+  "templatesDir": "templates",
+  "dataDir": "data",
+  "blockRulesFile": "platform_manifests/blockKindsConventions.json",
+  "schemaMap": {
+    "layouts": "platform_manifests/layoutNamingConventions.json",
+    "tokens": "platform_manifests/tokensNamingConventions.json",
+    "primitives": "platform_manifests/primitivesNamingConventions.json",
+    "components": "platform_manifests/componentsNamingConventions.json",
+    "themes": "platform_manifests/themesNamingConventions.json",
+    "regions": "platform_manifests/regionsNamingConventions.json"
+  },
+  "validation": {
+    "failOnMissingDefaults": false,
+    "verbose": false,
+    "ignorePatterns": ["node_modules", ".git", "dist", "build"]
+  }
+}

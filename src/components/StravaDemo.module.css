@@ -1,0 +1,50 @@
+.container {
+  width: 65%;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Command Prompt Box - Fixed at Top */
+.commandBox {
+  flex-shrink: 0;
+  background-color: white;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.commandContent {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Canvas Box - Fixed Size, No Scrolling */
+.canvasBox {
+  flex: 1;
+  overflow: hidden;
+  background-color: transparent;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.canvasContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  padding: 0 !important;
+  border: 3px solid red;
+}
+
+@keyframes slideInCard {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

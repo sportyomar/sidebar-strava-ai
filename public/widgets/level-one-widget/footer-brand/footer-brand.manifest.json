@@ -1,0 +1,46 @@
+{
+  "manifestType": "component",
+  "componentName": "FooterBrand",
+  "version": "1.0.0",
+  "description": "Footer with descriptive text and branding",
+
+  "props": {
+    "text": { "type": "string", "required": true },
+    "brandName": { "type": "string", "required": true },
+    "pageNumber": { "type": "number", "required": false }
+  },
+
+  "styling": {
+    "container": {
+      "display": "flex",
+      "justifyContent": "space-between",
+      "alignItems": "center",
+      "padding": "1rem 0",
+      "borderTop": "1px solid #e5e7eb",
+      "marginTop": "2rem"
+    },
+    "text": {
+      "fontSize": "0.75rem",
+      "color": "#6b7280",
+      "maxWidth": "70%"
+    },
+    "brand": {
+      "display": "flex",
+      "alignItems": "center",
+      "gap": "0.5rem"
+    },
+    "brandName": {
+      "fontSize": "0.875rem",
+      "fontWeight": "bold",
+      "color": "#1f2937",
+      "backgroundColor": "#000000",
+      "color": "#ffffff",
+      "padding": "0.25rem 0.5rem",
+      "borderRadius": "0.25rem"
+    },
+    "pageNumber": {
+      "fontSize": "0.75rem",
+      "color": "#6b7280"
+    }
+  }
+}

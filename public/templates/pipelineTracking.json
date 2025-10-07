@@ -1,0 +1,30 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "PipelineFunnel",
+      "settings": {
+        "stages": "{{pipelineStages}}"
+      }
+    },
+    {
+      "blockKind": "HorizontalStack",
+      "settings": { "spacing": "2rem" },
+      "containedBlocks": [
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "New Deals",
+            "amount": "{{pipelineMetrics.newDeals}}"
+          }
+        },
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "Avg Deal Size",
+            "amount": "{{pipelineMetrics.avgDealSize}}"
+          }
+        }
+      ]
+    }
+  ]
+}

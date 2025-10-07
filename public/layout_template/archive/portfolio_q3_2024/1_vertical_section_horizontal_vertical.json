@@ -1,0 +1,81 @@
+{
+  "layoutSections": [
+    {
+      "layoutKind": "DashboardLayout",
+      "settings": {
+        "maxWidth": "{{tokens.layout.maxWidth}}",
+        "sectionSpacing": "{{computed: calculateSpacing(tokens.spacing.section)}}",
+        "children": [
+          {
+            "layoutKind": "Section",
+            "settings": {
+              "padding": "{{tokens.spacing.large}}",
+              "children": ["DynamicDashboardHeader"]
+            }
+          },
+          {
+            "layoutKind": "HorizontalStack",
+            "settings": {
+              "spacing": "xl",
+              "alignment": "flex-start",
+              "children": [
+                {
+                  "layoutKind": "Section",
+                  "settings": {
+                    "padding": "{{tokens.spacing.medium}}",
+                    "children": ["DynamicFilterPanel"]
+                  }
+                },
+                {
+                  "layoutKind": "VerticalStack",
+                  "settings": {
+                    "spacing": "lg",
+                    "children": [
+                      {
+                        "layoutKind": "MetricGridLayout",
+                        "settings": {
+                          "columns": "{{computed: getBreakpointColumns(viewport.breakpoint)}}",
+                          "gap": "lg",
+                          "children": ["DynamicMetricGrid"]
+                        }
+                      },
+                      {
+                        "layoutKind": "TableGroupLayout",
+                        "settings": {
+                          "spacing": "xl",
+                          "children": [
+                            {
+                              "component": "DynamicCompanyPerformanceTable",
+                              "instances": [
+                                {
+                                  "title": "🚨 Companies with High Negative Variance",
+                                  "filter": { "variance_flag": "high_negative" }
+                                },
+                                {
+                                  "title": "⚠️ Watch List (Variance ±15-20%)",
+                                  "filter": { "variance_flag": "outside_range" }
+                                },
+                                {
+                                  "title": "🟢 Normal Range (±15%)",
+                                  "filter": { "variance_flag": "within_range" }
+                                },
+                                {
+                                  "title": "✅ Performing Well (High Positive Variance)",
+                                  "filter": { "variance_flag": "high_positive" }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

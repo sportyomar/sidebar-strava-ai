@@ -1,0 +1,452 @@
+/* PEWelcomeNavLarge.module.css - Weights & Biases Inspired */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /*background: rgba(26, 32, 44, 1);*/
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  backdrop-filter: blur(10px);
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+  transition: all 0.3s ease;
+  /*min-height: 88px; !* Increased from 80px to match W&B style *!*/
+  min-height: 50px;
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,
+    rgba(99, 102, 241, 0.05) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
+    rgba(99, 102, 241, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.navContainer {
+  max-width: 1400px; /* Increased max-width for better spacing */
+  margin: 0 auto;
+  /*padding: 0 24px; !* Increased padding *!*/
+  padding: 0 10px;
+  /*height: 88px; !* Match navbar height *!*/
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo Section - Much Larger */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Increased gap */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px; /* Ensure logo section has enough space */
+}
+
+.logoSection:hover {
+  transform: translateY(-1px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px; /* Increased from 64px - significantly larger */
+  height: 76px;
+  background: transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.logoIcon {
+  color: white;
+  width: 68px; /* Increased from 56px - significantly larger than font */
+  height: 68px;
+}
+
+.brandName {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.brandText {
+  /*font-size: 2rem; !* Significantly larger text - 32px *!*/
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.brandSuffix {
+  /*font-size: 2rem;*/
+  font-size: 1.75rem;
+  font-weight: 700;
+  /*background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);*/
+  background-color: #8B9DC3;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+/* Navigation Links - Better Spacing */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Increased gap for better spacing */
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 1rem; /* Slightly larger text */
+  font-weight: 500;
+  padding: 12px 20px; /* Larger padding */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  /*background: linear-gradient(135deg, #6366f1, #3b82f6);*/
+  background-color: #8B9DC3;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 70%;
+}
+
+/* Action Buttons - Larger and More Prominent */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap */
+  min-width: 280px; /* Increased to accommodate admin button */
+  justify-content: flex-end;
+}
+
+.loginBtn {
+  /*background: transparent;*/
+  background-color: white;
+  /*color: #cbd5e0;*/
+  color: black;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 12px; /* Larger padding */
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.signupBtn {
+  /*background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);*/
+  background-color: #8B9DC3;
+  color: black;
+  border: none;
+  padding: 12px 24px; /* Larger padding */
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.adminBtn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.mobileMenuBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px; /* Larger hamburger */
+  height: 22px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px; /* Thicker lines */
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(26, 32, 44, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavLinks {
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLink {
+  display: block;
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger mobile text */
+  font-weight: 500;
+  padding: 20px 0; /* More padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
+}
+
+.mobileNavLink:hover {
+  color: white;
+  padding-left: 12px;
+}
+
+.mobileActions {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileLoginBtn {
+  background: transparent;
+  color: #cbd5e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 28px; /* Larger mobile buttons */
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileLoginBtn:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobileSignupBtn {
+  /*background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);*/
+  background-color: #8B9DC3;
+  color: white;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navContainer {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .navLinks {
+    gap: 32px;
+  }
+
+  .brandText,
+  .brandSuffix {
+    font-size: 1.8rem; /* 28.8px */
+  }
+
+  /* Adjust logo size proportionally for tablet */
+  .logo {
+    width: 70px; /* Increased from 58px */
+    height: 70px;
+  }
+
+  .logoIcon {
+    width: 62px; /* Increased from 50px - About 2.15x the font size */
+    height: 62px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks,
+  .navActions {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .navContainer {
+    padding: 0 16px;
+    height: 76px; /* Slightly smaller on mobile but still large */
+  }
+
+  .navbar {
+    min-height: 76px;
+  }
+
+  .brandText,
+  .brandSuffix {
+    font-size: 1.6rem; /* 25.6px */
+  }
+
+  /* Adjust logo for mobile - still larger than font */
+  .logo {
+    width: 66px; /* Increased from 54px */
+    height: 66px;
+  }
+
+  .logoIcon {
+    width: 58px; /* Increased from 46px - About 2.3x the font size */
+    height: 58px;
+  }
+
+  .logoSection {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandText,
+  .brandSuffix {
+    font-size: 1.4rem; /* 22.4px */
+  }
+
+  /* Logo remains prominently larger than font on small screens */
+  .logo {
+    width: 70px; /* Increased from 58px */
+    height: 70px;
+  }
+
+  .logoIcon {
+    width: 62px; /* Increased from 50px - About 2.8x the font size */
+    height: 62px;
+  }
+
+  .navContainer {
+    padding: 0 12px;
+    height: 70px;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+  /*padding-top: 88px;*/
+  padding-top: 50px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 76px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+/* Additional styling for better visual hierarchy */
+.navContainer > * {
+  flex-shrink: 0;
+}
+
+.navLinks {
+  overflow: visible;
+}

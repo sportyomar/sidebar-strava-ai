@@ -1,0 +1,645 @@
+/* Base styles for all layouts */
+.loginPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: relative;
+}
+
+.loginCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* CENTERED LAYOUT (original design) */
+.centeredLayout {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.centeredContainer {
+  display: flex;
+  max-height: 100vh;
+  overflow-y: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.centeredCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: fit-content;
+}
+
+/* TOP LAYOUT (new design) */
+.topLayout {
+  background: #f8fafc;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+  gap: 0;
+}
+
+.topCard {
+  background: white;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 24px 40px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* SIDEBAR LAYOUT (future layout option) */
+.sidebarLayout {
+  background: #1a202c;
+}
+
+.sidebarContainer {
+  display: flex;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.sidebarCard {
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 40px;
+  width: 400px;
+  min-width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #4a5568;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.logo:hover {
+  color: #2d3748;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: #374151;
+}
+
+.forgotLink {
+  font-size: 14px;
+  color: #246eda;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  padding: 14px 20px;
+  background: #1a7ec0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submitButton.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.switchAccountButton {
+  padding: 12px 20px;
+  background: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switchAccountButton:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.signupPrompt {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.signupLink {
+  color: #246eda;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+/* Side Panel Styles (for centered layout) */
+.sidePanel {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 60px 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+}
+
+.hiddenSidePanel {
+  display: none;
+}
+
+.sidePanelContent {
+  max-width: 500px;
+}
+
+.sidePanelTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.sidePanelSubtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.feature {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureIcon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.featureContent h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.featureContent p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.callToAction {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.ctaText {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: white;
+  color: #4474b4;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 16px 0;
+  opacity: 0.9;
+}
+
+.author {
+  font-size: 14px;
+  opacity: 0.7;
+  font-style: normal;
+}
+
+/* Profile Views */
+.singleProfileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.multipleProfilesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chooseAccountTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 16px 0;
+}
+
+.profilesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.profileCard:hover {
+  border-color: #667eea;
+  background: #f8fafc;
+}
+
+.profileAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profileAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 4px 0;
+}
+
+.profileEmail {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+.removeProfile {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-radius: 50%;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.profileCard:hover .removeProfile {
+  opacity: 1;
+}
+
+.removeProfile:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.useAnotherAccount {
+  padding: 12px 20px;
+  background: #f7fafc;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.useAnotherAccount:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+/* Loading and Error States */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 16px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.errorMessage {
+  background: #fee;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #fed7d7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .centeredContainer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sidePanel {
+    display: none;
+  }
+
+  .topCard {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .centeredCard {
+    padding: 32px 24px;
+    max-width: 100%;
+  }
+
+  .sidebarCard {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+  }
+
+  .sidePanelTitle {
+    font-size: 28px;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centeredCard,
+  .topCard {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+  .topLayout {
+    background: #0f172a;
+  }
+
+  .topCard {
+    background: #1e293b;
+    color: white;
+    border-color: #334155;
+  }
+
+  .input {
+    background: #334155;
+    border-color: #475569;
+    color: white;
+  }
+
+  .input::placeholder {
+    color: #94a3b8;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "DashboardContextBar",
+      "settings": {
+        "title": "{{metadata.title}}",
+        "period": "{{metadata.period}}"
+      }
+    },
+    {
+      "blockKind": "VerticalStack",
+      "settings": { "spacing": "{{tokens.spacing.lg}}" },
+      "containedBlocks": [
+        {
+          "blockKind": "HorizontalStack",
+          "settings": { "spacing": "{{tokens.spacing.md}}" },
+          "containedBlocks": [
+            {
+              "blockKind": "MetricCard",
+              "settings": {
+                "title": "{{metrics.0.title}}",
+                "amount": "{{metrics.0.amount}}"
+              }
+            },
+            {
+              "blockKind": "MetricCard",
+              "settings": {
+                "title": "{{metrics.1.title}}",
+                "amount": "{{metrics.1.amount}}"
+              }
+            },
+            {
+              "blockKind": "MetricCard",
+              "settings": {
+                "title": "{{metrics.2.title}}",
+                "amount": "{{metrics.2.amount}}"
+              }
+            }
+          ]
+        },
+        {
+          "blockKind": "LineChart",
+          "settings": {
+            "title": "Revenue Over Time",
+            "data": "{{charts.revenueOverTime}}",
+            "height": "300px"
+          }
+        },
+        {
+          "blockKind": "StatusLegend",
+          "settings": {}
+        },
+        {
+          "blockKind": "CardContainer",
+          "settings": {
+            "padding": "{{tokens.spacing.md}}",
+            "shadow": "{{tokens.shadows.md}}"
+          },
+          "containedBlocks": [
+            {
+              "blockKind": "CompanyTable",
+              "settings": {
+                "companies": "{{tables.mainPortfolio}}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

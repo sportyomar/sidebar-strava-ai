@@ -1,0 +1,310 @@
+{
+  "team_members": [
+    {
+      "name": "Bret Wiener",
+      "title": "Founder & CEO"
+    },
+    {
+      "name": "D.J. Andrzejewski",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Geoff Broglio",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Clay Cole",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Michael Fan",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Charlie Fraas",
+      "title": "Managing Director",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Aron Grossman",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Andrew Lerner",
+      "title": "Managing Director",
+      "additional_roles": ["General Counsel", "Chief Compliance Officer"]
+    },
+    {
+      "name": "Zubin Malkani",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Michael McCulloch",
+      "title": "Managing Director",
+      "specialization": "Research"
+    },
+    {
+      "name": "Kal Mukherjee",
+      "title": "Managing Director",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Martin Mumford",
+      "title": "Managing Director",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Connor O'Byrne",
+      "title": "Managing Director",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Matt Reibl",
+      "title": "Managing Director",
+      "additional_roles": ["Chief Financial Officer"]
+    },
+    {
+      "name": "Jay Reynolds",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Karl Rodger",
+      "title": "Managing Director",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Alex Shakibnia",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Matt Shuman",
+      "title": "Managing Director",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Kristin Steen",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Glenn Stevens",
+      "title": "Managing Director",
+      "specialization": "Head of Portfolio Talent"
+    },
+    {
+      "name": "Jack Tucker",
+      "title": "Managing Director",
+      "additional_roles": ["Chief Operating Officer"]
+    },
+    {
+      "name": "Mathew Wallace",
+      "title": "Managing Director"
+    },
+    {
+      "name": "Dave Welinsky",
+      "title": "Managing Director",
+      "specialization": "Capital Markets"
+    },
+    {
+      "name": "Dan Andrews",
+      "title": "Principal"
+    },
+    {
+      "name": "Greg Barnes",
+      "title": "Principal"
+    },
+    {
+      "name": "Howy Fang",
+      "title": "Principal"
+    },
+    {
+      "name": "Thomas Henry",
+      "title": "Principal"
+    },
+    {
+      "name": "Chirag Hirawat",
+      "title": "Principal"
+    },
+    {
+      "name": "John Ross",
+      "title": "Principal"
+    },
+    {
+      "name": "Erich Sorger",
+      "title": "Principal"
+    },
+    {
+      "name": "Kathy Calio",
+      "title": "Director",
+      "specialization": "Operations"
+    },
+    {
+      "name": "Kelsey Curtis",
+      "title": "Director",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Ryan Donegan",
+      "title": "Director",
+      "specialization": "Fund Finance"
+    },
+    {
+      "name": "Courtney Hamlin",
+      "title": "Director",
+      "specialization": "Investor Relations"
+    },
+    {
+      "name": "Susie Starr",
+      "title": "Director",
+      "specialization": "People & Performance"
+    },
+    {
+      "name": "Jordan Stewart",
+      "title": "Director",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Matt Tharp",
+      "title": "Director",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Jennifer Zanetti",
+      "title": "Director",
+      "specialization": "Operations"
+    },
+    {
+      "name": "Alex Crowe",
+      "title": "Vice President"
+    },
+    {
+      "name": "Jake Fenlon",
+      "title": "Vice President"
+    },
+    {
+      "name": "Geoff Griffen",
+      "title": "Vice President",
+      "specialization": "Portfolio Operations"
+    },
+    {
+      "name": "Reid Litowitz",
+      "title": "Vice President"
+    },
+    {
+      "name": "Chris Lloyd",
+      "title": "Vice President"
+    },
+    {
+      "name": "Conor McNamara",
+      "title": "Vice President",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Nathan Rakos",
+      "title": "Vice President"
+    },
+    {
+      "name": "Stephen Reynolds",
+      "title": "Vice President"
+    },
+    {
+      "name": "Adrian Roth",
+      "title": "Vice President",
+      "specialization": "Strategy & Research"
+    },
+    {
+      "name": "Gardiner Schroeder",
+      "title": "Vice President"
+    },
+    {
+      "name": "Jack Shannon",
+      "title": "Vice President"
+    },
+    {
+      "name": "James Simpson",
+      "title": "Vice President"
+    },
+    {
+      "name": "Tyler Feldman",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Molly Langer",
+      "title": "Senior Associate",
+      "specialization": "Investor Relations"
+    },
+    {
+      "name": "Eileen O'Connor",
+      "title": "Senior Associate",
+      "specialization": "Finance"
+    },
+    {
+      "name": "Yadel Okorie",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Michelle Santos",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Kelley Weibezahl",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Scott Wright",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Raymond Zhao",
+      "title": "Senior Associate"
+    },
+    {
+      "name": "Brian Abt",
+      "title": "Associate"
+    },
+    {
+      "name": "Gordy Leech",
+      "title": "Associate"
+    },
+    {
+      "name": "Alex Malin",
+      "title": "Associate"
+    },
+    {
+      "name": "Colin Minicus",
+      "title": "Associate"
+    },
+    {
+      "name": "Heather Pascanik",
+      "title": "Associate"
+    },
+    {
+      "name": "Alex Rakos",
+      "title": "Associate"
+    },
+    {
+      "name": "Matt Troiani",
+      "title": "Associate"
+    },
+    {
+      "name": "James Wetter",
+      "title": "Associate"
+    },
+    {
+      "name": "John O'Doherty",
+      "title": "Analyst",
+      "specialization": "Business Development"
+    },
+    {
+      "name": "Morgan Papp",
+      "title": "Executive Assistant"
+    },
+    {
+      "name": "Adriana Scala",
+      "title": "Executive Assistant"
+    },
+    {
+      "name": "Devon Weiss",
+      "title": "Executive Assistant"
+    }
+  ]
+}

@@ -1,0 +1,2245 @@
+/* LoginPage.module.css - Version 10 Complete CSS */
+
+:root {
+  /* Complex/Advanced (Backstage) Colors */
+  --deep-steel: #1e293b;
+  --steel-blue: #334155;
+  --advanced-charcoal: #475569;
+  --complex-gray: #64748b;
+  --subtle-slate: #94a3b8;
+
+  /* Common/Familiar (Front Stage) Colors */
+  --executive-navy: #1e3a8a;
+  --boardroom-navy: #1d4ed8;
+  --professional-charcoal: #374151;
+  --trusted-gray: #6b7280;
+  --premium-platinum: #f8fafc;
+  --clean-white: #ffffff;
+  --accent-steel: #64748b;
+
+  /* Transformation Gradients */
+  --backstage-foundation: linear-gradient(135deg, var(--deep-steel) 0%, var(--steel-blue) 100%);
+  --executive-presentation: linear-gradient(135deg, var(--executive-navy) 0%, var(--boardroom-navy) 100%);
+  --professional-confidence: linear-gradient(135deg, var(--professional-charcoal) 0%, var(--executive-navy) 100%);
+}
+
+/* Main layout */
+.loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--backstage-foundation);
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--clean-white);
+  border-radius: 16px;
+  box-shadow:
+    0 25px 50px -12px rgba(30, 41, 59, 0.4),
+    0 0 0 1px rgba(148, 163, 184, 0.1);
+  overflow: hidden;
+  min-height: 600px;
+  position: relative;
+}
+
+/* Executive document corner treatments */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--executive-navy) 0%,
+    var(--accent-steel) 50%,
+    var(--executive-navy) 100%);
+  z-index: 10;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(30, 58, 138, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(55, 65, 81, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(148, 163, 184, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(30, 58, 138, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.loginCard {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  position: relative;
+  z-index: 20;
+  background: var(--clean-white);
+}
+
+.sidePanel {
+  flex: 1;
+  background: var(--backstage-foundation);
+  color: var(--clean-white);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle technical grid pattern (complex backstage) */
+.sidePanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(45deg, transparent 40%, rgba(148, 163, 184, 0.03) 50%, transparent 60%),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(148, 163, 184, 0.02) 61px),
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(148, 163, 184, 0.02) 61px);
+  pointer-events: none;
+}
+
+.sidePanelContent {
+  max-width: 400px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--trusted-gray);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--executive-navy);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--professional-charcoal);
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--trusted-gray);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--professional-charcoal);
+  font-size: 0.875rem;
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid var(--subtle-slate);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--clean-white);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--executive-navy);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.formOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin: 0;
+}
+
+.checkboxLabel {
+  font-size: 0.875rem;
+  color: var(--professional-charcoal);
+}
+
+.forgotLink {
+  color: var(--executive-navy);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.forgotLink:hover {
+  color: var(--boardroom-navy);
+}
+
+/* Buttons */
+.submitButton {
+  background: var(--trusted-gray);
+  color: var(--clean-white);
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--executive-navy);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitButton.loading {
+  opacity: 0.8;
+}
+
+.switchAccountButton {
+  background: none;
+  border: 1px solid var(--executive-navy);
+  color: var(--executive-navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.switchAccountButton:hover {
+  background: var(--executive-navy);
+  color: var(--clean-white);
+}
+
+.useAnotherAccount {
+  background: none;
+  border: 1px solid var(--trusted-gray);
+  color: var(--trusted-gray);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.useAnotherAccount:hover {
+  background: var(--trusted-gray);
+  color: var(--clean-white);
+}
+
+/* Error messages */
+.errorMessage {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Loading state */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--trusted-gray);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--premium-platinum);
+  border-top: 2px solid var(--executive-navy);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Single profile container */
+.singleProfileContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Multiple profiles container */
+.multipleProfilesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chooseAccountTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--professional-charcoal);
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.profilesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Profile card styles */
+.profileCard {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--subtle-slate);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--clean-white);
+  position: relative;
+}
+
+.profileCard:hover {
+  border-color: var(--executive-navy);
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.1);
+  transform: translateY(-1px);
+}
+
+.profileCard:active {
+  transform: translateY(0);
+}
+
+/* Profile avatar */
+.profileAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.profileAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: var(--backstage-foundation);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clean-white);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Profile info */
+.profileInfo {
+  flex: 1;
+  min-width: 0; /* Allows text truncation */
+}
+
+.profileName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--professional-charcoal);
+  margin: 0 0 0.25rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profileEmail {
+  font-size: 0.875rem;
+  color: var(--trusted-gray);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Remove profile button */
+.removeProfile {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--subtle-slate);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.2s ease;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileCard:hover .removeProfile {
+  opacity: 1;
+}
+
+.removeProfile:hover {
+  background: var(--premium-platinum);
+  color: #dc3545;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.signupPrompt {
+  color: var(--trusted-gray);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.signupLink {
+  color: var(--executive-navy);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.signupLink:hover {
+  color: var(--boardroom-navy);
+}
+
+/* Side panel content */
+.sidePanelTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--clean-white) 0%, var(--premium-platinum) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sidePanelSubtitle {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  color: rgba(248, 250, 252, 0.85);
+}
+
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  /* Starts complex/advanced (backstage) */
+  background: rgba(148, 163, 184, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transforms to familiar/professional (front stage) */
+.feature:hover {
+  background: rgba(30, 58, 138, 0.12);
+  border-color: rgba(30, 58, 138, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.15);
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.feature:hover::before {
+  left: 100%;
+}
+
+.featureIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Starts complex/muted */
+  background: rgba(148, 163, 184, 0.15);
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Transforms to executive/familiar */
+.feature:hover .featureIcon {
+  background: var(--professional-confidence);
+  color: var(--clean-white);
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
+}
+
+.featureContent h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.feature:hover .featureContent h3 {
+  color: var(--premium-platinum);
+}
+
+.featureContent p {
+  opacity: 0.85;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.feature:hover .featureContent p {
+  opacity: 1;
+}
+
+/* Call to Action Section */
+.callToAction {
+  padding: 2rem;
+  /* Professional presentation styling */
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.callToAction:hover {
+  background: rgba(30, 58, 138, 0.1);
+  border-color: rgba(30, 58, 138, 0.25);
+}
+
+.ctaText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.callToAction:hover .ctaText {
+  opacity: 1;
+}
+
+.ctaButton {
+  /* Starts familiar/conservative */
+  background: var(--trusted-gray);
+  color: var(--clean-white);
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.6s ease;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+  background: var(--executive-presentation);
+}
+
+/* Enhanced Custom SVG Icons */
+.iconBlueprint, .iconModules, .iconEngineering {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  transition: all 0.3s ease;
+}
+
+/* Legacy testimonial for compatibility */
+.testimonial {
+  padding: 1.5rem;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.quote {
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.author {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  font-style: normal;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 1rem;
+    min-height: auto;
+  }
+
+  .sidePanel {
+    display: none;
+  }
+
+  .loginCard {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 1.5rem;
+  }
+
+  .profileCard {
+    padding: 0.75rem;
+  }
+
+  .profileAvatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.75rem;
+  }
+
+  .avatarPlaceholder {
+    font-size: 1rem;
+  }
+
+  .profileName {
+    font-size: 0.875rem;
+  }
+
+  .profileEmail {
+    font-size: 0.8125rem;
+  }
+
+  .removeProfile {
+    top: 0.25rem;
+    right: 0.25rem;
+    font-size: 0.875rem;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Error message updates for profile views */
+.singleProfileContainer .errorMessage,
+.multipleProfilesContainer .errorMessage {
+  margin-bottom: 1rem;
+}
+
+/* Tablet landscape and smaller desktops */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 900px;
+    margin: 1rem;
+  }
+
+  .loginCard {
+    padding: 2.5rem;
+  }
+
+  .sidePanel {
+    padding: 2.5rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 1rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .loginPage {
+    padding: 0.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 0.5rem;
+    min-height: auto;
+    max-width: none;
+  }
+
+  .sidePanel {
+    order: -1; /* Move side panel to top */
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .loginCard {
+    padding: 2rem;
+    max-width: none;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.5rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 1rem;
+  }
+
+  .features {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .loginPage {
+    padding: 0.25rem;
+  }
+
+  .container {
+    margin: 0.25rem;
+    border-radius: 12px;
+  }
+
+  .sidePanel {
+    padding: 1.5rem;
+  }
+
+  .loginCard {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.25rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .features {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .featureContent h3 {
+    font-size: 1rem;
+  }
+
+  .featureContent p {
+    font-size: 0.875rem;
+  }
+
+  .callToAction {
+    padding: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .loginPage {
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .sidePanel {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .loginCard {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .formGroup {
+    gap: 0.25rem;
+  }
+
+  .label {
+    font-size: 0.8125rem;
+  }
+
+  .input {
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+  }
+
+  .formOptions {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .submitButton {
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .switchAccountButton,
+  .useAnotherAccount {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* Side panel mobile adjustments */
+  .sidePanelTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .features {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature {
+    padding: 0.5rem;
+    gap: 0.5rem;
+    flex-direction: row;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .featureContent h3 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .callToAction {
+    padding: 1rem;
+  }
+
+  .ctaText {
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ctaButton {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  .testimonial {
+    padding: 1rem;
+  }
+
+  .quote {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .author {
+    font-size: 0.75rem;
+  }
+
+  /* Profile cards mobile */
+  .profileCard {
+    padding: 0.75rem;
+  }
+
+  .profileAvatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.75rem;
+  }
+
+  .avatarPlaceholder {
+    font-size: 0.875rem;
+  }
+
+  .profileName {
+    font-size: 0.875rem;
+  }
+
+  .profileEmail {
+    font-size: 0.75rem;
+  }
+
+  .removeProfile {
+    top: 0.25rem;
+    right: 0.25rem;
+    font-size: 0.75rem;
+    width: 18px;
+    height: 18px;
+  }
+
+  .chooseAccountTitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .profilesList {
+    max-height: 250px;
+    gap: 0.5rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  .loginCard {
+    padding: 0.75rem;
+  }
+
+  .sidePanel {
+    padding: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .submitButton {
+    padding: 0.625rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Enhanced responsive breakpoints for better laptop experience */
+
+/* Large desktop (27" monitors) - your original design works here */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Standard desktop and large laptops (15-17") */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .loginCard {
+    padding: 2.5rem;
+  }
+
+  .sidePanel {
+    padding: 2.5rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.625rem;
+  }
+
+  .features {
+    gap: 1.25rem;
+  }
+
+  .feature {
+    padding: 1.25rem;
+  }
+}
+
+/* Laptop screens (13-15") - this is where your main issue is */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .loginPage {
+    padding: 0.75rem;
+  }
+
+  .container {
+    max-width: 900px;
+    min-height: 500px; /* Reduce from 600px */
+  }
+
+  .loginCard {
+    padding: 2rem;
+    max-width: 400px; /* Reduce from 480px */
+  }
+
+  .sidePanel {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .features {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .featureContent h3 {
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .featureContent p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .callToAction {
+    padding: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small laptops and large tablets (768px - 991px) */
+@media (max-width: 991px) and (min-width: 769px) {
+  .loginPage {
+    padding: 0.5rem;
+  }
+
+  .container {
+    max-width: 700px;
+    min-height: 450px;
+  }
+
+  .loginCard {
+    padding: 1.75rem;
+    max-width: 350px;
+  }
+
+  .sidePanel {
+    padding: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form {
+    gap: 1.25rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.375rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .features {
+    gap: 0.875rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .feature {
+    padding: 0.875rem;
+    gap: 0.875rem;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.95rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8125rem;
+  }
+
+  .callToAction {
+    padding: 1.25rem;
+  }
+
+  .ctaText {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet and below - stack vertically */
+@media (max-width: 768px) {
+  .loginPage {
+    padding: 0.5rem;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 0.5rem;
+    min-height: auto;
+    max-width: none;
+  }
+
+  /* Move side panel to top */
+  .sidePanel {
+    order: -1;
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .loginCard {
+    padding: 1.5rem;
+    max-width: none;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.25rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .features {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.9375rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8125rem;
+  }
+
+  .callToAction {
+    padding: 1rem;
+  }
+
+  .ctaText {
+    font-size: 0.8125rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .ctaButton {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .loginPage {
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  .sidePanel {
+    padding: 1rem;
+  }
+
+  .loginCard {
+    padding: 1rem;
+    flex: 1;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .input {
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+  }
+
+  .submitButton {
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Condensed side panel for mobile */
+  .sidePanelTitle {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.8125rem;
+    margin-bottom: 1rem;
+  }
+
+  .features {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .featureIcon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .featureContent p {
+    font-size: 0.75rem;
+  }
+
+  .callToAction {
+    padding: 0.75rem;
+  }
+
+  .ctaText {
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Improve profile cards for all screen sizes */
+@media (max-width: 991px) {
+  .profileCard {
+    padding: 0.875rem;
+  }
+
+  .profileAvatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.875rem;
+  }
+
+  .avatarPlaceholder {
+    font-size: 1rem;
+  }
+
+  .profileName {
+    font-size: 0.9375rem;
+  }
+
+  .profileEmail {
+    font-size: 0.8125rem;
+  }
+
+  .removeProfile {
+    width: 24px;
+    height: 24px;
+    top: 0.375rem;
+    right: 0.375rem;
+  }
+}
+
+/* Very specific fix for 14" laptop screens (1366x768 and similar) */
+@media (max-width: 1366px) and (min-width: 1200px) and (max-height: 800px) {
+  .container {
+    max-width: 950px;
+    min-height: 480px;
+    margin: 0.5rem auto;
+  }
+
+  .loginCard {
+    padding: 2rem;
+    max-width: 380px;
+  }
+
+  .sidePanel {
+    padding: 2rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+
+  .callToAction {
+    padding: 1.25rem;
+  }
+}
+
+/* Additional viewport-specific optimizations */
+@media (max-width: 1024px) and (orientation: landscape) and (max-height: 768px) {
+  .container {
+    min-height: 400px;
+  }
+
+  .features {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+  }
+
+  .callToAction {
+    padding: 1rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.375rem;
+  }
+}
+
+/* 14-inch laptop specific optimizations */
+
+/* Target common 14" laptop resolutions: 1366x768, 1440x900, 1600x900 */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .loginPage {
+    padding: 1.5rem; /* Add breathing room around entire page */
+  }
+
+  .container {
+    max-width: 800px; /* Much smaller than original 1200px */
+    min-height: 400px; /* Reduce from 600px */
+    margin: 0 auto;
+    box-shadow:
+      0 10px 25px -5px rgba(30, 41, 59, 0.3), /* Lighter shadow */
+      0 0 0 1px rgba(148, 163, 184, 0.1);
+  }
+
+  /* Adjust the split ratio - give more space to login form */
+  .loginCard {
+    flex: 1.2; /* Increase from 1 */
+    padding: 2rem;
+    max-width: none; /* Remove width constraint */
+  }
+
+  .sidePanel {
+    flex: 0.8; /* Decrease from 1 */
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  /* Typography scaling for 14" screens */
+  .logo {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Form optimizations */
+  .form {
+    gap: 1rem; /* Reduce from 1.5rem */
+  }
+
+  .input {
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+  }
+
+  .submitButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Dramatically simplify side panel for laptops */
+  .sidePanelTitle {
+    font-size: 1.25rem; /* Much smaller */
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+
+  /* Show only 2 features instead of 3 on laptops */
+  .features {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  /* Hide the third feature on laptops to reduce clutter */
+  .feature:nth-child(3) {
+    display: none;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .featureContent p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  /* Compact call-to-action */
+  .callToAction {
+    padding: 1rem;
+  }
+
+  .ctaText {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Even more aggressive optimization for smaller 14" screens */
+@media (max-width: 1400px) and (min-width: 1200px) and (max-height: 800px) {
+  .loginPage {
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 750px;
+    min-height: 350px;
+  }
+
+  .loginCard {
+    padding: 1.5rem;
+  }
+
+  .sidePanel {
+    padding: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.375rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.125rem;
+  }
+
+  /* Hide call-to-action on very cramped screens */
+  .callToAction {
+    display: none;
+  }
+
+  .features {
+    margin-bottom: 0;
+  }
+}
+
+/* Alternative: Single column layout for laptops */
+@media (max-width: 1366px) and (min-width: 1200px) {
+  /* Option to stack vertically on laptops if horizontal is too cramped */
+  .laptopStack .container {
+    flex-direction: column;
+    max-width: 500px;
+    min-height: auto;
+  }
+
+  .laptopStack .sidePanel {
+    order: -1;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .laptopStack .loginCard {
+    padding: 1.5rem;
+    max-width: none;
+  }
+
+  .laptopStack .features {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .laptopStack .feature {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .laptopStack .featureIcon {
+    margin: 0 auto 0.25rem auto;
+    width: 24px;
+    height: 24px;
+  }
+
+  .laptopStack .featureContent h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.125rem;
+  }
+
+  .laptopStack .featureContent p {
+    font-size: 0.625rem;
+  }
+
+  .laptopStack .callToAction {
+    display: none;
+  }
+}
+
+/* Improve profile cards for laptop screens */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .profileCard {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .profileAvatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.75rem;
+  }
+
+  .avatarPlaceholder {
+    font-size: 0.875rem;
+  }
+
+  .profileName {
+    font-size: 0.875rem;
+  }
+
+  .profileEmail {
+    font-size: 0.75rem;
+  }
+
+  .removeProfile {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .chooseAccountTitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .profilesList {
+    max-height: 200px;
+    gap: 0.375rem;
+  }
+}
+
+/* Compact form styling for laptops */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .formGroup {
+    gap: 0.375rem;
+  }
+
+  .label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  .formOptions {
+    margin: 0.75rem 0;
+  }
+
+  .checkboxLabel {
+    font-size: 0.8125rem;
+  }
+
+  .forgotLink {
+    font-size: 0.8125rem;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+  }
+
+  .signupPrompt {
+    font-size: 0.8125rem;
+  }
+
+  .switchAccountButton,
+  .useAnotherAccount {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Emergency fallback: hide side panel completely on very constrained laptops */
+@media (max-width: 1366px) and (max-height: 768px) {
+  .emergencyCompact .sidePanel {
+    display: none;
+  }
+
+  .emergencyCompact .container {
+    max-width: 400px;
+  }
+
+  .emergencyCompact .loginCard {
+    max-width: none;
+    padding: 2rem;
+  }
+}
+
+/* Enhanced 14-inch laptop layout optimizations */
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .loginPage {
+    padding: 1.5rem;
+  }
+
+  .container {
+    max-width: 900px; /* Increased from 800px */
+    min-height: 500px; /* Increased height for better content display */
+    margin: 0 auto;
+    box-shadow:
+      0 10px 25px -5px rgba(30, 41, 59, 0.3),
+      0 0 0 1px rgba(148, 163, 184, 0.1);
+  }
+
+  /* Adjust the split ratio - narrow form, wider info panel */
+  .loginCard {
+    flex: 0.8; /* Reduced from 1.2 to make narrower */
+    padding: 2rem 1.5rem; /* Reduce horizontal padding */
+    max-width: none;
+  }
+
+  .sidePanel {
+    flex: 1.4; /* Increased from 0.8 to make much wider */
+    padding: 2rem; /* Increase padding for more content */
+  }
+
+  /* Typography remains compact but readable */
+  .logo {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Form optimizations - keep compact */
+  .form {
+    gap: 1rem;
+  }
+
+  .input {
+    padding: 0.625rem;
+    font-size: 0.9375rem;
+  }
+
+  .submitButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Side panel typography */
+  .sidePanelTitle {
+    font-size: 1.375rem; /* Slightly larger since we have more space */
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.9375rem; /* Slightly larger */
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  /* GRID LAYOUT FOR FEATURES - 2 cards side by side */
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 cards side by side */
+    gap: 0.75rem;
+    margin-bottom: 1.5rem; /* Space for call-to-action below */
+  }
+
+  /* Show only first 2 features in grid layout */
+  .feature {
+    padding: 0.875rem;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column; /* Stack icon and content vertically for grid */
+    text-align: center; /* Center content in grid cells */
+  }
+
+  /* Hide the third feature for cleaner 2-card layout */
+  .feature:nth-child(3) {
+    display: none;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 0.5rem auto; /* Center icons in grid */
+  }
+
+  .featureContent h3 {
+    font-size: 0.9375rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  /* Call-to-action below the 2-card grid - MUST be visible */
+  .callToAction {
+    display: block !important; /* Force visibility */
+    padding: 1.25rem;
+    margin-top: 0;
+  }
+
+  .ctaText {
+    font-size: 0.8125rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .ctaButton {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Alternative 2x1 layout for very wide aspect ratios */
+@media (max-width: 1600px) and (min-width: 1400px) {
+  .container {
+    max-width: 1000px; /* Even wider on larger laptops */
+  }
+
+  .loginCard {
+    flex: 0.7; /* Even narrower form */
+  }
+
+  .sidePanel {
+    flex: 1.5; /* Even wider info panel */
+    padding: 2.5rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .feature {
+    padding: 1rem;
+  }
+
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .featureContent h3 {
+    font-size: 1rem;
+  }
+
+  .featureContent p {
+    font-size: 0.875rem;
+  }
+
+  /* Ensure call-to-action is always visible */
+  .callToAction {
+    display: block !important;
+    padding: 1.5rem;
+  }
+
+  .ctaText {
+    font-size: 0.875rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Compact layout for smaller 14" screens */
+@media (max-width: 1400px) and (min-width: 1200px) and (max-height: 800px) {
+  .container {
+    max-width: 850px;
+    min-height: 450px;
+  }
+
+  .loginCard {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .sidePanel {
+    padding: 1.75rem;
+  }
+
+  .sidePanelTitle {
+    font-size: 1.25rem;
+  }
+
+  .sidePanelSubtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .features {
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature {
+    padding: 0.75rem;
+  }
+
+  .featureIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .featureContent h3 {
+    font-size: 0.875rem;
+  }
+
+  .featureContent p {
+    font-size: 0.75rem;
+  }
+
+  /* Ensure call-to-action is always visible */
+  .callToAction {
+    display: block !important;
+    padding: 1rem;
+  }
+
+  .ctaText {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Profile cards optimizations for narrow login section */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .profileCard {
+    padding: 0.75rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .profileAvatar {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.75rem;
+  }
+
+  .avatarPlaceholder {
+    font-size: 0.875rem;
+  }
+
+  .profileName {
+    font-size: 0.875rem;
+  }
+
+  .profileEmail {
+    font-size: 0.75rem;
+  }
+
+  .removeProfile {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .chooseAccountTitle {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .profilesList {
+    max-height: 250px;
+    gap: 0.5rem;
+  }
+
+  /* Optimize buttons for narrower space */
+  .switchAccountButton,
+  .useAnotherAccount {
+    padding: 0.625rem 1rem;
+    font-size: 0.8125rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Form specific optimizations for narrow login panel */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .formGroup {
+    gap: 0.375rem;
+  }
+
+  .label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+  }
+
+  .formOptions {
+    margin: 0.75rem 0;
+    gap: 0.5rem;
+  }
+
+  .checkboxLabel {
+    font-size: 0.8125rem;
+  }
+
+  .forgotLink {
+    font-size: 0.8125rem;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+  }
+
+  .signupPrompt {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Hover effects optimized for 2-card grid layout */
+@media (max-width: 1600px) and (min-width: 1200px) {
+  .feature:hover {
+    transform: translateY(-2px); /* Subtle lift */
+  }
+
+  /* Ensure call-to-action is never hidden */
+  .callToAction {
+    display: block !important;
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "value": "executive",
+    "label": "Executive"
+  },
+  {
+    "value": "partner",
+    "label": "Partner"
+  },
+  {
+    "value": "consultant",
+    "label": "Consultant"
+  },
+  {
+    "value": "engineer",
+    "label": "Engineer"
+  },
+  {
+    "value": "vpPrincipal",
+    "label": "VP/Principal"
+  },
+  {
+    "value": "partnerExec",
+    "label": "Partner/Exec"
+  },
+  {
+    "value": "associate",
+    "label": "Associate"
+  },
+  {
+    "value": "admin",
+    "label": "Admin"
+  }
+]

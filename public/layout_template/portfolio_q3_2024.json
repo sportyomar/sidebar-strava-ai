@@ -1,0 +1,111 @@
+{
+  "layoutSections": [
+    {
+      "layoutKind": "DashboardLayout",
+      "settings": {
+        "maxWidth": "{{tokens.layout.maxWidth}}",
+        "sectionSpacing": "{{computed: calculateSpacing(tokens.spacing.section)}}",
+        "headerSticky": false,
+        "footerSticky": false,
+        "children": [
+          {
+            "layoutKind": "Section",
+            "settings": {
+              "spacing": "lg",
+              "padding": "{{tokens.spacing.large}}",
+              "children": ["DynamicDashboardHeader"]
+            }
+          },
+          {
+            "layoutKind": "MetricGridLayout",
+            "settings": {
+              "columns": "{{computed: getBreakpointColumns(viewport.breakpoint)}}",
+              "gap": "lg",
+              "stackAt": "md",
+              "equalHeight": true,
+              "children": ["DynamicMetricGrid"]
+            }
+          },
+          {
+            "layoutKind": "Section",
+            "settings": {
+              "spacing": "md",
+              "padding": "{{tokens.spacing.medium}}",
+              "children": ["DynamicFilterPanel"]
+            }
+          },
+          {
+            "layoutKind": "TableGroupLayout",
+            "settings": {
+              "spacing": "{{computed: viewport.width > 768 ? 'xl' : 'lg'}}",
+              "collapsible": "{{computed: viewport.width < 768}}",
+              "tabbed": "{{computed: viewport.width < 640}}",
+              "children": [
+                "DynamicCompanyPerformanceTable_HighNegative",
+                "DynamicCompanyPerformanceTable_WatchList",
+                "DynamicCompanyPerformanceTable_Normal",
+                "DynamicCompanyPerformanceTable_HighPositive"
+              ]
+            }
+          },
+          {
+            "layoutKind": "HorizontalStack",
+            "settings": {
+              "spacing": "md",
+              "alignment": "center",
+              "justification": "space-between",
+              "wrap": "{{computed: viewport.width < 768}}",
+              "children": [
+                "DynamicStatusLegend",
+                "DynamicNextStepsPanel"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "responsive": {
+    "xs": {
+      "DashboardLayout": {
+        "maxWidth": "100%",
+        "sectionSpacing": "md"
+      },
+      "MetricGridLayout": {
+        "columns": 1,
+        "gap": "md"
+      },
+      "TableGroupLayout": {
+        "spacing": "md",
+        "tabbed": true
+      }
+    },
+    "sm": {
+      "MetricGridLayout": {
+        "columns": 2,
+        "gap": "lg"
+      },
+      "TableGroupLayout": {
+        "spacing": "lg",
+        "tabbed": false
+      }
+    },
+    "md": {
+      "MetricGridLayout": {
+        "columns": 3,
+        "gap": "lg"
+      }
+    },
+    "lg": {
+      "MetricGridLayout": {
+        "columns": 4,
+        "gap": "xl"
+      },
+      "TableGroupLayout": {
+        "spacing": "xl"
+      }
+    }
+  },
+  "extensions": ["responsive", "financial-layouts"],
+  "domains": ["portfolio-dashboard"]
+}

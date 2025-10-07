@@ -1,0 +1,238 @@
+{
+  "system": {
+    "buildDate": "2025-01-10T08:30:00Z",
+    "currentDate": "January 10, 2025",
+    "version": "1.0.0"
+  },
+  "documentation": {
+    "availableBlocks": [
+      "DashboardHeader",
+      "MetricGrid",
+      "MetricCard",
+      "TextBlock",
+      "TabbedContainer",
+      "PositionsTable",
+      "ChartGrid",
+      "OrderEntry",
+      "OrderHistory",
+      "RiskMetrics",
+      "CorrelationMatrix",
+      "AlertsPanel"
+    ],
+    "tradingDashboard": {
+      "totalLines": 185,
+      "bindingCount": 23,
+      "computedExpressions": 12,
+      "blockTypes": 7,
+      "tabCount": 4,
+      "realTimeEndpoints": 3
+    },
+    "validationRules": {
+      "total": 47,
+      "requiredSettings": 18,
+      "optionalSettings": 29,
+      "strictTypes": 12
+    },
+    "manifestExamples": {
+      "dashboardHeader": {
+        "blockKind": "DashboardHeader",
+        "settings": {
+          "title": "{{trading.portfolioName}}",
+          "subtitle": "Real-time Portfolio Analytics",
+          "lastUpdate": "{{trading.lastUpdate}}",
+          "status": "{{trading.marketStatus}}"
+        }
+      },
+      "metricGridSample": {
+        "blockKind": "MetricGrid",
+        "settings": {
+          "columns": 4,
+          "spacing": "md",
+          "metrics": [
+            {
+              "title": "Portfolio Value",
+              "amount": "{{computed: formatCurrency(trading.totalValue)}}",
+              "trend": "{{computed: calculateTrend(trading.dailyChange)}}",
+              "trendColor": "{{computed: 'success' if trading.dailyChange >= 0 else 'danger'}}"
+            }
+          ]
+        }
+      }
+    },
+    "expressionExamples": {
+      "directBinding": {
+        "syntax": "{{path.to.data}}",
+        "example": "{{trading.portfolioName}}",
+        "result": "High Frequency Alpha Strategy"
+      },
+      "computedFunction": {
+        "syntax": "{{computed: function(args)}}",
+        "example": "{{computed: formatCurrency(trading.totalValue)}}",
+        "result": "$2,547,823.45"
+      },
+      "conditionalLogic": {
+        "syntax": "{{computed: condition ? value1 : value2}}",
+        "example": "{{computed: 'success' if trading.dailyChange >= 0 else 'danger'}}",
+        "result": "success"
+      }
+    },
+    "builtInFunctions": [
+      {
+        "name": "formatCurrency",
+        "signature": "formatCurrency(number)",
+        "description": "Formats a number as currency with $ and commas",
+        "example": "formatCurrency(2547823.45)",
+        "result": "$2,547,823.45"
+      },
+      {
+        "name": "formatPercentage",
+        "signature": "formatPercentage(number)",
+        "description": "Formats a number as percentage with +/- sign",
+        "example": "formatPercentage(0.61)",
+        "result": "+0.61%"
+      },
+      {
+        "name": "calculateTrend",
+        "signature": "calculateTrend(number)",
+        "description": "Shows numeric change with sign and formatting",
+        "example": "calculateTrend(15420.30)",
+        "result": "+$15,420.30"
+      },
+      {
+        "name": "calculateAllocation",
+        "signature": "calculateAllocation(positions)",
+        "description": "Converts position market values to percentage allocation",
+        "example": "calculateAllocation(trading.activePositions)",
+        "result": "[{\"label\": \"AAPL\", \"value\": 26.1}, ...]"
+      }
+    ],
+    "blockKindSchemas": {
+      "MetricGrid": {
+        "requiredSettings": ["metrics"],
+        "optionalSettings": {
+          "columns": "number",
+          "spacing": "string",
+          "responsive": "object"
+        },
+        "strictTypes": {
+          "metrics": "array"
+        },
+        "examples": {
+          "valid": {
+            "metrics": [{"title": "Test", "amount": "100"}],
+            "columns": 4
+          },
+          "invalid": {
+            "error": "metrics should be array but found string"
+          }
+        }
+      },
+      "DashboardHeader": {
+        "requiredSettings": ["title"],
+        "optionalSettings": {
+          "subtitle": "string",
+          "lastUpdate": "string",
+          "status": "string",
+          "actions": "array"
+        }
+      },
+      "TabbedContainer": {
+        "requiredSettings": ["tabs"],
+        "optionalSettings": {
+          "defaultTab": "string",
+          "orientation": "string",
+          "lazy": "boolean"
+        },
+        "strictTypes": {
+          "tabs": "array"
+        }
+      }
+    },
+    "commonErrors": [
+      {
+        "type": "Missing Required Setting",
+        "example": "Block MetricGrid missing required setting 'metrics'",
+        "fix": "Add required 'metrics' array to settings"
+      },
+      {
+        "type": "Type Mismatch",
+        "example": "Setting 'metrics' should be array but found string",
+        "fix": "Ensure metrics is an array of metric objects"
+      },
+      {
+        "type": "Unknown BlockKind",
+        "example": "Unknown blockKind 'CustomBlock'",
+        "fix": "Use only defined BlockKinds from the schema"
+      },
+      {
+        "type": "Expression Error",
+        "example": "Unknown function: unknownFunction",
+        "fix": "Use only built-in functions: formatCurrency, formatPercentage, etc."
+      }
+    ],
+    "resolutionPipeline": {
+      "steps": [
+        {
+          "step": 1,
+          "name": "Manifest Loading",
+          "description": "Load JSON manifest template from templates/ directory",
+          "input": "templates/real-time-trading-dashboard.json",
+          "output": "Raw manifest object with {{bindings}}"
+        },
+        {
+          "step": 2,
+          "name": "Data Context Loading",
+          "description": "Load corresponding data file and create evaluation context",
+          "input": "data/real-time-trading-dashboard.json",
+          "output": "Context object with trading, risk, tokens data"
+        },
+        {
+          "step": 3,
+          "name": "Schema Validation",
+          "description": "Validate manifest structure against BlockKind schemas",
+          "input": "Manifest + BlockKind definitions",
+          "output": "Validation report (errors or success)"
+        },
+        {
+          "step": 4,
+          "name": "Expression Resolution",
+          "description": "Process all {{bindings}} and {{computed: expressions}}",
+          "input": "Manifest with bindings + Context data",
+          "output": "Resolved manifest with actual values"
+        },
+        {
+          "step": 5,
+          "name": "Final Validation",
+          "description": "Validate resolved manifest against type constraints",
+          "input": "Resolved manifest + Schema rules",
+          "output": "Final validated manifest ready for rendering"
+        }
+      ]
+    }
+  },
+  "trading": {
+    "portfolioName": "Documentation Example Portfolio",
+    "lastUpdate": "2025-01-10T08:30:00Z",
+    "marketStatus": "open",
+    "totalValue": 1000000.00,
+    "dailyChange": 25000.00,
+    "dailyPnL": 25000.00,
+    "dailyPnLPercent": 2.5,
+    "valueHistory": [
+      {"timestamp": "09:30", "value": 975000},
+      {"timestamp": "10:30", "value": 985000},
+      {"timestamp": "11:30", "value": 995000},
+      {"timestamp": "12:30", "value": 1000000}
+    ],
+    "activePositions": [
+      {
+        "symbol": "DOCS",
+        "quantity": 1000,
+        "avgPrice": 100.00,
+        "currentPrice": 125.00,
+        "unrealizedPnL": 25000.00,
+        "marketValue": 125000.00
+      }
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+/* Pane.module.css */
+.pane {
+  width: 320px;
+  background: white;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.closeButton:hover {
+  background: rgba(107, 114, 128, 0.1);
+  transform: scale(1.05);
+}
+
+.actionSection {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.newThreadBtn, .uploadBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.newThreadBtn:hover, .uploadBtn:hover {
+  background: #2563eb;
+}
+
+.newThreadForm {
+  padding: 12px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #f8fafc;
+}
+
+.newThreadInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.newThreadActions {
+  display: flex;
+  gap: 8px;
+}
+
+.createBtn {
+  padding: 6px 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  padding: 6px 12px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.threadList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.threadItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f8fafc;
+  transition: background-color 0.15s ease;
+}
+
+.threadItem:hover {
+  background: #f9fafb;
+}
+
+.threadItem.activeThread {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+  padding-left: 17px;
+}
+
+.threadItemContent {
+  flex: 1;
+}
+
+.threadItemTitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.threadItemMeta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.deleteBtn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: all 0.15s ease;
+}
+
+.deleteBtn:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.confirmDialog {
+  padding: 12px 20px;
+  background: #fef2f2;
+  border-left: 3px solid #ef4444;
+}
+
+.confirmContent p {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #7f1d1d;
+}
+
+.confirmActions {
+  display: flex;
+  gap: 8px;
+}
+
+.confirmDelete {
+  padding: 4px 8px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.confirmCancel {
+  padding: 4px 8px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.hiddenFileInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fileItemContent {
+  flex: 1;
+}
+
+.fileName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.fileMeta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.loading, .empty {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.paneContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.contentSection {
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.threadInfo {
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.threadTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.threadMeta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fileItem {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.fileName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.fileMeta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.emptyState {
+  padding: 20px 12px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}

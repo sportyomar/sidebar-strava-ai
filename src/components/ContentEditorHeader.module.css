@@ -1,0 +1,23 @@
+import React from 'react';
+import styles from './ContentEditorHeader.module.css';
+import VersionDropdown from "./VersionDropdown";
+
+const ContentEditorHeader = ({ onClose, onVersionSelect, onSaveNewVersion }) => {
+  return (
+    <div className={styles.modalHeader}>
+      <h2>Edit Formatting</h2>
+      <VersionDropdown
+        currentVersion="1.2"
+        versions={[
+          { id: '1', version: '1.1', date: '2 days ago' },
+          { id: '2', version: '1.0', date: '1 week ago' }
+        ]}
+        onVersionSelect={onVersionSelect}
+        onSaveNewVersion={onSaveNewVersion}
+      />
+      <button className={styles.closeButton} onClick={onClose}>×</button>
+    </div>
+  );
+};
+
+export default ContentEditorHeader;

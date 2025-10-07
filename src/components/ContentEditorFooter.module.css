@@ -1,0 +1,17 @@
+import React from 'react';
+import styles from './ContentEditorFooter.module.css';
+
+const ContentEditorFooter = ({ onClose, onSave }) => {
+  return (
+    <div className={styles.modalFooter}>
+      <button onClick={onClose} className={styles.cancelButton}>
+        Cancel
+      </button>
+      <button onClick={onSave} className={styles.saveButton}>
+        Apply Formatting
+      </button>
+    </div>
+  );
+};
+
+export default ContentEditorFooter;

@@ -1,0 +1,37 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "DashboardContextBar",
+      "settings": {
+        "title": "{{metadata.title}}",
+        "period": "{{metadata.period}}"
+      }
+    },
+    {
+      "blockKind": "VerticalStack",
+      "settings": { "spacing": "2rem" },
+      "containedBlocks": [
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "{{metrics.0.title}}",
+            "amount": "{{metrics.0.amount}}"
+          }
+        },
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "{{metrics.1.title}}",
+            "amount": "{{metrics.1.amount}}"
+          }
+        }
+      ]
+    },
+    {
+      "blockKind": "CompanyTable",
+      "settings": {
+        "companies": "{{tables.0.companies}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": {
+    "title": "string",
+    "context": "string",
+    "period": "string",
+    "breadcrumb": "string"
+  },
+  "example": {
+    "title": "Q3 2024 Portfolio Performance",
+    "context": "Quarterly portfolio review and performance analysis",
+    "period": "Q3 2024",
+    "breadcrumb": "Dashboard > Portfolio > Q3 2024 > Overview"
+  },
+  "bindings": {
+    "title": "metadata.display_title",
+    "context": "metadata.context",
+    "period": "metadata.period",
+    "onNavigate": "navigation callback function"
+  }
+}

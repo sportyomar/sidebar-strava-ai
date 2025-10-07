@@ -1,0 +1,24 @@
+{
+  "schema": {
+    "type": "string",
+    "label": "string",
+    "options": ["string"]
+  },
+  "example": [
+    {
+      "type": "sector",
+      "label": "Sector",
+      "options": ["Technology", "Healthcare", "Retail"]
+    },
+    {
+      "type": "cash_flow_status",
+      "label": "Cash Flow",
+      "options": ["Positive", "Negative"]
+    }
+  ],
+  "bindings": {
+    "filters": "metadata.available_filters",
+    "selected": "selectedFilters state",
+    "onChange": "toggleFilter callback"
+  }
+}

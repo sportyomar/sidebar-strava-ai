@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "section_type": "overview",
+    "dashboard_info": {
+      "title": "📊 Portfolio Triage Dashboard",
+      "description": "Executive performance monitoring and decision support system",
+      "purpose": "Real-time portfolio health assessment and prioritization framework for executive leadership",
+      "use_cases": [
+        "Identify portfolio companies requiring immediate attention",
+        "Monitor variance from approved operating plans by sector and cash position",
+        "Enable data-driven prioritization for CFO and CEO decision-making"
+      ],
+      "target_audience": "C-Suite, Portfolio Management Team, Board Members"
+    },
+    "display_title": "Q3 2024 Portfolio Performance",
+    "current_period": "Q3 2024",
+    "prior_period": "Q3 2023",
+    "period": "Q3 2024",
+    "context": "Quarterly portfolio review and performance analysis",
+    "description": "This consolidates data from all 12 portfolio companies across various sectors and performance metrics",
+    "data_source_info": {
+      "total_companies": 12,
+      "data_collection_period": "Q3 2024",
+      "last_updated": "2024-10-15",
+      "source_systems": [
+        "Portfolio Management System",
+        "Financial Reporting Platform",
+        "Company Management Reports"
+      ]
+    },
+    "navigation_context": {
+      "parent_section": "Portfolio Dashboard",
+      "section_id": "overview",
+      "breadcrumb": "Dashboard > Portfolio > Q3 2024 > Overview"
+    },
+    "available_filters": [
+      {
+        "filter_type": "sector",
+        "options": ["Technology", "Healthcare", "Retail", "Manufacturing", "Financial Services"]
+      },
+      {
+        "filter_type": "performance_tier",
+        "options": ["Ahead of Plan", "On Track", "Behind Plan", "Underperforming"]
+      },
+      {
+        "filter_type": "cash_flow_status",
+        "options": ["Positive", "Negative", "Break-even"]
+      },
+      {
+        "filter_type": "variance_flag",
+        "options": [
+          "high_positive (>20%)",
+          "high_negative (<-20%)",
+          "outside_range (±15-20%)",
+          "within_range (±15%)"
+        ]
+      },
+      {
+        "filter_type": "deep_dive_required",
+        "options": ["Requires Deep Dive", "No Action Needed"]
+      }
+    ],
+    "user_tips": [
+      "Use filters to focus on specific sectors or performance tiers",
+      "Sort by plan_variance_percent to identify outliers quickly",
+      "Flag companies with >20% variance from plan for immediate attention",
+      "Focus on companies outside ±15% variance for board discussion",
+      "Click on company names to drill down into detailed performance metrics",
+      "Hover over metrics for additional context and comparison data",
+      "Export filtered views for board presentations or investor updates"
+    ]
+  },
+  "portfolio_companies": [
+    {
+      "name": "TechCorp",
+      "sector": "Technology",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 45,
+      "variance_flag": "high_positive",
+      "requires_deep_dive": true,
+      "planned_revenue": "$24M",
+      "actual_revenue": "$34.8M"
+    },
+    {
+      "name": "RetailCo",
+      "sector": "Retail",
+      "performance_tier": "Behind Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": -23,
+      "variance_flag": "high_negative",
+      "requires_deep_dive": true,
+      "planned_revenue": "$78M",
+      "actual_revenue": "$60.1M"
+    },
+    {
+      "name": "HealthInc",
+      "sector": "Healthcare",
+      "performance_tier": "Behind Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": -18,
+      "variance_flag": "outside_range",
+      "requires_deep_dive": true,
+      "planned_revenue": "$65M",
+      "actual_revenue": "$53.3M"
+    },
+    {
+      "name": "ManufacturePlus",
+      "sector": "Manufacturing",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 22,
+      "variance_flag": "high_positive",
+      "requires_deep_dive": true,
+      "planned_revenue": "$45M",
+      "actual_revenue": "$54.9M"
+    },
+    {
+      "name": "FinanceFirst",
+      "sector": "Financial Services",
+      "performance_tier": "On Track",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 8,
+      "variance_flag": "within_range",
+      "requires_deep_dive": false,
+      "planned_revenue": "$52M",
+      "actual_revenue": "$56.2M"
+    },
+    {
+      "name": "TechSolutions",
+      "sector": "Technology",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 16,
+      "variance_flag": "outside_range",
+      "requires_deep_dive": true,
+      "planned_revenue": "$38M",
+      "actual_revenue": "$44.1M"
+    },
+    {
+      "name": "Healthcare Partners",
+      "sector": "Healthcare",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 12,
+      "variance_flag": "within_range",
+      "requires_deep_dive": false,
+      "planned_revenue": "$42M",
+      "actual_revenue": "$47.0M"
+    },
+    {
+      "name": "RetailMax",
+      "sector": "Retail",
+      "performance_tier": "On Track",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 5,
+      "variance_flag": "within_range",
+      "requires_deep_dive": false,
+      "planned_revenue": "$58M",
+      "actual_revenue": "$60.9M"
+    },
+    {
+      "name": "Manufacturing Co",
+      "sector": "Manufacturing",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Positive",
+      "plan_variance_percent": 19,
+      "variance_flag": "outside_range",
+      "requires_deep_dive": true,
+      "planned_revenue": "$48M",
+      "actual_revenue": "$57.1M"
+    },
+    {
+      "name": "TechVentures",
+      "sector": "Technology",
+      "performance_tier": "Behind Plan",
+      "cash_flow_status": "Negative",
+      "plan_variance_percent": -28,
+      "variance_flag": "high_negative",
+      "requires_deep_dive": true,
+      "planned_revenue": "$35M",
+      "actual_revenue": "$25.2M"
+    },
+    {
+      "name": "ServiceCorp",
+      "sector": "Financial Services",
+      "performance_tier": "Behind Plan",
+      "cash_flow_status": "Negative",
+      "plan_variance_percent": -31,
+      "variance_flag": "high_negative",
+      "requires_deep_dive": true,
+      "planned_revenue": "$41M",
+      "actual_revenue": "$28.3M"
+    },
+    {
+      "name": "InnovateLab",
+      "sector": "Technology",
+      "performance_tier": "Ahead of Plan",
+      "cash_flow_status": "Negative",
+      "plan_variance_percent": 14,
+      "variance_flag": "within_range",
+      "requires_deep_dive": false,
+      "planned_revenue": "$28M",
+      "actual_revenue": "$31.9M"
+    }
+  ],
+  "key_wins": [
+    {
+      "title": "Revenue growth +12% YoY across portfolio",
+      "details": "led by TechCorp (+45% vs plan)",
+      "impact_level": "high",
+      "companies_involved": ["TechCorp"]
+    },
+    {
+      "title": "Cash flow positive in 9 out of 12 companies this quarter",
+      "details": "Significant improvement in operational efficiency",
+      "impact_level": "high",
+      "companies_involved": ["TechCorp", "RetailCo", "HealthInc", "ManufacturePlus", "FinanceFirst", "TechSolutions", "Healthcare Partners", "RetailMax", "Manufacturing Co"]
+    },
+    {
+      "title": "New strategic partnership signed by RetailCo",
+      "details": "unlocking international markets",
+      "impact_level": "medium",
+      "companies_involved": ["RetailCo"]
+    }
+  ],
+  "areas_of_concern": [
+    {
+      "company": "RetailCo",
+      "issue": "revenue -23% vs plan",
+      "cause": "supply chain delays",
+      "severity": "high",
+      "action_required": true
+    },
+    {
+      "company": "HealthInc",
+      "issue": "EBITDA margins compressed (down 4pts)",
+      "cause": "rising COGS",
+      "severity": "medium",
+      "action_required": true
+    }
+  ],
+  "strategic_recommendation": {
+    "primary": "Launch margin enhancement initiative focused on procurement optimization and price increases in underperforming segments",
+    "timeline": "Q4 2024 - Q1 2025",
+    "expected_impact": "2-3% improvement in portfolio EBITDA margins",
+    "target_companies": ["RetailCo", "HealthInc", "ServiceCorp"]
+  },
+  "key_metrics": {
+    "portfolio_revenue": {
+      "amount": "$847M",
+      "growth": "+12% YoY",
+      "vs_plan": "+3%"
+    },
+    "avg_ebitda_margin": {
+      "current": "18.5%",
+      "previous_quarter": "19.2%",
+      "target": "20.0%"
+    },
+    "plan_performance": {
+      "ahead_of_plan": 7,
+      "behind_plan": 5,
+      "total_companies": 12
+    },
+    "cash_generation": {
+      "actual": "$38M",
+      "target": "$30M",
+      "vs_target_percent": "+27%",
+      "vs_burn_targets": "+$38M",
+      "vs_prior_year": "+$12M",
+      "vs_target": "+$8M",
+      "positive_companies": 9,
+      "negative_companies": 3
+    }
+  },
+  "next_steps": [
+    {
+      "action": "Schedule deep dives for RetailCo & HealthInc",
+      "owner": "Portfolio Management Team",
+      "due_date": "2024-10-30",
+      "priority": "high"
+    },
+    {
+      "action": "Prepare updated investor presentation for Q4 outlook",
+      "owner": "Investor Relations",
+      "due_date": "2024-11-15",
+      "priority": "medium"
+    },
+    {
+      "action": "Refresh fund-level model with revised forecasts",
+      "owner": "Finance Team",
+      "due_date": "2024-11-30",
+      "priority": "medium"
+    }
+  ]
+}

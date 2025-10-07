@@ -1,0 +1,1366 @@
+{
+  "company_overview": {
+    "name": "Pacific Lake",
+    "description": "Find and grow a great company with start-to-finish help from the leading firm that has defined the search fund space for more than a decade",
+    "mission": "Our legacy is built on the foundation of partnering with ambitious individuals on their path to entrepreneurship through acquisition. How can we help you amplify your potential?",
+    "key_metrics": {
+      "search_funds_backed": "200+",
+      "operating_companies": "120+",
+      "funds": 8,
+      "committed_capital": "$1.58B"
+    },
+    "geographic_focus": ["Boston", "Palo Alto"],
+    "target_market": "Entrepreneurs acquiring small-to-mid-sized businesses"
+  },
+  "portfolio_companies": [
+    {
+      "name": "Fleetflo",
+      "ceo": [
+        "Dan Calano"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "Pathfinder Brands",
+      "ceo": [
+        "Leif Frey",
+        "Adam Lifshiftz"
+      ],
+      "sector": "HoldCo",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "Wu Consulting",
+      "ceo": [
+        "Steven Tan"
+      ],
+      "sector": "Prof. services",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "Resolute Property Tax Solutions",
+      "ceo": [
+        "James Serena",
+        "Ed Buser",
+        "Federico Marchese"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "Provider Resources",
+      "ceo": [
+        "Alex Ginsberg"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "Crystal Practice Management",
+      "ceo": [
+        "Kyle Baer"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2025
+    },
+    {
+      "name": "SeQent",
+      "ceo": [
+        "Michael Levine",
+        "Sheret Ross"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Advanced Aircrew Academy",
+      "ceo": [
+        "Alvin Wong",
+        "Jordan Huibers"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "HealthBridge",
+      "ceo": [
+        "Shaquille Walker",
+        "Nick Kerr"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Comprehensive Mobile Care",
+      "ceo": [
+        "Saad Hirani",
+        "Tanner Clawson"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Ryzer",
+      "ceo": [
+        "Tim Heath",
+        "Michael Kahn"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Forio",
+      "ceo": [
+        "Drew Marx"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Biometrics4ALL",
+      "ceo": [
+        "Brigid Mulcahy"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "StaffScheduleCare",
+      "ceo": [
+        "Federico de la Balze",
+        "Tony Patti"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "Katonah Management Services",
+      "ceo": [
+        "Tyler Lendzion"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2024
+    },
+    {
+      "name": "ELK Analytics",
+      "ceo": [
+        "Daniel Baiz",
+        "Camilo Garces"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "Pelvic Health Solutions",
+      "ceo": [
+        "Beixi Li"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "FileOnQ",
+      "ceo": [
+        "Chris Michotte"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "BroadPeak",
+      "ceo": [
+        "Tobin Kearn"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "Avanti",
+      "ceo": [
+        "Amin Lalani",
+        "David Cord"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "LabShares",
+      "ceo": [
+        "Philip Borden"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "Jaama",
+      "ceo": [
+        "Andrew Holgate"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "ElderTree Care Management",
+      "ceo": [
+        "Adriana Garcia Ceja"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "Raisin",
+      "ceo": [
+        "Adrian Bartha",
+        "Quinten Griffiths"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2023
+    },
+    {
+      "name": "ServantPC Resources",
+      "ceo": [
+        "Mike Yakima"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "ETU",
+      "ceo": [
+        "Katie Laidlaw"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "EvoText",
+      "ceo": [
+        "David Parkinson"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Quick Soft",
+      "ceo": [
+        "Rodrigo Eddine",
+        "Lucas Fiuza"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Triyam",
+      "ceo": [
+        "Luka Salamunic"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2022
+    },
+    {
+      "name": "Page Vault",
+      "ceo": [
+        "Alex Sappington",
+        "Luke Suydam"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Management One",
+      "ceo": [
+        "Nathan Sheth"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Eleven Software",
+      "ceo": [
+        "Hannah Greenberg",
+        "Alex Lopez"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Discovery Senior Living",
+      "ceo": [
+        "Jonathan Schatz"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Meternet",
+      "ceo": [
+        "Bryson Smith"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Darcy Partners",
+      "ceo": [
+        "Sam Long",
+        "Phil Kantor"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Gastro Center of MD",
+      "ceo": [
+        "Zachary Jones"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Calyx Senior Living",
+      "ceo": [
+        "Karen Moriarty"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2022,
+      "notes": "LTH"
+    },
+    {
+      "name": "Octapus",
+      "ceo": [
+        "Felipe Villaneda",
+        "Pierre Lambert"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Elios Media",
+      "ceo": [
+        "Ryan Schafer"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Revive Salon & Spa",
+      "ceo": [
+        "Matthew Speaker",
+        "Michael Speaker"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "Concierge Plus",
+      "ceo": [
+        "Mauricio Gonzalez"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2022
+    },
+    {
+      "name": "NeoAssist",
+      "ceo": [],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "TopQuadrant",
+      "ceo": [
+        "Nimit Mehta",
+        "Amar Doshi"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Spanish Schoolhouse",
+      "ceo": [
+        "Evan Meehan"
+      ],
+      "sector": "Education",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Salvavidas Cardio",
+      "ceo": [
+        "Carlos Fernandez"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Prelude Dynamics",
+      "ceo": [
+        "Tommy Jackson"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "TaskRay",
+      "ceo": [
+        "Sam Swan"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Waverock",
+      "ceo": [
+        "Mike Rozenfeld"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Icon",
+      "ceo": [
+        "Ryan Galea"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "maxRTE",
+      "ceo": [
+        "Carla Larin"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Tactiq",
+      "ceo": [
+        "Mark Devooght"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "dotCMS",
+      "ceo": [
+        "Vadym Kononenko",
+        "Zain Ishaq"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Vitana Pediatric & Orthodontic Partners",
+      "ceo": [
+        "Ashish Bagai",
+        "Amir Fardshisheh"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "ConsumerAffairs",
+      "ceo": [
+        "Zac Carman"
+      ],
+      "sector": "Consumer services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Flint Group",
+      "ceo": [
+        "Collin Hathaway"
+      ],
+      "sector": "Prof. services",
+      "status": "Exited",
+      "investment_year": 2021
+    },
+    {
+      "name": "Central Storage & Warehouse",
+      "ceo": [
+        "Hill Hamrick",
+        "Sam Krieg"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2021,
+      "notes": "LTH"
+    },
+    {
+      "name": "NCFDD",
+      "ceo": [],
+      "sector": "Prof. services",
+      "status": "Active",
+      "investment_year": 2021,
+      "notes": "LTH"
+    },
+    {
+      "name": "HigherMe",
+      "ceo": [
+        "Elise Polezel"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2021
+    },
+    {
+      "name": "Halsey Health",
+      "ceo": [
+        "Peter Sullivan",
+        "Danny Ball"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Montis Financial",
+      "ceo": [
+        "John Yanchek",
+        "Tucker Donahoe"
+      ],
+      "sector": "Financial services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "másLabor",
+      "ceo": [],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Meridian Title Corporation",
+      "ceo": [
+        "Randy Rempp"
+      ],
+      "sector": "Prof. services",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Ennoble Care",
+      "ceo": [
+        "Kush Das"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Newbury Franklin",
+      "ceo": [
+        "Mark Anderegg"
+      ],
+      "sector": "Diversified",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Datacor",
+      "ceo": [
+        "Tom Jackson"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021,
+      "notes": "LTH"
+    },
+    {
+      "name": "Axero",
+      "ceo": [
+        "Adam Ilowite",
+        "Michael Upex"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2021
+    },
+    {
+      "name": "Arven Capital Partners",
+      "ceo": [
+        "Daniel Potgieter",
+        "Richard Challis"
+      ],
+      "sector": "HoldCo",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "ECP",
+      "ceo": [
+        "Adam Aisen"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "2020 Innovation",
+      "ceo": [
+        "Michael Roberts"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "Shandy Clinic",
+      "ceo": [
+        "Laura Franklin"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "JDXpert",
+      "ceo": [],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "OneShield",
+      "ceo": [
+        "Cameron Parker",
+        "Brandon Parker"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2020,
+      "notes": "LTH"
+    },
+    {
+      "name": "NovoPath",
+      "ceo": [
+        "Promise Okeke"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2020
+    },
+    {
+      "name": "Radiation Detection Company",
+      "ceo": [
+        "Ryan Turk"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2020,
+      "notes": "LTH"
+    },
+    {
+      "name": "Echosec",
+      "ceo": [
+        "Jeff Oldenburg"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2020
+    },
+    {
+      "name": "Clariti",
+      "ceo": [
+        "Cyrus Symoom",
+        "Jake Dancyger"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019,
+      "notes": "LTH"
+    },
+    {
+      "name": "IntellaTriage",
+      "ceo": [
+        "Daniel Reese"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "Performio",
+      "ceo": [
+        "Grayson Morris",
+        "Luke Teeple"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "The Nearshore Company",
+      "ceo": [
+        "Armando Martinez Alarcon"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "Utility Cloud",
+      "ceo": [
+        "Dan Calano"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2019
+    },
+    {
+      "name": "Pacific Fertility Center Los Angeles",
+      "ceo": [
+        "Brittany Collins",
+        "Miles Collins"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2019
+    },
+    {
+      "name": "Stoque",
+      "ceo": [
+        "Thiago De Assis Silva"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "Colcharter I.P.S.",
+      "ceo": [
+        "Santiago Ferro",
+        "Sebastian Perez Restrepo"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "BP Logix",
+      "ceo": [
+        "Girish Pashilkar"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "Auronix",
+      "ceo": [
+        "Martin Urrutia",
+        "Adrián Villaseñor"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "i4pro",
+      "ceo": [
+        "Rafael Araujo"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2019
+    },
+    {
+      "name": "Tecnología en Cuentas por Cobrar",
+      "ceo": [
+        "Eduardo Etchegaray",
+        "Marvin Palavicini"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2018
+    },
+    {
+      "name": "Ascend Software",
+      "ceo": [
+        "Robert Southern"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Neul Capital",
+      "ceo": [
+        "Adam McGregor",
+        "Doug McGregor"
+      ],
+      "sector": "HoldCo",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Avea",
+      "ceo": [],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2018
+    },
+    {
+      "name": "Legna Software",
+      "ceo": [
+        "Woody Rich"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Discover Health",
+      "ceo": [
+        "Daniel Hudspeth"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Dynamic Growth Dental Support",
+      "ceo": [
+        "Ryan Jones"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2018
+    },
+    {
+      "name": "AspenRidge Recovery",
+      "ceo": [],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Destination Pet",
+      "ceo": [],
+      "sector": "Prof. services",
+      "status": "Exited",
+      "investment_year": 2018
+    },
+    {
+      "name": "Infosel",
+      "ceo": [
+        "Edgar Perez",
+        "Miguel Garcia Ruiz"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Kantola",
+      "ceo": [
+        "Scott Mackenzie",
+        "Sarah Rowell"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2018
+    },
+    {
+      "name": "The Carolina Center",
+      "ceo": [
+        "Brandon Garcilazo",
+        "Keith Laabs"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2018
+    },
+    {
+      "name": "Fraxion",
+      "ceo": [],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "Morningside",
+      "ceo": [
+        "Roland Lessard",
+        "Thomas Klein"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "Mercury Roadways",
+      "ceo": [
+        "Alex Ginsberg"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2017
+    },
+    {
+      "name": "Banyan",
+      "ceo": [
+        "David Berkal"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2017,
+      "notes": "LTH"
+    },
+    {
+      "name": "Richmond Alarm",
+      "ceo": [
+        "Brian Vanderheyden"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "Circle Surrogacy",
+      "ceo": [
+        "Steuart Botchford",
+        "Sam Hyde"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "CCD",
+      "ceo": [
+        "Kalil Diaz"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "eRequester",
+      "ceo": [],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2017
+    },
+    {
+      "name": "Falcon Critical Care Transport",
+      "ceo": [
+        "Tyler Coats"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2017
+    },
+    {
+      "name": "IS Entrega",
+      "ceo": [
+        "Andre Freire",
+        "Marcelo Novaes"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2017
+    },
+    {
+      "name": "HousingWire",
+      "ceo": [
+        "Clayton Collins"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2016
+    },
+    {
+      "name": "Omatic",
+      "ceo": [
+        "Daniel Kim"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2016
+    },
+    {
+      "name": "Lightwave Dental Management",
+      "ceo": [
+        "Justin Jory"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2016
+    },
+    {
+      "name": "Worldwide Security",
+      "ceo": [
+        "Alexander Schuil"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "ProPoint Solutions",
+      "ceo": [
+        "Raj Mahajan"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "Chronus",
+      "ceo": [
+        "Seena Mortazavi"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "Productive Access",
+      "ceo": [
+        "Alex Gelman"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "Ethos Risk Services",
+      "ceo": [
+        "Micah Smith"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "Answer1",
+      "ceo": [
+        "Parker Davis"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2015
+    },
+    {
+      "name": "PEC Safety",
+      "ceo": [
+        "Colby Lane"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2014
+    },
+    {
+      "name": "Constellant",
+      "ceo": [
+        "Bhavesh Patel"
+      ],
+      "sector": "Software",
+      "status": "Active",
+      "investment_year": 2014
+    },
+    {
+      "name": "AquaVita",
+      "ceo": [
+        "Jane Kaggwa-Snow"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2014
+    },
+    {
+      "name": "B.N.I.",
+      "ceo": [
+        "Graham Weihmiller"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2014
+    },
+    {
+      "name": "FieldEdge",
+      "ceo": [
+        "Rameez Ansari",
+        "Steve Lau"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2014
+    },
+    {
+      "name": "BEX Realty",
+      "ceo": [],
+      "sector": "Prof. services",
+      "status": "Active",
+      "investment_year": 2014
+    },
+    {
+      "name": "FastSpring",
+      "ceo": [
+        "Chris Lueck"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2013
+    },
+    {
+      "name": "Espyr",
+      "ceo": [
+        "Rick Taweel"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2013
+    },
+    {
+      "name": "Aegis Treatment Center",
+      "ceo": [
+        "Alex Dodd"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2013
+    },
+    {
+      "name": "Virtual OfficeWare Healthcare Solutions",
+      "ceo": [
+        "David Harel"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2012
+    },
+    {
+      "name": "Raptor Technologies",
+      "ceo": [
+        "Jim Vesterman"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2012
+    },
+    {
+      "name": "Discovia",
+      "ceo": [
+        "Christian Lawrence",
+        "Ciaran Power"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2012
+    },
+    {
+      "name": "Circle Graphics",
+      "ceo": [
+        "Andrew Cousin"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2012
+    },
+    {
+      "name": "Little Sprouts",
+      "ceo": [
+        "Mark Anderegg"
+      ],
+      "sector": "Education",
+      "status": "Exited",
+      "investment_year": 2012
+    },
+    {
+      "name": "Cleo",
+      "ceo": [
+        "Mahesh Rajasekharan"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2012
+    },
+    {
+      "name": "Scottish American",
+      "ceo": [],
+      "sector": "HoldCo",
+      "status": "Exited",
+      "investment_year": 2011
+    },
+    {
+      "name": "RIA in a Box",
+      "ceo": [
+        "G.J. King",
+        "Will Bressman"
+      ],
+      "sector": "Software",
+      "status": "Exited",
+      "investment_year": 2011
+    },
+    {
+      "name": "QMC Telecom",
+      "ceo": [
+        "Rafael Somoza",
+        "Jose Stella"
+      ],
+      "sector": "B2B services",
+      "status": "Active",
+      "investment_year": 2011
+    },
+    {
+      "name": "Vector Disease Control International",
+      "ceo": [
+        "Jay Davis",
+        "Jason Pananos"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2011
+    },
+    {
+      "name": "n2",
+      "ceo": [],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2011
+    },
+    {
+      "name": "Arizona College of Allied Health",
+      "ceo": [
+        "Nick Mansour"
+      ],
+      "sector": "Healthcare",
+      "status": "Active",
+      "investment_year": 2010,
+      "notes": "LTH"
+    },
+    {
+      "name": "Griswold Home Care",
+      "ceo": [
+        "Graham Weihmiller"
+      ],
+      "sector": "Healthcare",
+      "status": "Exited",
+      "investment_year": 2010
+    },
+    {
+      "name": "OnRamp",
+      "ceo": [
+        "Lucas Braun",
+        "Ryan Robinson"
+      ],
+      "sector": "B2B services",
+      "status": "Exited",
+      "investment_year": 2009
+    }
+  ],
+  "offices": [
+    {
+      "location": "Boston",
+      "address": "Prudential Tower, 800 Boylston Street, Suite 2220, Boston, MA 02199"
+    },
+    {
+      "location": "Palo Alto",
+      "address": "Town & Country Village, 855 El Camino Real, Bldg 4, Suite 290, Palo Alto, CA 94301"
+    }
+  ],
+  "metadata": {
+    "total_companies": 125,
+    "by_status": {
+      "active": 90,
+      "exited": 35
+    },
+    "by_sector": {
+      "software": 62,
+      "b2b_services": 33,
+      "healthcare": 21,
+      "prof_services": 5,
+      "holdco": 4,
+      "education": 2,
+      "consumer_services": 1,
+      "financial_services": 1,
+      "diversified": 1
+    },
+    "by_investment_year": {
+      "2025": 6,
+      "2024": 9,
+      "2023": 9,
+      "2022": 18,
+      "2021": 26,
+      "2020": 9,
+      "2019": 9,
+      "2018": 10,
+      "2017": 9,
+      "2016": 3,
+      "2015": 6,
+      "2014": 5,
+      "2013": 3,
+      "2012": 6,
+      "2011": 4,
+      "2010": 2,
+      "2009": 1
+    },
+    "investment_period": {
+      "earliest": 2009,
+      "latest": 2025,
+      "span_years": 16
+    },
+    "notes": {
+      "lth_companies": 8,
+      "companies_with_multiple_ceos": 45,
+      "companies_without_listed_ceos": 8
+    },
+    "extraction_date": "2025-06-28"
+  }
+}

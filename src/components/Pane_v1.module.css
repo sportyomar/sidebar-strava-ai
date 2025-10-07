@@ -1,0 +1,105 @@
+/* Pane.module.css */
+.pane {
+  width: 320px;
+  background: white;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.closeButton:hover {
+  background: rgba(107, 114, 128, 0.1);
+  transform: scale(1.05);
+}
+
+.paneContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.contentSection {
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.threadInfo {
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.threadTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.threadMeta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fileItem {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.fileName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.fileMeta {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.emptyState {
+  padding: 20px 12px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}

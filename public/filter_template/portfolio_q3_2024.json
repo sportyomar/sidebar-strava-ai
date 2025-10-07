@@ -1,0 +1,33 @@
+{
+  "designSections": [
+    {
+      "designKind": "ComponentTheme",
+      "settings": {
+        "component": "header",
+        "padding": "{{spacing.spacing.sm}}",
+        "background": "{{colors.colors.surface}}",
+        "borderBottom": "1px solid {{colors.colors.border-subtle}}"
+      }
+    },
+    {
+      "designKind": "ComponentTheme",
+      "settings": {
+        "component": "sidebar",
+        "padding": "{{spacing.spacing.lg}}",
+        "background": "{{colors.colors.surface-secondary}}",
+        "width": "300px"
+      }
+    },
+    {
+      "designKind": "ComponentTheme",
+      "settings": {
+        "component": "card",
+        "padding": "{{spacing.spacing.lg}}",
+        "background": "{{colors.colors.surface}}",
+        "border": "1px solid {{colors.colors.border-subtle}}",
+        "borderRadius": "8px",
+        "boxShadow": "{{shadows.shadows.sm}}"
+      }
+    }
+  ]
+}

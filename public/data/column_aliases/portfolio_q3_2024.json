@@ -1,0 +1,11 @@
+export const COLUMN_ALIASES = {
+  company_name: 'Company',
+  sector: 'Sector',
+  planned_revenue: 'Planned Revenue',
+  actual_revenue: 'Actual Revenue',
+  plan_variance_percent: 'Variance (%)',
+  cash_flow_status: 'Cash Flow',
+  performance_tier: 'Performance Tier',
+  variance_flag: 'Variance Flag',
+  requires_deep_dive: 'Deep Dive Req.'
+};

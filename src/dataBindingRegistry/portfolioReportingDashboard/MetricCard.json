@@ -1,0 +1,36 @@
+{
+  "schema": {
+    "title": "string",
+    "amount": "string",
+    "trend": {
+      "type": "up|down|neutral",
+      "text": "string"
+    },
+    "lines": [
+      {
+        "text": "string",
+        "type": "positive|negative|neutral"
+      }
+    ],
+    "subLabel": "string"
+  },
+  "example": {
+    "title": "Revenue",
+    "amount": "$847M",
+    "trend": {
+      "type": "up",
+      "text": "vs Q3 2023"
+    },
+    "lines": [
+      {"text": "+3% (vs Q3 Target)", "type": "positive"},
+      {"text": "+12% (vs Q3 2023)", "type": "positive"}
+    ],
+    "subLabel": "Q3 2024, Portfolio Total"
+  },
+  "bindings": {
+    "amount": "key_metrics.portfolio_revenue.amount",
+    "trend.text": "calculated from growth field",
+    "lines[0].text": "key_metrics.portfolio_revenue.vs_plan",
+    "lines[1].text": "key_metrics.portfolio_revenue.growth"
+  }
+}

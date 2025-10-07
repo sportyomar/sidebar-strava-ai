@@ -1,0 +1,67 @@
+{
+  "company_info": {
+    "name": "TechCorp",
+    "sector": "Technology",
+    "reporting_period": "Q3 2024",
+    "cfo_name": "David Kim",
+    "submission_date": "2024-10-10"
+  },
+  "financial_statements": {
+    "income_statement": {
+      "revenue": 34800000,
+      "cost_of_goods_sold": 13920000,
+      "gross_profit": 20880000,
+      "operating_expenses": {
+        "sales_marketing": 8700000,
+        "research_development": 5220000,
+        "general_admin": 3480000,
+        "total": 17400000
+      },
+      "ebitda": 3480000,
+      "depreciation": 696000,
+      "ebit": 2784000,
+      "interest_expense": 348000,
+      "tax": 609000,
+      "net_income": 1827000
+    },
+    "cash_flow": {
+      "operating_cash_flow": 4176000,
+      "investing_cash_flow": -1740000,
+      "financing_cash_flow": -870000,
+      "net_cash_flow": 1566000,
+      "cash_beginning": 8700000,
+      "cash_ending": 10266000
+    },
+    "balance_sheet": {
+      "total_assets": 52200000,
+      "total_liabilities": 17400000,
+      "shareholders_equity": 34800000,
+      "debt": 8700000
+    }
+  },
+  "budget_comparison": {
+    "planned_revenue": 24000000,
+    "actual_revenue": 34800000,
+    "variance_amount": 10800000,
+    "variance_percent": 45.0
+  },
+  "key_metrics": {
+    "gross_margin_percent": 60.0,
+    "ebitda_margin_percent": 10.0,
+    "customer_count": 450,
+    "revenue_per_customer": 77333,
+    "employee_count": 280
+  },
+  "management_commentary": {
+    "performance_highlights": [
+      "Strong demand for new AI-powered features drove 45% revenue beat",
+      "Successful enterprise customer acquisition (+25% new logos)",
+      "Product development milestones achieved ahead of schedule"
+    ],
+    "challenges": [
+      "Higher than expected R&D costs for AI platform development",
+      "Competitive pressure on pricing in mid-market segment"
+    ],
+    "outlook": "Maintaining strong momentum into Q4 with robust pipeline"
+  }
+}

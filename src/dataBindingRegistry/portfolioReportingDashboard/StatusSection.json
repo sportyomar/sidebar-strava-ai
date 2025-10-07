@@ -1,0 +1,32 @@
+{
+  "schema": {
+    "title": "string",
+    "icon": "string",
+    "filter": "string",
+    "color": "string"
+  },
+  "example": [
+    {
+      "title": "Problems",
+      "icon": "🚨",
+      "filter": "variance_flag === 'high_negative' || cash_flow_status === 'Negative'",
+      "color": "problemsTitle"
+    },
+    {
+      "title": "Watch List",
+      "icon": "⚠️",
+      "filter": "variance_flag === 'outside_range'",
+      "color": "watchTitle"
+    },
+    {
+      "title": "Performing Well",
+      "icon": "✅",
+      "filter": "variance_flag === 'high_positive' && cash_flow_status === 'Positive'",
+      "color": "performersTitle"
+    }
+  ],
+  "bindings": {
+    "data": "filteredCompanies",
+    "filter_expression": "JavaScript expression for filtering"
+  }
+}

@@ -1,0 +1,256 @@
+/* =============================================================================
+   HEADER BUTTON GROUP - CLEAN IMPLEMENTATION
+   ============================================================================= */
+
+.buttonGroup {
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: visible; /* Changed to preserve dropdowns */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  position: relative;
+}
+
+.buttonGroup:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =============================================================================
+   BUTTON GROUP ITEMS
+   ============================================================================= */
+
+.buttonGroupItem {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Divider lines between items */
+.buttonGroupItem:not(.last):not(.only)::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 0;
+  width: 1px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+/* =============================================================================
+   CHILD COMPONENT OVERRIDES - MINIMAL APPROACH
+   ============================================================================= */
+
+/* Only target the direct wrapper/container of each button group item */
+.buttonGroupItem {
+  /* Remove default button/element styling from the wrapper */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/* Style the container to create the button group appearance */
+.buttonGroupItem > :first-child {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 34px !important;
+  background: transparent !important;
+  transition: background-color 0.15s ease !important;
+}
+
+/* Remove individual component borders and backgrounds */
+.buttonGroupItem > :first-child {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  background: white !important;
+}
+
+/* Add internal borders between items */
+.buttonGroupItem:not(.last):not(.only) > :first-child {
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+/* Hover state - only for the direct child, not nested elements */
+.buttonGroupItem > :first-child:hover {
+  background: #f8fafc !important;
+}
+
+/* Focus/active states */
+.buttonGroupItem > :first-child:focus-visible {
+  background: #f8fafc !important;
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: -2px !important;
+}
+
+/* Don't interfere with any nested elements or dropdowns */
+.buttonGroupItem * {
+  /* Let child components handle their own styling */
+}
+
+/* =============================================================================
+   POSITIONING CLASSES
+   ============================================================================= */
+
+/* First item - rounded left, flat right */
+.buttonGroupItem.first > :first-child {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Last item - rounded right, flat left */
+.buttonGroupItem.last > :first-child {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* Middle items - flat on both sides */
+.buttonGroupItem:not(.first):not(.last):not(.only) > :first-child {
+  border-radius: 0 !important;
+}
+
+/* Only item (single child) - rounded all around */
+.buttonGroupItem.only > :first-child {
+  border-radius: 5px !important;
+}
+
+/* =============================================================================
+   VARIANTS
+   ============================================================================= */
+
+/* Default variant (already defined above) */
+.variant-default {
+  /* Uses base styles */
+}
+
+/* Compact variant */
+.variant-compact {
+  border-radius: 4px;
+}
+
+.variant-compact .buttonGroupItem.first > :first-child {
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.variant-compact .buttonGroupItem.last > :first-child {
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.variant-compact .buttonGroupItem:not(.first):not(.last):not(.only) > :first-child {
+  border-radius: 0 !important;
+}
+
+.variant-compact .buttonGroupItem.only > :first-child {
+  border-radius: 3px !important;
+}
+
+/* Elevated variant */
+.variant-elevated {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1d5db;
+}
+
+.variant-elevated:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* =============================================================================
+   SIZES
+   ============================================================================= */
+
+/* Small size */
+.size-small {
+  height: 32px;
+}
+
+/* Medium size (default) */
+.size-medium {
+  height: 36px;
+}
+
+/* Large size */
+.size-large {
+  height: 40px;
+}
+
+/* =============================================================================
+   DROPDOWN POSITIONING - HANDS OFF APPROACH
+   ============================================================================= */
+
+/* Let dropdowns handle their own positioning completely */
+.buttonGroupItem [class*="dropdown"] {
+  /* Don't interfere with dropdown styling at all */
+}
+
+/* =============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  .buttonGroup {
+    flex-direction: column;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .buttonGroupItem:not(.last):not(.only)::after {
+    display: none;
+  }
+
+  .buttonGroupItem:not(.last):not(.only) {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .buttonGroupItem.first > :first-child {
+    border-radius: 7px 7px 0 0 !important;
+  }
+
+  .buttonGroupItem.last > :first-child {
+    border-radius: 0 0 7px 7px !important;
+  }
+
+  .buttonGroupItem:not(.first):not(.last):not(.only) > :first-child {
+    border-radius: 0 !important;
+  }
+
+  .buttonGroupItem.only > :first-child {
+    border-radius: 7px !important;
+  }
+
+  /* Compact variant mobile adjustments */
+  .variant-compact .buttonGroupItem.first > :first-child {
+    border-radius: 5px 5px 0 0 !important;
+  }
+
+  .variant-compact .buttonGroupItem.last > :first-child {
+    border-radius: 0 0 5px 5px !important;
+  }
+
+  .variant-compact .buttonGroupItem:not(.first):not(.last):not(.only) > :first-child {
+    border-radius: 0 !important;
+  }
+
+  .variant-compact .buttonGroupItem.only > :first-child {
+    border-radius: 5px !important;
+  }
+}

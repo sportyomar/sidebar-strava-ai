@@ -1,0 +1,31 @@
+import React, { useState, useEffect } from "react";
+import styles from "./CountdownTimerBlock.module.css";
+
+export default function CountdownTimerBlock({ targetTime, title }) {
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const diff = new Date(targetTime) - new Date();
+    return Math.max(0, Math.floor(diff / 1000));
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => Math.max(0, prev - 1));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const format = (s) => {
+    const h = String(Math.floor(s / 3600)).padStart(2, "0");
+    const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
+    const sec = String(s % 60).padStart(2, "0");
+    return `${h}:${m}:${sec}`;
+  };
+
+  return (
+    <div className={styles.timerBox}>
+      <h2>{title}</h2>
+      <div className={styles.time}>{format(timeLeft)}</div>
+      {timeLeft === 0 && <p>⏳ It has begun.</p>}
+    </div>
+  );
+}

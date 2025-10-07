@@ -1,0 +1,102 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "DynamicDashboardHeader",
+      "settings": {
+        "title": "{{dashboard_info.title}}",
+        "subtitle": "{{display_title}}",
+        "lastUpdate": "{{data_source_info.last_updated}}",
+        "status": "{{dashboard_info.description}}"
+      }
+    },
+    {
+      "blockKind": "DynamicMetricGrid",
+      "settings": {
+        "columns": 4,
+        "spacing": "lg",
+        "metrics": "{{key_metrics_cards}}"
+      }
+    },
+    {
+      "blockKind": "DynamicFilterPanel",
+      "settings": {
+        "filters": "{{available_filters}}"
+      }
+    },
+    {
+      "blockKind": "DynamicCompanyPerformanceTable",
+      "settings": {
+        "title": "🚨 Companies with High Negative Variance",
+        "filter": {
+          "logic": "AND",
+          "conditions": [
+            { "field": "variance_flag", "equals": "high_negative" }
+          ]
+        },
+        "columns": ["name", "sector", "plan_variance_percent", "cash_flow_status"],
+        "data": "{{portfolio_companies}}"
+      }
+    },
+    {
+      "blockKind": "DynamicCompanyPerformanceTable",
+      "settings": {
+        "title": "⚠️ Watch List (Variance ±15-20%)",
+        "filter": {
+          "logic": "AND",
+          "conditions": [
+            { "field": "variance_flag", "equals": "outside_range" }
+          ]
+        },
+        "columns": ["name", "sector", "plan_variance_percent", "cash_flow_status"],
+        "data": "{{portfolio_companies}}"
+      }
+    },
+    {
+      "blockKind": "DynamicCompanyPerformanceTable",
+      "settings": {
+        "title": "🟢 Normal Range (±15%)",
+        "filter": {
+          "logic": "AND",
+          "conditions": [
+            { "field": "variance_flag", "equals": "within_range" }
+          ]
+        },
+        "columns": ["name", "sector", "plan_variance_percent", "cash_flow_status"],
+        "data": "{{portfolio_companies}}"
+      }
+    },
+    {
+      "blockKind": "DynamicCompanyPerformanceTable",
+      "settings": {
+        "title": "✅ Performing Well (High Positive Variance)",
+        "filter": {
+          "logic": "AND",
+          "conditions": [
+            { "field": "variance_flag", "equals": "high_positive" }
+          ]
+        },
+        "columns": ["name", "sector", "plan_variance_percent", "cash_flow_status"],
+        "data": "{{portfolio_companies}}"
+      }
+    },
+    {
+      "blockKind": "DynamicStatusLegend",
+      "settings": {
+        "legendItems": [
+          { "icon": "🚨", "label": "High Negative Variance (<-20%)" },
+          { "icon": "⚠️", "label": "Watch List (±15-20%)" },
+          { "icon": "🟢", "label": "Normal Range (±15%)" },
+          { "icon": "✅", "label": "High Positive Variance (>+20%)" }
+        ]
+      }
+    },
+    {
+      "blockKind": "DynamicNextStepsPanel",
+      "settings": {
+        "actions": "{{next_steps}}"
+      }
+    }
+  ],
+  "extensions": ["styling", "portfolio-dashboard-enhancements"],
+  "domains": ["portfolio-analysis", "financial-dashboard"]
+}

@@ -1,0 +1,24 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "HorizontalStack",
+      "settings": { "spacing": "1.5rem" },
+      "containedBlocks": [
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "{{metrics.2.title}}",
+            "amount": "{{metrics.2.amount}}"
+          }
+        },
+        {
+          "blockKind": "MetricCard",
+          "settings": {
+            "title": "{{metrics.3.title}}",
+            "amount": "{{metrics.3.amount}}"
+          }
+        }
+      ]
+    }
+  ]
+}

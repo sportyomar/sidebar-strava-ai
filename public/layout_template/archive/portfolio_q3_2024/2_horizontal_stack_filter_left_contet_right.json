@@ -1,0 +1,103 @@
+{
+  "layoutSections": [
+    {
+      "layoutKind": "DashboardLayout",
+      "settings": {
+        "maxWidth": "1400px",
+        "sectionSpacing": "1.5rem",
+        "children": [
+          {
+            "layoutKind": "HorizontalStack",
+            "settings": {
+              "spacing": "xl",
+              "alignment": "flex-start",
+              "children": [
+                {
+                  "layoutKind": "Section",
+                  "settings": {
+                    "padding": "1rem",
+                    "children": [
+                      "DynamicFilterPanel"
+                    ]
+                  }
+                },
+                {
+                  "layoutKind": "VerticalStack",
+                  "settings": {
+                    "spacing": "lg",
+                    "children": [
+                      {
+                        "layoutKind": "Section",
+                        "settings": {
+                          "padding": "1.5rem",
+                          "children": [
+                            "DynamicDashboardHeader"
+                          ]
+                        }
+                      },
+                      {
+                        "layoutKind": "VerticalStack",
+                        "settings": {
+                          "spacing": "lg",
+                          "children": [
+                            {
+                              "layoutKind": "MetricGridLayout",
+                              "settings": {
+                                "columns": 4,
+                                "gap": "lg",
+                                "children": [
+                                  "DynamicMetricGrid"
+                                ]
+                              }
+                            },
+                            {
+                              "layoutKind": "TableGroupLayout",
+                              "settings": {
+                                "spacing": "xl",
+                                "children": [
+                                  {
+                                    "component": "DynamicCompanyPerformanceTable",
+                                    "instances": [
+                                      {
+                                        "title": "\ud83d\udea8 Companies with High Negative Variance",
+                                        "filter": {
+                                          "variance_flag": "high_negative"
+                                        }
+                                      },
+                                      {
+                                        "title": "\u26a0\ufe0f Watch List (Variance \u00b115-20%)",
+                                        "filter": {
+                                          "variance_flag": "outside_range"
+                                        }
+                                      },
+                                      {
+                                        "title": "\ud83d\udfe2 Normal Range (\u00b115%)",
+                                        "filter": {
+                                          "variance_flag": "within_range"
+                                        }
+                                      },
+                                      {
+                                        "title": "\u2705 Performing Well (High Positive Variance)",
+                                        "filter": {
+                                          "variance_flag": "high_positive"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

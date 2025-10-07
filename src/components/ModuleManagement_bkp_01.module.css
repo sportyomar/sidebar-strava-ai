@@ -1,0 +1,391 @@
+/* ModuleManagement.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.pageDescription {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.errorMessage {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #a33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.successMessage {
+  background-color: #efe;
+  border: 1px solid #cfc;
+  color: #3a3;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.moduleCard {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.moduleCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.moduleCard.enabled {
+  border-color: #4caf50;
+  background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
+}
+
+.moduleCard.pending {
+  border-color: #ff9800;
+  background: linear-gradient(135deg, #fff8f0 0%, #ffffff 100%);
+}
+
+.moduleCard.available {
+  border-color: #2196f3;
+  background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+}
+
+.moduleHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.moduleIcon {
+  font-size: 2.5rem;
+  min-width: 60px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+}
+
+.moduleInfo {
+  flex: 1;
+}
+
+.moduleName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.25rem 0;
+}
+
+.moduleCategory {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #1976d2;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.moduleDescription {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.moduleStatus {
+  margin-left: auto;
+}
+
+.enabledBadge,
+.pendingBadge,
+.availableBadge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.enabledBadge {
+  background: #4caf50;
+  color: white;
+}
+
+.pendingBadge {
+  background: #ff9800;
+  color: white;
+}
+
+.availableBadge {
+  background: #2196f3;
+  color: white;
+}
+
+.moduleFeatures {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #2196f3;
+}
+
+.moduleFeatures h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.moduleFeatures ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style-type: none;
+}
+
+.moduleFeatures li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.moduleFeatures li:before {
+  content: "✓";
+  position: absolute;
+  left: -1.25rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.moduleFeatures li:last-child {
+  margin-bottom: 0;
+}
+
+.moduleActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.enableButton,
+.disableButton,
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.enableButton {
+  background: #4caf50;
+  color: white;
+}
+
+.enableButton:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.disableButton {
+  background: #f44336;
+  color: white;
+}
+
+.disableButton:hover {
+  background: #e53935;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.cancelButton {
+  background: #ff9800;
+  color: white;
+}
+
+.cancelButton:hover {
+  background: #f57c00;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.enableButton:disabled,
+.disableButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .moduleGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .moduleCard {
+    padding: 1rem;
+  }
+
+  .moduleHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .moduleIcon {
+    align-self: flex-start;
+    min-width: 50px;
+    font-size: 2rem;
+  }
+
+  .moduleActions {
+    flex-direction: column;
+  }
+
+  .enableButton,
+  .disableButton,
+  .cancelButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageDescription {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .moduleCard {
+    padding: 0.75rem;
+  }
+
+  .moduleFeatures {
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+  }
+}
+
+/* Animation for status changes */
+@keyframes statusChange {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.moduleCard.statusChanging {
+  animation: statusChange 0.6s ease-in-out;
+}

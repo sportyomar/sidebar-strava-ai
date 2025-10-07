@@ -1,0 +1,48 @@
+/*ToggleTabsDesign.module.css*/
+
+.tabsContainer {
+  padding: 16px 0 0 0;
+  background-color: #ffffff;
+}
+
+.tabsWrapper {
+  position: relative;
+  display: inline-flex;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab {
+  position: relative;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+  z-index: 1;
+}
+
+.tab:hover {
+  color: #374151;
+}
+
+.tab.active {
+  color: #111827;
+}
+
+.activeIndicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}

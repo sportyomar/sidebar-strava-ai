@@ -1,0 +1,231 @@
+{
+  "company": {
+    "name": "Platform Dynamics",
+    "heroTitle": "The Future of Financial Technology is Here",
+    "heroSubtitle": "Transforming how Private Equity, CFOs, and CEOs manage complex financial ecosystems",
+    "tagline": "Where Financial Intelligence Meets Operational Excellence",
+    "clientCount": 127,
+    "assetsUnderManagement": "$23B",
+    "yearsInBusiness": 15,
+    "foundedYear": 2010,
+    "headquarters": "New York, NY",
+    "executiveContact": {
+      "email": "executives@platformdynamics.com",
+      "phone": "1-800-PLATFORM"
+    }
+  },
+  "marketProblems": {
+    "title": "The $2.3 Billion Problem",
+    "subtitle": "Financial leaders are drowning in fragmented systems",
+    "criticalIssues": [
+      {
+        "stat": "67%",
+        "description": "CFOs spend on data reconciliation vs. strategic planning",
+        "impact": "$847M lost annually in PE efficiency"
+      },
+      {
+        "stat": "94%",
+        "description": "Financial processes still manual across Fortune 500",
+        "impact": "Average 23 hours/week per executive team"
+      },
+      {
+        "stat": "156",
+        "description": "Average number of systems a PE firm manages",
+        "impact": "Zero real-time visibility into portfolio performance"
+      }
+    ]
+  },
+  "credentials": {
+    "title": "Who We Are",
+    "subtitle": "The team that solved financial technology's biggest challenges",
+    "marketLeadershipNote": "Before 'fintech' was a buzzword",
+    "automationDescription": "Average manual task elimination",
+    "reliabilityNote": "Mission-critical reliability",
+    "teamCredentials": "Former Goldman Sachs, McKinsey, and Microsoft leaders"
+  },
+  "platform": {
+    "automationRate": 94,
+    "uptimeSLA": 99.97,
+    "responseTime": "0.23s",
+    "dailyDataPoints": "50M+",
+    "maintenanceMode": false
+  },
+  "expertise": {
+    "title": "We Know Your Business",
+    "subtitle": "Industry-specific solutions for financial leaders",
+    "roleSpecificSolutions": [
+      {
+        "role": "Private Equity Partners",
+        "challenges": [
+          "Portfolio company performance tracking",
+          "LP reporting automation",
+          "Deal flow management",
+          "Risk assessment across investments"
+        ],
+        "ourSolution": "Real-time portfolio dashboards with automated LP reporting and predictive risk modeling",
+        "roi": "73% reduction in reporting time"
+      },
+      {
+        "role": "CFOs",
+        "challenges": [
+          "Multi-entity financial consolidation",
+          "Real-time cash flow visibility",
+          "Regulatory compliance tracking",
+          "Board presentation preparation"
+        ],
+        "ourSolution": "Unified financial command center with automated compliance monitoring and executive reporting",
+        "roi": "$2.1M average annual savings"
+      },
+      {
+        "role": "CEOs",
+        "challenges": [
+          "Strategic KPI monitoring",
+          "Cross-functional visibility",
+          "Investor communication",
+          "Operational efficiency metrics"
+        ],
+        "ourSolution": "Executive intelligence platform with predictive analytics and stakeholder communication tools",
+        "roi": "47% improvement in decision speed"
+      }
+    ]
+  },
+  "solution": {
+    "title": "Why We're Different",
+    "subtitle": "The only platform built specifically for financial complexity",
+    "beforeState": {
+      "title": "Legacy Financial Systems",
+      "problems": [
+        "Fragmented data across 15+ systems",
+        "Manual reconciliation processes",
+        "Week-old reporting",
+        "No predictive capabilities",
+        "Compliance as afterthought"
+      ],
+      "annualCost": 3200000
+    },
+    "afterState": {
+      "title": "Platform Dynamics Solution",
+      "benefits": [
+        "Unified data architecture",
+        "Automated reconciliation",
+        "Real-time insights",
+        "AI-powered predictions",
+        "Built-in compliance"
+      ],
+      "annualValue": 4700000
+    },
+    "competitiveAdvantages": [
+      "Manifest-driven architecture scales infinitely",
+      "Domain-specific BlockKinds for finance",
+      "AI-native design anticipates future needs",
+      "Enterprise security from day one"
+    ]
+  },
+  "technology": {
+    "title": "Future-Proof Architecture",
+    "subtitle": "Built for challenges that don't exist yet",
+    "coreCapabilities": [
+      {
+        "feature": "Manifest System",
+        "description": "Template + Data = Dashboard. Scale from 1 to 10,000 users instantly",
+        "businessValue": "Zero development time for new dashboard needs"
+      },
+      {
+        "feature": "AI-Ready Foundation",
+        "description": "Native integration with machine learning models and predictive analytics",
+        "businessValue": "Anticipate market changes 18 months ahead"
+      },
+      {
+        "feature": "Shadow Component Discovery",
+        "description": "Platform self-audits and governs components automatically",
+        "businessValue": "100% system integrity without manual oversight"
+      },
+      {
+        "feature": "Schema Validation Engine",
+        "description": "Every data point validated in real-time for accuracy",
+        "businessValue": "Eliminate data quality issues before they impact decisions"
+      }
+    ]
+  },
+  "ai": {
+    "title": "The AI Advantage",
+    "subtitle": "We've solved the problems others haven't thought of yet",
+    "futureProofStatement": "Platform architecture designed for AI capabilities not yet invented",
+    "capabilities": [
+      {
+        "capability": "Predictive Cash Flow Modeling",
+        "description": "AI analyzes 127 variables to predict cash flow 6 months ahead",
+        "accuracy": "94.7% accuracy rate",
+        "impact": "Prevents liquidity crises before they happen"
+      },
+      {
+        "capability": "Automated Risk Assessment",
+        "description": "Machine learning identifies portfolio risks across 50+ metrics",
+        "detection": "Identifies risks 73% faster than traditional methods",
+        "impact": "Average $3.2M in prevented losses per client"
+      },
+      {
+        "capability": "Intelligent Regulatory Compliance",
+        "description": "AI monitors 200+ regulations across all jurisdictions",
+        "proactive": "Alerts to regulatory changes 18 months before implementation",
+        "impact": "Zero compliance violations across all clients"
+      }
+    ]
+  },
+  "trust": {
+    "title": "Proven at Scale",
+    "subtitle": "Trusted by financial leaders worldwide",
+    "metrics": [
+      {
+        "category": "Security",
+        "indicators": [
+          "SOC 2 Type II Certified",
+          "ISO 27001 Compliant",
+          "Bank-level encryption",
+          "Zero security incidents in 5 years"
+        ]
+      },
+      {
+        "category": "Reliability",
+        "indicators": [
+          "99.97% uptime SLA",
+          "Sub-second response times",
+          "24/7 monitoring",
+          "Disaster recovery in 4 countries"
+        ]
+      },
+      {
+        "category": "Scalability",
+        "indicators": [
+          "Handles $23B in assets",
+          "127 concurrent PE firms",
+          "10,000+ daily active users",
+          "50M+ data points processed daily"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Platform Dynamics transformed our entire investment process. What used to take weeks now happens in real-time.",
+        "source": "Managing Partner, $2.3B PE Fund"
+      },
+      {
+        "quote": "Finally, a system that understands the complexity of modern finance. Our board meetings are now strategic, not administrative.",
+        "source": "CFO, Fortune 500 Company"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Financial Operations?",
+    "subtitle": "Join the 127 PE firms and Fortune 500 companies who've already made the switch",
+    "urgencyMessage": "Limited beta access for Q3 2025 AI features",
+    "primaryAction": {
+      "text": "Schedule Executive Demo",
+      "description": "See your specific use case in action"
+    },
+    "secondaryAction": {
+      "text": "Download Architecture Guide",
+      "description": "Technical deep-dive for your team"
+    }
+  }
+}

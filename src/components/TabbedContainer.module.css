@@ -1,0 +1,171 @@
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import renderBlock from '../orchestration/renderBlock';
+
+export default function TabbedContainer({
+  tabs = [],
+  defaultTab,
+  orientation = 'horizontal',
+  lazy = true,
+  onTabChange,
+  onContextReport
+}) {
+  const [selectedCuisine, setSelectedCuisine] = useState(defaultTab || tabs[0]?.id);
+  const [customerFilterSelections, setCustomerFilterSelections] = useState({});
+  const previousCuisineRef = useRef(null);
+
+  const activeCuisineData = tabs.find(tab => tab.id === selectedCuisine);
+
+  // 🌍 Extract cuisine-specific requirements
+  const cuisineRequirements = useMemo(() => (
+    activeCuisineData?.content?.[0]?.settings?.filter || {}
+  ), [activeCuisineData, selectedCuisine]);
+
+  // 🍽️ Get all dishes
+  const allAvailableDishes = useMemo(() => {
+    if (!activeCuisineData?.content) return [];
+    return activeCuisineData.content
+      .map(block => block.settings?.data)
+      .filter(Array.isArray)
+      .flat();
+  }, [activeCuisineData, selectedCuisine]);
+
+  // 🍽️ Filter by regional requirements
+  const regionalDishes = useMemo(() => {
+    if (!cuisineRequirements || Object.keys(cuisineRequirements).length === 0) return allAvailableDishes;
+    return allAvailableDishes.filter(dish =>
+      Object.entries(cuisineRequirements).every(([req, val]) => dish[req] === val)
+    );
+  }, [allAvailableDishes, cuisineRequirements, selectedCuisine]);
+
+  // 🔄 Reset filters on cuisine change
+  useEffect(() => {
+    setCustomerFilterSelections({});
+    previousCuisineRef.current = selectedCuisine;
+  }, [selectedCuisine]);
+
+  // 📊 Report context
+  useEffect(() => {
+    if (onContextReport && activeCuisineData) {
+      onContextReport({
+        type: 'cuisine_status',
+        label: activeCuisineData.label,
+        tabId: selectedCuisine,
+        cuisineId: selectedCuisine,
+        tabData: [...regionalDishes],
+        cuisineRequirements: {...cuisineRequirements},
+        customerSelections: {...customerFilterSelections},
+        timestamp: new Date().toISOString()
+      });
+    }
+  }, [customerFilterSelections, activeCuisineData, selectedCuisine, regionalDishes, cuisineRequirements, onContextReport]);
+
+  // 🖱️ Handle tab & filter changes
+  const handleCuisineChange = useCallback((newCuisineId) => {
+    onTabChange?.({
+      type: 'cuisine_change',
+      oldCuisine: selectedCuisine,
+      newCuisine: newCuisineId,
+      timestamp: new Date().toISOString()
+    });
+    setSelectedCuisine(newCuisineId);
+  }, [selectedCuisine, onTabChange]);
+
+  const handleFilterChange = useCallback((newSelections) => {
+    setCustomerFilterSelections(newSelections);
+
+    if (onContextReport && activeCuisineData) {
+      onContextReport({
+        type: 'cuisine_status',
+        label: activeCuisineData.label,
+        tabId: selectedCuisine,
+        cuisineId: selectedCuisine,
+        tabData: [...regionalDishes],
+        cuisineRequirements: { ...cuisineRequirements },
+        customerSelections: { ...newSelections },
+        timestamp: new Date().toISOString()
+      });
+    }
+  }, [onContextReport, activeCuisineData, selectedCuisine, regionalDishes, cuisineRequirements]);
+
+  const renderCuisineMenu = (cuisine) => (
+    <div>
+      <div style={{
+        padding: '12px',
+        backgroundColor: '#f0f9ff',
+        border: '1px solid #0ea5e9',
+        borderRadius: '4px',
+        marginBottom: '16px',
+        fontSize: '14px'
+      }}>
+        <strong>🌍 CUISINE STATUS</strong><br/>
+        Selected Cuisine: {cuisine.label}<br/>
+        Regional Dishes Available: {regionalDishes.length}<br/>
+        Customer Filter Selections: {JSON.stringify(customerFilterSelections)}<br/>
+        {regionalDishes.length > 0 && <>Sample Dish: {JSON.stringify(regionalDishes[0])}</>}
+      </div>
+
+      {cuisine.content?.map((block, index) => {
+        const props = {
+          tabId: cuisine.id,
+          regionalDishes,
+          cuisineType: cuisine.label,
+          activeFilters: customerFilterSelections,
+          onFiltersChange: handleFilterChange
+        };
+        return (
+          <div key={index} style={{ marginBottom: '24px' }}>
+            {renderBlock(block, props)}
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  return (
+    <div style={{ backgroundColor: '#fff', borderRadius: '8px', overflow: 'hidden' }}>
+      <div style={{
+        display: 'flex',
+        borderBottom: '1px solid #e5e7eb',
+        marginBottom: '24px',
+        overflowX: 'auto'
+      }}>
+        {tabs.map(cuisine => (
+          <button
+            key={cuisine.id}
+            onClick={() => handleCuisineChange(cuisine.id)}
+            style={{
+              padding: '12px 20px',
+              border: 'none',
+              background: 'transparent',
+              color: selectedCuisine === cuisine.id ? '#0070f3' : '#6b7280',
+              fontSize: '0.875rem',
+              fontWeight: '500',
+              cursor: 'pointer',
+              borderBottom: selectedCuisine === cuisine.id ? '2px solid #0070f3' : '2px solid transparent',
+              transition: 'all 0.2s ease',
+              whiteSpace: 'nowrap'
+            }}
+          >
+            🌍 {cuisine.label} Cuisine
+          </button>
+        ))}
+      </div>
+
+      <div style={{ minHeight: '400px' }}>
+        {lazy ? (
+          activeCuisineData ? renderCuisineMenu(activeCuisineData) : (
+            <div style={{ padding: '20px', color: '#ef4444' }}>
+              ⚠️ Cuisine not available
+            </div>
+          )
+        ) : (
+          tabs.map(cuisine => (
+            <div key={cuisine.id} style={{ display: selectedCuisine === cuisine.id ? 'block' : 'none' }}>
+              {renderCuisineMenu(cuisine)}
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}

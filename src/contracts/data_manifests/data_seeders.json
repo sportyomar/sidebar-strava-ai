@@ -1,0 +1,22 @@
+{
+  "seeders": {
+    "User": {
+      "count": 50,
+      "fields": {
+        "firstName": "faker.firstName",
+        "lastName": "faker.lastName",
+        "email": "faker.email",
+        "createdAt": "now"
+      }
+    },
+    "Post": {
+      "count": 200,
+      "fields": {
+        "userId": "randomFrom(User.id)",
+        "title": "faker.sentence",
+        "content": "faker.paragraph",
+        "createdAt": "now"
+      }
+    }
+  }
+}

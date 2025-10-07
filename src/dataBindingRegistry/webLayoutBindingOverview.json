@@ -1,0 +1,276 @@
+{
+  "web_layout_template_system": {
+    "concept": "Same data, multiple layout arrangements through configuration-driven templates",
+    "simplicity": "Much easier than cross-platform - same CSS/HTML paradigm, just different arrangements"
+  },
+
+  "layout_template_examples": {
+
+    "executive_overview_layout": {
+      "template_id": "exec_overview",
+      "description": "KPIs prominent, tables condensed",
+      "layout_config": {
+        "metric_cards": {
+          "position": "top_full_width",
+          "size": "large",
+          "columns": 4,
+          "prominence": "high"
+        },
+        "company_tables": {
+          "position": "bottom_half",
+          "layout": "tabbed_sections",
+          "row_limit": 5,
+          "prominence": "medium"
+        },
+        "filters": {
+          "position": "sidebar_collapsed",
+          "visibility": "minimized"
+        }
+      }
+    },
+
+    "analyst_detail_layout": {
+      "template_id": "analyst_detail",
+      "description": "Tables prominent, filters accessible",
+      "layout_config": {
+        "metric_cards": {
+          "position": "top_quarter",
+          "size": "compact",
+          "columns": 4,
+          "prominence": "low"
+        },
+        "company_tables": {
+          "position": "main_content",
+          "layout": "full_tables_stacked",
+          "row_limit": 50,
+          "prominence": "high"
+        },
+        "filters": {
+          "position": "sidebar_expanded",
+          "visibility": "prominent"
+        }
+      }
+    },
+
+    "board_presentation_layout": {
+      "template_id": "board_ready",
+      "description": "Clean, minimal, large fonts",
+      "layout_config": {
+        "metric_cards": {
+          "position": "center_grid",
+          "size": "extra_large",
+          "columns": 2,
+          "prominence": "maximum"
+        },
+        "company_tables": {
+          "position": "secondary_pages",
+          "layout": "problems_only",
+          "row_limit": 3,
+          "prominence": "minimal"
+        },
+        "filters": {
+          "position": "hidden",
+          "visibility": "none"
+        }
+      }
+    }
+  },
+
+  "binding_mechanism": {
+
+    "data_layer": {
+      "unchanged": "Same portfolio_companies array, same key_metrics object",
+      "binding_points": [
+        "data.metricCards → metric display logic",
+        "filteredCompanies → table content",
+        "selectedFilters → filter state"
+      ]
+    },
+
+    "layout_layer": {
+      "template_selector": "layout_template_id",
+      "position_mapping": {
+        "top_full_width": "grid-area: header / 1 / 2 / 5",
+        "sidebar_expanded": "grid-area: sidebar; width: 300px",
+        "main_content": "grid-area: main; overflow: auto"
+      },
+      "size_variants": {
+        "large": "min-height: 200px; font-size: 1.2em",
+        "compact": "min-height: 100px; font-size: 0.9em",
+        "extra_large": "min-height: 300px; font-size: 1.5em"
+      }
+    }
+  },
+
+  "implementation_approach": {
+
+    "css_grid_based": {
+      "container": {
+        "display": "grid",
+        "grid_template_areas": "defined by layout template",
+        "responsive_breakpoints": "maintained across templates"
+      },
+      "components": {
+        "grid_area": "assigned by template config",
+        "size_modifiers": "CSS classes for different emphasis levels",
+        "visibility": "controlled by template visibility rules"
+      }
+    },
+
+    "template_switching": {
+      "user_control": "Template selector dropdown in header",
+      "url_parameter": "?layout=analyst_detail for bookmarking",
+      "user_preferences": "Remember selected template per user",
+      "context_aware": "Auto-suggest template based on user role"
+    }
+  },
+
+  "practical_examples": {
+
+    "metric_cards_binding": {
+      "data": "Same metricCards array from your current dashboard",
+      "executive_layout": {
+        "container": "4-column grid, large spacing",
+        "card_size": "200px height, prominent typography",
+        "trend_indicators": "large arrows, bold colors"
+      },
+      "analyst_layout": {
+        "container": "4-column grid, tight spacing",
+        "card_size": "120px height, compact typography",
+        "trend_indicators": "small icons, subtle colors"
+      },
+      "board_layout": {
+        "container": "2-column grid, huge spacing",
+        "card_size": "300px height, extra large typography",
+        "trend_indicators": "simplified, presentation-ready"
+      }
+    },
+
+    "company_tables_binding": {
+      "data": "Same filteredCompanies array",
+      "executive_layout": {
+        "tables": "Problems table only, 5 rows max",
+        "columns": "Company, Revenue, Status only",
+        "styling": "Large fonts, high contrast"
+      },
+      "analyst_layout": {
+        "tables": "All three tables (Problems, Watch, Performing)",
+        "columns": "All available columns",
+        "styling": "Dense data, sortable headers"
+      },
+      "board_layout": {
+        "tables": "Problems table only, 3 rows max",
+        "columns": "Company, Issue, Action only",
+        "styling": "Presentation fonts, minimal borders"
+      }
+    }
+  },
+
+  "css_implementation": {
+
+    "template_classes": {
+      "executive_overview": {
+        "container": ".dashboard-exec { grid-template-areas: 'metrics metrics metrics metrics' 'tables tables tables tables'; }",
+        "metrics": ".metrics-exec { grid-area: metrics; min-height: 200px; }",
+        "tables": ".tables-exec { grid-area: tables; max-height: 400px; }"
+      },
+      "analyst_detail": {
+        "container": ".dashboard-analyst { grid-template-areas: 'metrics filters' 'tables filters'; }",
+        "metrics": ".metrics-analyst { grid-area: metrics; min-height: 120px; }",
+        "filters": ".filters-analyst { grid-area: filters; width: 250px; }"
+      }
+    },
+
+    "component_modifiers": {
+      "size_variants": {
+        "large": ".metric-card.large { min-height: 200px; font-size: 1.2em; }",
+        "compact": ".metric-card.compact { min-height: 100px; font-size: 0.9em; }",
+        "extra_large": ".metric-card.xl { min-height: 300px; font-size: 1.5em; }"
+      },
+      "prominence_levels": {
+        "high": ".high-prominence { border: 2px solid #007acc; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }",
+        "medium": ".medium-prominence { border: 1px solid #ccc; }",
+        "low": ".low-prominence { opacity: 0.8; border: 1px solid #eee; }"
+      }
+    }
+  },
+
+  "template_configuration": {
+
+    "json_driven": {
+      "template_registry": {
+        "executive_overview": {
+          "grid_template": "'metrics metrics metrics metrics' 'tables tables tables tables'",
+          "component_configs": {
+            "MetricCard": {"size": "large", "prominence": "high"},
+            "CompanyTable": {"rows": 5, "prominence": "medium"},
+            "FilterPanel": {"visibility": "collapsed"}
+          }
+        }
+      },
+      "dynamic_application": {
+        "template_selector": "reads from template_registry",
+        "css_generation": "applies grid-template and component classes",
+        "component_props": "passes size/prominence to components"
+      }
+    }
+  },
+
+  "user_experience": {
+
+    "template_switcher": {
+      "location": "Dashboard header, next to title",
+      "options": ["Executive Overview", "Analyst Detail", "Board Presentation"],
+      "preview": "Hover shows thumbnail preview of layout",
+      "persistence": "Remembers choice per user session"
+    },
+
+    "responsive_behavior": {
+      "mobile": "All templates collapse to single column",
+      "tablet": "Templates adapt grid columns appropriately",
+      "desktop": "Full template layouts as designed"
+    },
+
+    "transition_animations": {
+      "template_switching": "Smooth CSS transitions for position changes",
+      "size_changes": "Animated resize of metric cards",
+      "visibility_toggles": "Fade in/out for showing/hiding sections"
+    }
+  },
+
+  "advantages_of_this_approach": {
+
+    "simplicity": {
+      "same_components": "No component code changes needed",
+      "same_data": "No data transformation required",
+      "css_only": "Pure layout and styling changes"
+    },
+
+    "user_empowerment": {
+      "role_based": "Executives get clean overview, analysts get detailed tables",
+      "context_switching": "Same data, different mental models",
+      "personalization": "Users can choose their preferred working style"
+    },
+
+    "maintenance": {
+      "single_codebase": "One dashboard component with multiple presentations",
+      "centralized_data": "Data logic unchanged across layouts",
+      "easy_extension": "Add new templates without touching component logic"
+    }
+  },
+
+  "next_steps": {
+    "mvp_implementation": [
+      "Add template selector to dashboard header",
+      "Create 3 CSS template classes (exec, analyst, board)",
+      "Add size/prominence props to existing components",
+      "Test template switching with current data"
+    ],
+    "advanced_features": [
+      "URL parameter for template selection",
+      "User preference persistence",
+      "Template preview thumbnails",
+      "Custom template builder interface"
+    ]
+  }
+}

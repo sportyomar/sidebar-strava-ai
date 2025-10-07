@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "variance_flag": { "type": "string" },
+    "cash_flow_status": { "type": "string" },
+    "plan_variance_percent": { "type": "number" },
+    "sector": { "type": "string" },
+    "performance_tier": { "type": "string" },
+    "requires_deep_dive": { "type": "boolean" }
+  },
+  "default_operator": "equals"
+}

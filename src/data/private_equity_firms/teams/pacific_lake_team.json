@@ -1,0 +1,197 @@
+{
+  "team_members": [
+    {
+      "name": "Coley Andrews",
+      "title": "Co-Founder & Managing Member",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/coley-andrews"
+    },
+    {
+      "name": "Lindsey Gray",
+      "title": "Partner",
+      "team_categories": ["Operations team", "Value creation team"],
+      "profile_url": "/team-members/lindsey-gray"
+    },
+    {
+      "name": "Keith Gross",
+      "title": "Partner",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/keith-gross"
+    },
+    {
+      "name": "Chris Hendriksen",
+      "title": "Partner",
+      "team_categories": ["Value creation team", "Investment team"],
+      "profile_url": "/team-members/chris-hendriksen"
+    },
+    {
+      "name": "Kevin Oxendine",
+      "title": "Partner",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/kevin-oxendine"
+    },
+    {
+      "name": "Jim Southern",
+      "title": "Founding Partner",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/jim-southern"
+    },
+    {
+      "name": "Hannah Barrett",
+      "title": "Director",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/hannah-barrett"
+    },
+    {
+      "name": "Scott Barstow",
+      "title": "Operating Partner",
+      "team_category": "Value creation team",
+      "profile_url": "/team-members/scott-barstow"
+    },
+    {
+      "name": "Ben Broughton",
+      "title": "Director",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/ben-broughton"
+    },
+    {
+      "name": "Jack Bulmer",
+      "title": "Director",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/jack-bulmer"
+    },
+    {
+      "name": "Liza Cherney",
+      "title": "Operating Partner",
+      "team_category": "Value creation team",
+      "profile_url": "/team-members/liza-cherney"
+    },
+    {
+      "name": "Tessa Denning",
+      "title": "Vice President",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/tessa-denning"
+    },
+    {
+      "name": "Lindsay Feitler",
+      "title": "Administration",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/lindsay-feitler"
+    },
+    {
+      "name": "Armando Garrido",
+      "title": "Investment Professional",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/armando-garrido"
+    },
+    {
+      "name": "Dan Hergott",
+      "title": "Senior Finance Associate",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/dan-hergott"
+    },
+    {
+      "name": "Eunice Huang",
+      "title": "Associate",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/eunice-huang"
+    },
+    {
+      "name": "Lydia Kolodij",
+      "title": "Administration",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/lydia-kolodij"
+    },
+    {
+      "name": "Roland Lessard",
+      "title": "Operating Partner",
+      "team_category": "Value creation team",
+      "profile_url": "/team-members/roland-lessard"
+    },
+    {
+      "name": "Rob Morgan",
+      "title": "Chief Administrative Officer & Chief Compliance Officer",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/rob-morgan"
+    },
+    {
+      "name": "Kabir Nakra",
+      "title": "Entrepreneur In Residence",
+      "team_category": "Value creation team",
+      "profile_url": "/team-members/kabir-nakra"
+    },
+    {
+      "name": "Ethan O'Connell",
+      "title": "Associate",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/ethan-oconnell"
+    },
+    {
+      "name": "Jack O'Rourke",
+      "title": "Vice President",
+      "team_category": "Investment team",
+      "profile_url": "/team-members/jack-orourke"
+    },
+    {
+      "name": "Sarah Robinson",
+      "title": "Administration",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/sarah-robinson"
+    },
+    {
+      "name": "Christina Rudolf",
+      "title": "Vice President of Finance",
+      "team_category": "Operations team",
+      "profile_url": "/team-members/christina-rudolf"
+    },
+    {
+      "name": "Don Taylor",
+      "title": "Operating Partner",
+      "team_category": "Value creation team",
+      "profile_url": "/team-members/don-taylor"
+    }
+  ],
+  "metadata": {
+    "total_members": 25,
+    "by_title": {
+      "co_founder_managing_member": 1,
+      "founding_partner": 1,
+      "partners": 4,
+      "operating_partners": 5,
+      "directors": 3,
+      "vice_presidents": 3,
+      "associates": 2,
+      "investment_professionals": 1,
+      "senior_finance_associates": 1,
+      "administration": 3,
+      "chief_officers": 1,
+      "entrepreneur_in_residence": 1
+    },
+    "by_team_category": {
+      "investment_team": 13,
+      "value_creation_team": 6,
+      "operations_team": 8
+    },
+    "team_categories": [
+      "Investment team",
+      "Value creation team",
+      "Operations team"
+    ],
+    "unique_titles": [
+      "Co-Founder & Managing Member",
+      "Founding Partner",
+      "Partner",
+      "Operating Partner",
+      "Director",
+      "Vice President",
+      "Vice President of Finance",
+      "Associate",
+      "Investment Professional",
+      "Senior Finance Associate",
+      "Administration",
+      "Chief Administrative Officer & Chief Compliance Officer",
+      "Entrepreneur In Residence"
+    ],
+    "extraction_date": "2025-06-28"
+  }
+}

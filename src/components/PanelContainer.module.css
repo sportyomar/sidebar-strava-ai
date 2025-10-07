@@ -1,0 +1,117 @@
+/* PanelContainer.module.css */
+
+/* Main docked panel container */
+.panelContainer {
+  position: fixed;
+  top: 2.5rem;           /* Adjust based on your menu bar height */
+  left: 0;
+  width: 100%;
+  z-index: 2000;         /* Above canvas and other content */
+  background: #f6f8fb;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Panel header with title and close button */
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  min-height: 2.5rem;
+}
+
+.panelTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.closeButton:active {
+  background: #e5e7eb;
+}
+
+/* Panel content area */
+.panelContent {
+  padding: 1rem 1.25rem;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;     /* Prevent panel from taking up entire screen */
+}
+
+/* Placeholder styling for future panels */
+.panelPlaceholder {
+  padding: 2rem;
+  background: #ffffff;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.panelPlaceholder h3 {
+  margin: 0 0 0.5rem 0;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+.panelPlaceholder p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .panelContainer {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #dcdcdc;
+  }
+
+  .panelContent {
+    max-height: 300px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Animation for panel appearance */
+.panelContainer {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

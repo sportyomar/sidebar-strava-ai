@@ -1,0 +1,20 @@
+{
+  "components": {
+    "button": {
+      "type": "button",
+      "props": {
+        "variant": "primary",
+        "size": "md",
+        "icon": "arrow-right"
+      }
+    },
+    "navbar": {
+      "type": "navigation",
+      "props": { "links": ["Home", "Docs", "Contact"] }
+    },
+    "card": {
+      "type": "card",
+      "props": { "padding": "4", "shadow": "md" }
+    }
+  }
+}

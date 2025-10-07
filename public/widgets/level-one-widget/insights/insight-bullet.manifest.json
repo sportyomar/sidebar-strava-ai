@@ -1,0 +1,37 @@
+{
+  "manifestType": "component",
+  "componentName": "InsightBullet",
+  "version": "1.0.0",
+  "description": "Single bullet point for key insights list",
+
+  "props": {
+    "text": { "type": "string", "required": true },
+    "icon": { "type": "string", "default": "•" },
+    "emphasis": { "type": "boolean", "default": false }
+  },
+
+  "styling": {
+    "container": {
+      "display": "flex",
+      "alignItems": "flex-start",
+      "gap": "0.5rem",
+      "marginBottom": "0.75rem"
+    },
+    "bullet": {
+      "color": "#6366f1",
+      "fontSize": "0.875rem",
+      "fontWeight": "bold",
+      "marginTop": "0.125rem",
+      "minWidth": "0.5rem"
+    },
+    "text": {
+      "fontSize": "0.875rem",
+      "color": "#374151",
+      "lineHeight": "1.5",
+      "fontWeight": {
+        "normal": "400",
+        "emphasis": "500"
+      }
+    }
+  }
+}

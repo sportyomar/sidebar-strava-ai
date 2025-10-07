@@ -1,0 +1,46 @@
+{
+  "manifestType": "component",
+  "componentName": "TimelineScale",
+  "version": "1.0.0",
+  "description": "Timeline header showing weeks and days",
+
+  "props": {
+    "totalDays": { "type": "number", "required": true, "default": 21 },
+    "weeksConfig": {
+      "type": "array",
+      "items": {
+        "weekNumber": "number",
+        "startDay": "number",
+        "endDay": "number",
+        "label": "string"
+      },
+      "default": [
+        { "weekNumber": 1, "startDay": 1, "endDay": 7, "label": "Week 1 (Days 1-7)" },
+        { "weekNumber": 2, "startDay": 8, "endDay": 14, "label": "Week 2 (Days 8-14)" },
+        { "weekNumber": 3, "startDay": 15, "endDay": 21, "label": "Week 3 (Days 15-21)" }
+      ]
+    }
+  },
+
+  "styling": {
+    "container": {
+      "display": "grid",
+      "gridTemplateColumns": "200px 1fr",
+      "borderBottom": "1px solid #e5e7eb"
+    },
+    "weekHeaders": {
+      "backgroundColor": "#f9fafb",
+      "padding": "0.5rem",
+      "fontSize": "0.875rem",
+      "fontWeight": "600",
+      "textAlign": "center",
+      "borderRight": "1px solid #e5e7eb"
+    },
+    "dayNumbers": {
+      "display": "flex",
+      "fontSize": "0.75rem",
+      "color": "#6b7280",
+      "padding": "0.25rem 0"
+    }
+  }
+}

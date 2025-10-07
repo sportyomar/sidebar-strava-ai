@@ -1,0 +1,196 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .header-title { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .header-subtitle { font-family: Arial, sans-serif; font-size: 14px; fill: #64748b; }
+      .header-meta { font-family: Arial, sans-serif; font-size: 12px; fill: #94a3b8; }
+      .section-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+      .metric-label { font-family: Arial, sans-serif; font-size: 14px; font-weight: 500; fill: #64748b; }
+      .metric-value { font-family: Arial, sans-serif; font-size: 36px; font-weight: bold; fill: #1e293b; }
+      .table-header { font-family: Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #475569; }
+      .table-cell { font-family: Arial, sans-serif; font-size: 14px; fill: #1e293b; }
+      .positive { fill: #22c55e; }
+      .negative { fill: #ef4444; }
+      .warning { fill: #eab308; }
+      .filter-text { font-family: Arial, sans-serif; font-size: 13px; fill: #4b5563; }
+      .filter-label { font-family: Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #374151; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8fafc"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1400" height="80" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Header Content -->
+  <text x="32" y="30" class="header-title">Portfolio Triage Dashboard</text>
+  <text x="32" y="50" class="header-subtitle">Q3 2024 Portfolio Performance</text>
+  <text x="32" y="66" class="header-meta">Last updated: 2024-10-15 • Executive performance monitoring and decision support system</text>
+
+  <!-- User Profile -->
+  <circle cx="1340" cy="40" r="20" fill="#3b82f6"/>
+  <text x="1340" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">U</text>
+
+  <!-- Main Content Area -->
+  <rect x="20" y="100" width="1360" height="780" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Sidebar -->
+  <rect x="40" y="120" width="280" height="740" fill="#f8fafc" rx="6" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Sidebar Title -->
+  <text x="60" y="145" class="section-title" fill="#1e293b">Filters</text>
+
+  <!-- Filter Sections -->
+  <text x="60" y="175" class="filter-label">Sector</text>
+  <rect x="60" y="185" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="197" class="filter-text">Technology</text>
+
+  <rect x="60" y="205" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="217" class="filter-text">Healthcare</text>
+
+  <rect x="60" y="225" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="237" class="filter-text">Retail</text>
+
+  <rect x="60" y="245" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="257" class="filter-text">Manufacturing</text>
+
+  <rect x="60" y="265" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="277" class="filter-text">Financial Services</text>
+
+  <text x="60" y="305" class="filter-label">Performance Tier</text>
+  <rect x="60" y="315" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="327" class="filter-text">Ahead of Plan</text>
+
+  <rect x="60" y="335" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="347" class="filter-text">On Track</text>
+
+  <rect x="60" y="355" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="367" class="filter-text">Behind Plan</text>
+
+  <rect x="60" y="375" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="387" class="filter-text">Underperforming</text>
+
+  <text x="60" y="415" class="filter-label">Cash Flow Status</text>
+  <rect x="60" y="425" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="437" class="filter-text">Positive</text>
+
+  <rect x="60" y="445" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="457" class="filter-text">Negative</text>
+
+  <rect x="60" y="465" width="16" height="16" fill="none" stroke="#d1d5db" stroke-width="1.5" rx="2"/>
+  <text x="85" y="477" class="filter-text">Break-even</text>
+
+  <!-- Key Metrics Cards -->
+  <!-- Revenue Card -->
+  <rect x="360" y="140" width="240" height="120" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="380" y="165" class="metric-label">Revenue</text>
+  <text x="380" y="195" class="metric-value">$847M</text>
+  <text x="380" y="215" font-family="Arial, sans-serif" font-size="12" class="positive">+12% YoY</text>
+  <text x="380" y="230" font-family="Arial, sans-serif" font-size="12" fill="#64748b">vs Plan: +3%</text>
+
+  <!-- EBITDA Card -->
+  <rect x="620" y="140" width="240" height="120" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="640" y="165" class="metric-label">EBITDA Margin</text>
+  <text x="640" y="195" class="metric-value">18.5%</text>
+  <text x="640" y="215" font-family="Arial, sans-serif" font-size="12" class="negative">-0.7 pts vs Q2</text>
+  <text x="640" y="230" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Target: 20%</text>
+
+  <!-- Cash Health Card -->
+  <rect x="880" y="140" width="240" height="120" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="900" y="165" class="metric-label">Cash Health</text>
+  <text x="900" y="195" class="metric-value">9/12</text>
+  <text x="975" y="198" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#64748b">Positive</text>
+  <text x="900" y="215" font-family="Arial, sans-serif" font-size="12" class="positive">+3 vs prior year</text>
+  <text x="900" y="230" font-family="Arial, sans-serif" font-size="12" fill="#64748b">$38M vs Target: $30M</text>
+
+  <!-- Companies with High Negative Variance Section -->
+  <rect x="360" y="290" width="800" height="220" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Section Header -->
+  <rect x="360" y="290" width="800" height="40" fill="#fef2f2" rx="8"/>
+  <circle cx="380" cy="310" r="6" fill="#ef4444"/>
+  <text x="380" y="314" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">!</text>
+  <text x="395" y="305" class="section-title" fill="#dc2626">Companies with High Negative Variance</text>
+  <text x="395" y="320" font-family="Arial, sans-serif" font-size="12" fill="#7f1d1d">(3 companies)</text>
+
+  <!-- Table Header -->
+  <rect x="380" y="350" width="760" height="25" fill="#f8fafc"/>
+  <text x="400" y="367" class="table-header">Name</text>
+  <text x="550" y="367" class="table-header">Sector</text>
+  <text x="700" y="367" class="table-header">Plan Variance %</text>
+  <text x="850" y="367" class="table-header">Cash Flow Status</text>
+
+  <!-- Table Rows -->
+  <rect x="380" y="375" width="760" height="30" fill="#ffffff" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="395" class="table-cell">RetailCo</text>
+  <text x="550" y="395" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Retail</text>
+  <text x="700" y="395" font-family="Arial, sans-serif" font-size="14" font-weight="600" class="negative">-23%</text>
+  <circle cx="860" cy="390" r="4" fill="#22c55e"/>
+  <text x="875" y="395" font-family="Arial, sans-serif" font-size="14" class="positive">Positive</text>
+
+  <rect x="380" y="405" width="760" height="30" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="425" class="table-cell">TechVentures</text>
+  <text x="550" y="425" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Technology</text>
+  <text x="700" y="425" font-family="Arial, sans-serif" font-size="14" font-weight="600" class="negative">-28%</text>
+  <circle cx="860" cy="420" r="4" fill="#ef4444"/>
+  <text x="875" y="425" font-family="Arial, sans-serif" font-size="14" class="negative">Negative</text>
+
+  <rect x="380" y="435" width="760" height="30" fill="#ffffff" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="455" class="table-cell">ServiceCorp</text>
+  <text x="550" y="455" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Financial Services</text>
+  <text x="700" y="455" font-family="Arial, sans-serif" font-size="14" font-weight="600" class="negative">-31%</text>
+  <circle cx="860" cy="450" r="4" fill="#ef4444"/>
+  <text x="875" y="455" font-family="Arial, sans-serif" font-size="14" class="negative">Negative</text>
+
+  <!-- Watch List Section -->
+  <rect x="360" y="530" width="800" height="140" fill="#ffffff" rx="8" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Section Header -->
+  <rect x="360" y="530" width="800" height="40" fill="#fefce8" rx="8"/>
+  <circle cx="380" cy="550" r="6" fill="#eab308"/>
+  <text x="380" y="554" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">!</text>
+  <text x="395" y="545" class="section-title" fill="#a16207">Watch List (Variance ±15-20%)</text>
+  <text x="395" y="560" font-family="Arial, sans-serif" font-size="12" fill="#92400e">(3 companies)</text>
+
+  <!-- Table Header -->
+  <rect x="380" y="590" width="760" height="25" fill="#f8fafc"/>
+  <text x="400" y="607" class="table-header">Name</text>
+  <text x="550" y="607" class="table-header">Sector</text>
+  <text x="700" y="607" class="table-header">Plan Variance %</text>
+  <text x="850" y="607" class="table-header">Cash Flow Status</text>
+
+  <!-- Table Rows -->
+  <rect x="380" y="615" width="760" height="20" fill="#ffffff" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="629" font-family="Arial, sans-serif" font-size="13" fill="#1e293b">HealthInc</text>
+  <text x="550" y="629" font-family="Arial, sans-serif" font-size="13" fill="#64748b">Healthcare</text>
+  <text x="700" y="629" font-family="Arial, sans-serif" font-size="13" font-weight="600" class="negative">-18%</text>
+  <circle cx="860" cy="625" r="3" fill="#22c55e"/>
+  <text x="875" y="629" font-family="Arial, sans-serif" font-size="13" class="positive">Positive</text>
+
+  <rect x="380" y="635" width="760" height="20" fill="#f8fafc" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="649" font-family="Arial, sans-serif" font-size="13" fill="#1e293b">TechSolutions</text>
+  <text x="550" y="649" font-family="Arial, sans-serif" font-size="13" fill="#64748b">Technology</text>
+  <text x="700" y="649" font-family="Arial, sans-serif" font-size="13" font-weight="600" class="positive">+16%</text>
+  <circle cx="860" cy="645" r="3" fill="#22c55e"/>
+  <text x="875" y="649" font-family="Arial, sans-serif" font-size="13" class="positive">Positive</text>
+
+  <rect x="380" y="655" width="760" height="20" fill="#ffffff" stroke="#f1f5f9" stroke-width="1"/>
+  <text x="400" y="669" font-family="Arial, sans-serif" font-size="13" fill="#1e293b">Manufacturing Co</text>
+  <text x="550" y="669" font-family="Arial, sans-serif" font-size="13" fill="#64748b">Manufacturing</text>
+  <text x="700" y="669" font-family="Arial, sans-serif" font-size="13" font-weight="600" class="positive">+19%</text>
+  <circle cx="860" cy="665" r="3" fill="#22c55e"/>
+  <text x="875" y="669" font-family="Arial, sans-serif" font-size="13" class="positive">Positive</text>
+
+  <!-- Additional section previews -->
+  <rect x="360" y="690" width="380" height="30" fill="#f0fdf4" rx="6" stroke="#dcfce7" stroke-width="1"/>
+  <circle cx="380" cy="705" r="4" fill="#22c55e"/>
+  <text x="395" y="701" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#15803d">Normal Range (±15%)</text>
+  <text x="395" y="713" font-family="Arial, sans-serif" font-size="12" fill="#166534">(4 companies)</text>
+
+  <rect x="760" y="690" width="400" height="30" fill="#f0fdf4" rx="6" stroke="#dcfce7" stroke-width="1"/>
+  <circle cx="780" cy="705" r="4" fill="#22c55e"/>
+  <text x="795" y="701" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#15803d">Performing Well (High Positive)</text>
+  <text x="795" y="713" font-family="Arial, sans-serif" font-size="12" fill="#166534">(2 companies)</text>
+
+</svg>

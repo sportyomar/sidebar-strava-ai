@@ -1,0 +1,72 @@
+{
+  "dashboardSections": [
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.intro}}",
+        "fontSize": "{{tokens.fontSizes.lg}}",
+        "color": "{{tokens.colors.primary}}",
+        "spacing": "{{tokens.spacing.lg}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.details}}",
+        "fontSize": "{{tokens.fontSizes.md}}",
+        "color": "{{tokens.colors.neutral}}",
+        "spacing": "{{tokens.spacing.md}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.platformOverview}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.orchestrationRole}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.contractsRole}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.primitivesRole}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.validatorRole}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.publicFolder}}",
+        "spacing": "{{tokens.spacing.sm}}"
+      }
+    },
+    {
+      "blockKind": "TextBlock",
+      "settings": {
+        "text": "{{docs.ownership}}",
+        "fontSize": "{{tokens.fontSizes.md}}",
+        "spacing": "{{tokens.spacing.lg}}"
+      }
+    }
+  ]
+}

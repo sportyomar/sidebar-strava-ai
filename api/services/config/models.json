@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-08-10",
+  "providers": {
+    "openai": {
+      "provider_name": "OpenAI",
+      "api_base": "https://api.openai.com/v1",
+      "api_key_env": "OPENAI_API_KEY",
+      "models": {
+        "gpt-4o": {
+          "id": "gpt-4o",
+          "name": "GPT-4o",
+          "description": "Most capable GPT-4 model for complex tasks",
+          "type": "chat",
+          "context_window": 128000,
+          "max_output_tokens": 4096,
+          "pricing": {
+            "input_cost_per_1k_tokens": 0.005,
+            "output_cost_per_1k_tokens": 0.015
+          },
+          "default_parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          },
+          "approved": true,
+          "approved_date": "2025-08-10",
+          "use_cases": ["complex_reasoning", "analysis", "content_generation"]
+        },
+        "gpt-4o-mini": {
+          "id": "gpt-4o-mini",
+          "name": "GPT-4o Mini",
+          "description": "Fast and cost-effective model for simpler tasks",
+          "type": "chat",
+          "context_window": 128000,
+          "max_output_tokens": 16384,
+          "pricing": {
+            "input_cost_per_1k_tokens": 0.00015,
+            "output_cost_per_1k_tokens": 0.0006
+          },
+          "default_parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          },
+          "approved": true,
+          "approved_date": "2025-08-10",
+          "use_cases": ["simple_tasks", "cost_optimization", "high_volume"]
+        }
+      }
+    },
+    "anthropic": {
+      "provider_name": "Anthropic",
+      "api_base": "https://api.anthropic.com",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-3-5-sonnet": {
+          "id": "claude-3-5-sonnet-20241022",
+          "name": "Claude 3.5 Sonnet",
+          "description": "Anthropic's most capable model for complex tasks",
+          "type": "chat",
+          "context_window": 200000,
+          "max_output_tokens": 8192,
+          "pricing": {
+            "input_cost_per_1k_tokens": 0.003,
+            "output_cost_per_1k_tokens": 0.015
+          },
+          "default_parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          },
+          "approved": true,
+          "approved_date": "2025-08-10",
+          "use_cases": ["analysis", "reasoning", "writing"]
+        },
+        "claude-3-haiku": {
+          "id": "claude-3-haiku-20240307",
+          "name": "Claude 3 Haiku",
+          "description": "Fast and cost-effective model for simple tasks",
+          "type": "chat",
+          "context_window": 200000,
+          "max_output_tokens": 4096,
+          "pricing": {
+            "input_cost_per_1k_tokens": 0.00025,
+            "output_cost_per_1k_tokens": 0.00125
+          },
+          "default_parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          },
+          "approved": true,
+          "approved_date": "2025-08-10",
+          "use_cases": ["simple_tasks", "cost_optimization", "speed"]
+        }
+      }
+    },
+    "azure_openai": {
+      "provider_name": "Azure OpenAI",
+      "api_base": null,
+      "api_key_env": "AZURE_OPENAI_KEY",
+      "api_version": "2024-02-15-preview",
+      "models": {
+        "gpt-4o-azure": {
+          "id": "gpt-4o",
+          "name": "GPT-4o (Azure)",
+          "description": "GPT-4o deployed on Azure infrastructure",
+          "type": "chat",
+          "context_window": 128000,
+          "max_output_tokens": 4096,
+          "pricing": {
+            "input_cost_per_1k_tokens": 0.005,
+            "output_cost_per_1k_tokens": 0.015
+          },
+          "default_parameters": {
+            "temperature": 0.7,
+            "max_tokens": 1000
+          },
+          "approved": true,
+          "approved_date": "2025-08-10",
+          "use_cases": ["enterprise", "compliance", "data_residency"],
+          "deployment_name": "gpt-4o-deployment",
+          "endpoint_env": "AZURE_OPENAI_ENDPOINT"
+        }
+      }
+    }
+  },
+  "model_categories": {
+    "cost_effective": ["gpt-4o-mini", "claude-3-haiku"],
+    "high_performance": ["gpt-4o", "claude-3-5-sonnet"],
+    "enterprise": ["gpt-4o-azure"],
+    "general_purpose": ["gpt-4o", "gpt-4o-mini", "claude-3-5-sonnet"]
+  },
+  "compliance": {
+    "approved_by": "AI Governance Committee",
+    "review_cycle": "quarterly",
+    "next_review": "2025-11-10"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "trading": {
+    "portfolioName": "High Frequency Alpha Strategy",
+    "lastUpdate": "2025-01-09T14:30:15Z",
+    "marketStatus": "open",
+    "connectionStatus": "connected",
+    "totalValue": 2547823.45,
+    "dailyChange": 15420.30,
+    "dailyPnL": 15420.30,
+    "dailyPnLPercent": 0.61,
+    "cashBalance": 245678.90,
+    "cashUtilization": 85.2,
+    "newPositionsToday": 3,
+    "primarySymbol": "AAPL",
+    "chartTimeframe": "1H",
+    "selectedSymbol": "AAPL",
+    "valueHistory": [
+      { "timestamp": "2025-01-09T09:30:00Z", "value": 2532403.15 },
+      { "timestamp": "2025-01-09T10:30:00Z", "value": 2538920.40 },
+      { "timestamp": "2025-01-09T11:30:00Z", "value": 2541567.80 },
+      { "timestamp": "2025-01-09T12:30:00Z", "value": 2545234.20 },
+      { "timestamp": "2025-01-09T13:30:00Z", "value": 2547823.45 }
+    ],
+    "pnlHistory": [
+      { "timestamp": "2025-01-09T09:30:00Z", "pnl": 0 },
+      { "timestamp": "2025-01-09T10:30:00Z", "pnl": 6517.25 },
+      { "timestamp": "2025-01-09T11:30:00Z", "pnl": 9164.65 },
+      { "timestamp": "2025-01-09T12:30:00Z", "pnl": 12831.05 },
+      { "timestamp": "2025-01-09T13:30:00Z", "pnl": 15420.30 }
+    ],
+    "activePositions": [
+      {
+        "symbol": "AAPL",
+        "quantity": 1500,
+        "avgPrice": 187.45,
+        "currentPrice": 189.23,
+        "unrealizedPnL": 2670.00,
+        "sector": "Technology",
+        "marketValue": 283845.00
+      },
+      {
+        "symbol": "MSFT",
+        "quantity": 800,
+        "avgPrice": 378.90,
+        "currentPrice": 381.45,
+        "unrealizedPnL": 2040.00,
+        "sector": "Technology",
+        "marketValue": 305160.00
+      },
+      {
+        "symbol": "GOOGL",
+        "quantity": 600,
+        "avgPrice": 142.30,
+        "currentPrice": 144.80,
+        "unrealizedPnL": 1500.00,
+        "sector": "Technology",
+        "marketValue": 86880.00
+      },
+      {
+        "symbol": "TSLA",
+        "quantity": 1200,
+        "avgPrice": 238.70,
+        "currentPrice": 235.90,
+        "unrealizedPnL": -3360.00,
+        "sector": "Automotive",
+        "marketValue": 283080.00
+      },
+      {
+        "symbol": "NVDA",
+        "quantity": 900,
+        "avgPrice": 118.45,
+        "currentPrice": 122.30,
+        "unrealizedPnL": 3465.00,
+        "sector": "Technology",
+        "marketValue": 110070.00
+      }
+    ],
+    "portfolioPerformance": [
+      { "date": "2025-01-02", "value": 2500000, "benchmark": 2500000 },
+      { "date": "2025-01-03", "value": 2515000, "benchmark": 2508000 },
+      { "date": "2025-01-06", "value": 2528000, "benchmark": 2520000 },
+      { "date": "2025-01-07", "value": 2535000, "benchmark": 2525000 },
+      { "date": "2025-01-08", "value": 2532403, "benchmark": 2530000 },
+      { "date": "2025-01-09", "value": 2547823, "benchmark": 2535000 }
+    ],
+    "sectorPerformance": [
+      { "sector": "Technology", "performance": 2.4, "weight": 68.5 },
+      { "sector": "Healthcare", "performance": 1.1, "weight": 12.3 },
+      { "sector": "Financial", "performance": -0.8, "weight": 8.9 },
+      { "sector": "Automotive", "performance": -1.2, "weight": 10.3 }
+    ],
+    "orderHistory": [
+      {
+        "id": "ORD-001",
+        "timestamp": "2025-01-09T09:45:23Z",
+        "symbol": "AAPL",
+        "side": "BUY",
+        "quantity": 500,
+        "orderType": "MARKET",
+        "status": "FILLED",
+        "fillPrice": 188.90
+      },
+      {
+        "id": "ORD-002",
+        "timestamp": "2025-01-09T11:22:45Z",
+        "symbol": "TSLA",
+        "side": "SELL",
+        "quantity": 200,
+        "orderType": "LIMIT",
+        "limitPrice": 240.00,
+        "status": "PENDING"
+      }
+    ],
+    "alerts": [
+      {
+        "id": "ALERT-001",
+        "type": "PRICE",
+        "message": "AAPL crossed above $189.00",
+        "timestamp": "2025-01-09T13:28:45Z",
+        "priority": "medium",
+        "dismissed": false
+      },
+      {
+        "id": "ALERT-002",
+        "type": "RISK",
+        "message": "Portfolio concentration in Tech sector exceeds 65%",
+        "timestamp": "2025-01-09T12:15:30Z",
+        "priority": "high",
+        "dismissed": false
+      }
+    ]
+  },
+  "risk": {
+    "valueAtRisk": 45230.50,
+    "portfolioBeta": 1.15,
+    "sharpeRatio": 1.84,
+    "maxDrawdown": -2.8,
+    "activeAlerts": [
+      {
+        "type": "CONCENTRATION",
+        "message": "Technology sector weight exceeds threshold",
+        "threshold": 65,
+        "current": 68.5
+      }
+    ],
+    "riskThresholds": {
+      "maxSectorConcentration": 65,
+      "maxSinglePosition": 15,
+      "maxDailyLoss": 50000
+    }
+  }
+}

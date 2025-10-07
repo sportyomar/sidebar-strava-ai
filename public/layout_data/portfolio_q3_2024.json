@@ -1,0 +1,77 @@
+{
+  "layout": {
+    "system": "css-grid",
+    "maxWidth": "1400px",
+    "baseSpacing": "1rem",
+    "containerPadding": "1.5rem",
+    "sectionSpacing": "2rem"
+  },
+  "viewport": {
+    "width": 1024,
+    "height": 768,
+    "breakpoint": "lg",
+    "deviceType": "desktop"
+  },
+  "performance": {
+    "enableVirtualization": true,
+    "lazyLoadTables": true,
+    "optimizeReflows": true
+  },
+  "accessibility": {
+    "reducedMotion": false,
+    "highContrast": false,
+    "focusVisible": true
+  },
+  "theme": {
+    "spacing": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "section": "lg",
+      "large": "1.5rem",
+      "medium": "1rem"
+    },
+    "containers": {
+      "maxWidth": "1400px",
+      "padding": "1.5rem",
+      "margin": "0 auto"
+    },
+    "grid": {
+      "columns": 12,
+      "gap": "1rem",
+      "breakpoints": {
+        "xs": "0px",
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px"
+      }
+    }
+  },
+  "dashboard": {
+    "sections": {
+      "header": {
+        "sticky": false,
+        "height": "auto",
+        "background": "transparent"
+      },
+      "metrics": {
+        "columns": 4,
+        "responsive": true,
+        "equalHeight": true
+      },
+      "tables": {
+        "spacing": "xl",
+        "alternateBackgrounds": true,
+        "stickyHeaders": false
+      },
+      "footer": {
+        "sticky": false,
+        "alignment": "space-between"
+      }
+    }
+  }
+}

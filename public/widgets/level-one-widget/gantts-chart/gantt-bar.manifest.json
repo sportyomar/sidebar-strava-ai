@@ -1,0 +1,41 @@
+{
+  "manifestType": "component",
+  "componentName": "GanttBar",
+  "version": "1.0.0",
+  "description": "Individual task bar for Gantt chart timeline visualization",
+
+  "props": {
+    "startDay": { "type": "number", "required": true },
+    "duration": { "type": "number", "required": true },
+    "taskId": { "type": "string", "required": true },
+    "taskName": { "type": "string", "required": true },
+    "status": { "type": "string", "enum": ["planned", "in-progress", "completed"], "default": "planned" }
+  },
+
+  "styling": {
+    "bar": {
+      "height": "1.5rem",
+      "borderRadius": "0.25rem",
+      "backgroundColor": {
+        "planned": "#8b7355",
+        "in-progress": "#d97706",
+        "completed": "#059669"
+      },
+      "opacity": 0.8,
+      "border": "1px solid rgba(0,0,0,0.1)"
+    },
+    "hover": {
+      "opacity": 1,
+      "cursor": "pointer",
+      "transform": "scale(1.02)"
+    }
+  },
+
+  "behavior": {
+    "interactive": true,
+    "tooltip": {
+      "show": true,
+      "content": "{taskName}: Day {startDay}-{endDay} ({duration} days)"
+    }
+  }
+}

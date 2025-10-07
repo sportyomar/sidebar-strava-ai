@@ -1,0 +1,8 @@
+{
+  "regions": [
+    "sidebar",
+    "main",
+    "footer",
+    "input"
+  ]
+}

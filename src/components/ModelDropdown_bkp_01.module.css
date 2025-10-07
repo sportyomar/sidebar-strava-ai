@@ -1,0 +1,213 @@
+.container {
+  position: relative;
+  display: inline-block;
+  min-width: 240px;
+  font-family: system-ui, sans-serif;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+.placeholder {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #64748b;
+  font-style: italic;
+}
+
+.trigger {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.trigger:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.triggerOpen {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.triggerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.triggerIcon {
+  flex-shrink: 0;
+}
+
+.triggerText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.triggerModelName {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.triggerProvider {
+  opacity: 0.8;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.defaultBadge {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.providerHeader {
+  padding: 8px 12px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #f8fafc;
+}
+
+.option {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  font-size: 13px;
+  border-bottom: 1px solid #f8fafc;
+  box-sizing: border-box;
+}
+
+.option:hover {
+  background: #f8fafc;
+}
+
+.optionSelected {
+  background: #f1f5f9;
+  border-left: 3px solid #64748b;
+}
+
+.optionSelected:hover {
+  background: #f1f5f9;
+}
+
+.optionLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.optionIcon {
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+.optionText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.optionName {
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.optionProvider {
+  color: #64748b;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.optionRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.optionMetrics {
+  display: flex;
+  gap: 6px;
+}
+
+.metric {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.optionDefaultBadge {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
