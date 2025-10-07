@@ -8,7 +8,7 @@ from psycopg2.extras import RealDictCursor
 import sys
 
 sys.path.append('/Users/sporty/PycharmProjects/memory_issue/Sidebar/sidebar')
-from api.registry import get_db_instance
+from registry import get_db_instance
 
 modules_bp = Blueprint('modules', __name__)
 
